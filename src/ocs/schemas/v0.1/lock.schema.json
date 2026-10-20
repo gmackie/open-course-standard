@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OCS v0.1 prototype local dependency lock",
+  "type": "object",
+  "required": ["lockVersion", "root", "dependencies"],
+  "properties": {
+    "lockVersion": { "const": 1 },
+    "root": { "$ref": "#/$defs/release" },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["alias", "id", "version", "digest", "source"],
+        "properties": {
+          "alias": { "type": "string" },
+          "id": { "type": "string" },
+          "version": { "type": "string" },
+          "digest": { "$ref": "#/$defs/digest" },
+          "source": { "type": "object", "required": ["type", "path"], "properties": { "type": { "const": "local" }, "path": { "type": "string" } }, "additionalProperties": false }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "digest": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" },
+    "release": { "type": "object", "required": ["id", "version", "digest"], "properties": { "id": { "type": "string" }, "version": { "type": "string" }, "digest": { "$ref": "#/$defs/digest" } }, "additionalProperties": false }
+  }
+}

@@ -1,0 +1,11 @@
+specVersion: "0.1"
+kind: Codex
+id: org.example/watershed-codex
+version: "1.0.0"
+metadata:
+  title: Watershed Science Codex
+  language: en-US
+resources:
+  - id: runoff
+    kind: Concept
+    path: runoff.md

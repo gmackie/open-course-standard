@@ -1,0 +1,33 @@
+kind: Composition
+id: org.example/watershed-science.standard
+imports:
+  - alias: codex
+    package: org.example/watershed-codex
+    version: "1.0.0"
+    source:
+      type: local
+      path: deps/watershed-codex
+  - alias: field
+    package: org.example/stream-lab
+    version: "1.0.0"
+    source:
+      type: local
+      path: deps/field-lab
+placements:
+  - id: overview
+    use:
+      from: self
+      resource: kickoff
+    purpose: introduce
+  - id: scientific-background
+    use:
+      from: codex
+      resource: runoff
+    purpose: explain
+    after: [overview]
+  - id: investigate
+    use:
+      from: field
+      resource: sampling
+    purpose: apply
+    after: [scientific-background]

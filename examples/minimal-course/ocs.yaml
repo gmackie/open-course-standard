@@ -1,0 +1,15 @@
+specVersion: "0.1"
+kind: Course
+id: org.example/introduction-to-poetry
+version: "1.0.0"
+metadata:
+  title: Introduction to Poetry
+  description: A tiny level-neutral OCS course
+  language: en-US
+  license: CC-BY-4.0
+resources:
+  - id: introduction
+    kind: Lesson
+    path: lesson.md
+entrypoints:
+  - introduction

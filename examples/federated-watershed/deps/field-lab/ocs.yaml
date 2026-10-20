@@ -1,0 +1,11 @@
+specVersion: "0.1"
+kind: Activity
+id: org.example/stream-lab
+version: "1.0.0"
+metadata:
+  title: Stream Sampling Laboratory
+  language: en-US
+resources:
+  - id: sampling
+    kind: Activity
+    path: sampling.md

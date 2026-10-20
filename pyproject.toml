@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "open-course-standard"
+version = "0.1.0a0"
+description = "Reference tooling for the draft Open Course Standard"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+authors = [{ name = "OCS Contributors" }]
+dependencies = ["PyYAML>=6.0,<7", "jsonschema>=4.20,<5"]
+
+[project.scripts]
+ocs = "ocs.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+ocs = ["schemas/v0.1/*.json"]

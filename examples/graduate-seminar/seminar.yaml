@@ -1,0 +1,12 @@
+kind: LearningExperience
+id: methods-discussion
+metadata:
+  title: Critiquing Research Methodology
+  audience: [graduate]
+content:
+  primary: ./reading-guide.md
+relations:
+  - type: teaches
+    ref: research.critical-methodology
+  - type: produces
+    ref: research.research-proposal

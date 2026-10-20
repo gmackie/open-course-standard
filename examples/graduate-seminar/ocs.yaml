@@ -1,0 +1,13 @@
+specVersion: "0.1"
+kind: Course
+id: org.example/research-methods-seminar
+version: "1.0.0"
+metadata:
+  title: Research Methods Seminar
+  description: A graduate research course without required exams or letter grades
+  language: en-US
+resources:
+  - id: methods-discussion
+    kind: LearningExperience
+    path: seminar.yaml
+entrypoints: [methods-discussion]
