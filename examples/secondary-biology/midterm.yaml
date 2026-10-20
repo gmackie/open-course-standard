@@ -1,0 +1,20 @@
+kind: AssessmentBlueprint
+id: cell-division-exam
+metadata:
+  title: Cell Division Assessment Blueprint
+goals:
+  - biology.cell-division
+evidence:
+  - id: model-explanation
+    artifactType: document
+    criterion: reasoning
+  - id: unfamiliar-scenario
+    artifactType: structured-response
+    criterion: transfer
+generation:
+  mode: per-term
+evaluation:
+  method: rubric-plus-teacher-review
+approval:
+  required: true
+  authority: course-lead

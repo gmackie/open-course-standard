@@ -1,0 +1,10 @@
+kind: Lesson
+id: cell-division
+metadata:
+  title: Cell Division and Scientific Models
+  audience: [secondary]
+content:
+  primary: ./lesson.md
+relations:
+  - type: teaches
+    ref: biology.cell-division

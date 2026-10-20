@@ -1,0 +1,12 @@
+kind: LearningExperience
+id: stream-investigation
+metadata:
+  title: Stream Sampling and Measurement Uncertainty
+  audience: [undergraduate]
+content:
+  primary: ./protocol.md
+relations:
+  - type: teaches
+    ref: experimental-design.measurement-uncertainty
+  - type: produces
+    ref: data.student-stream-measurements

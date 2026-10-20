@@ -1,0 +1,16 @@
+specVersion: "0.1"
+kind: Course
+id: org.example/intro-hydrology-lab
+version: "1.0.0"
+metadata:
+  title: Introductory Hydrology Laboratory
+  description: Undergraduate fieldwork and reproducible measurement
+  language: en-US
+resources:
+  - id: stream-investigation
+    kind: LearningExperience
+    path: experience.yaml
+  - id: lab-protocol
+    kind: Resource
+    path: protocol.md
+entrypoints: [stream-investigation]

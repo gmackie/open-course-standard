@@ -1,0 +1,14 @@
+specVersion: "0.1"
+kind: Course
+id: org.example/watershed-science
+version: "1.0.0"
+metadata:
+  title: Watershed Science
+  description: A course composed from locally mounted independent OCS packages
+  language: en-US
+resources:
+  - id: kickoff
+    kind: Lesson
+    path: kickoff.md
+composition: composition.yaml
+entrypoints: [kickoff]

@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OCS v0.1 educational resource descriptor",
+  "type": "object",
+  "required": ["kind", "id", "metadata"],
+  "properties": {
+    "kind": { "type": "string", "minLength": 1 },
+    "id": { "type": "string", "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._-]*$" },
+    "metadata": {
+      "type": "object",
+      "required": ["title"],
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "description": { "type": "string" },
+        "license": { "type": "string" },
+        "audience": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": true
+    },
+    "content": {
+      "type": "object",
+      "properties": {
+        "primary": { "type": "string", "minLength": 1 },
+        "supplemental": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": true
+    },
+    "relations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "ref"],
+        "properties": {
+          "type": { "enum": ["requires", "recommends", "teaches", "assesses", "reinforces", "extends", "alignsWith", "derivedFrom", "uses", "produces", "alternativeTo"] },
+          "ref": { "type": "string", "minLength": 1 }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

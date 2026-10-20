@@ -1,0 +1,30 @@
+{
+  "dependencies": [
+    {
+      "alias": "codex",
+      "digest": "sha256:0c1b6844195645a5b2c624e09049ec7b7f6ef86a5c8beb71768e8cd069d50d97",
+      "id": "org.example/watershed-codex",
+      "source": {
+        "path": "deps/watershed-codex",
+        "type": "local"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "alias": "field",
+      "digest": "sha256:64828b8b8e73359fb9add2a70c9d2730b21777d10731cb226b4771d39a542df7",
+      "id": "org.example/stream-lab",
+      "source": {
+        "path": "deps/field-lab",
+        "type": "local"
+      },
+      "version": "1.0.0"
+    }
+  ],
+  "lockVersion": 1,
+  "root": {
+    "digest": "sha256:6717483aaececc2a0797ad9b85bcf6e194e431cc1f0c5f8811725fd49f1a0d77",
+    "id": "org.example/watershed-science",
+    "version": "1.0.0"
+  }
+}

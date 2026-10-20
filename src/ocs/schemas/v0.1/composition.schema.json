@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OCS v0.1 course composition",
+  "type": "object",
+  "required": ["kind", "id", "placements"],
+  "properties": {
+    "kind": { "const": "Composition" },
+    "id": { "type": "string", "minLength": 1 },
+    "imports": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["alias", "package", "version", "source"],
+        "properties": {
+          "alias": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$", "not": { "const": "self" } },
+          "package": { "type": "string", "pattern": "^[a-z0-9][a-z0-9.-]*/[a-z0-9][a-z0-9._-]*$" },
+          "version": { "type": "string", "minLength": 1 },
+          "source": {
+            "oneOf": [
+              { "type": "object", "required": ["type", "path"], "properties": { "type": { "const": "local" }, "path": { "type": "string", "minLength": 1 } }, "additionalProperties": false },
+              { "type": "object", "required": ["type", "path"], "properties": { "type": { "const": "git-submodule" }, "path": { "type": "string", "minLength": 1 } }, "additionalProperties": false },
+              { "type": "object", "required": ["type", "locator"], "properties": { "type": { "const": "registry" }, "locator": { "type": "string", "minLength": 1 } }, "additionalProperties": false }
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "placements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "use"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._-]*$" },
+          "use": {
+            "type": "object",
+            "required": ["from", "resource"],
+            "properties": {
+              "from": { "type": "string", "minLength": 1 },
+              "resource": { "type": "string", "minLength": 1 }
+            },
+            "additionalProperties": false
+          },
+          "purpose": { "type": "string", "minLength": 1 },
+          "after": { "type": "array", "uniqueItems": true, "items": { "type": "string" } }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": false
+}
