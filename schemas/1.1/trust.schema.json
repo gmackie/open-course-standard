@@ -1,0 +1,73 @@
+{
+  "$comment": "Generated from the reference implementation (packages/ocs/scripts/generate-schemas.ts); do not edit. License: CC-BY-4.0.",
+  "$id": "https://raw.githubusercontent.com/gmackie/open-course-standard/main/schemas/1.1/trust.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "The publisher keys a destination approved, and its own publishing domains. See https://github.com/gmackie/open-course-standard/blob/main/spec/ocs-1.1.md §15.1. Normative for structure (OCS 1.1 §1). Rules a schema cannot express, such as references between files, uniqueness within lists, and the digest and signature checks, are stated in the specification.",
+  "properties": {
+    "localDomains": {
+      "items": {
+        "maxLength": 200,
+        "minLength": 1,
+        "type": "string"
+      },
+      "maxItems": 20,
+      "type": "array"
+    },
+    "publishers": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "domain": {
+            "maxLength": 200,
+            "minLength": 1,
+            "type": "string"
+          },
+          "keys": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "keyId": {
+                  "pattern": "^ed25519-[A-Za-z0-9_-]{43}$",
+                  "type": "string"
+                },
+                "publicKey": {
+                  "maxLength": 43,
+                  "minLength": 43,
+                  "pattern": "^[A-Za-z0-9_-]*$",
+                  "type": "string"
+                },
+                "retiresAt": {
+                  "format": "date-time",
+                  "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d+)?(?:Z))$",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "keyId",
+                "publicKey"
+              ],
+              "type": "object"
+            },
+            "maxItems": 16,
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "domain",
+          "keys"
+        ],
+        "type": "object"
+      },
+      "maxItems": 200,
+      "type": "array"
+    }
+  },
+  "required": [
+    "localDomains",
+    "publishers"
+  ],
+  "title": "OCS trust configuration",
+  "type": "object"
+}

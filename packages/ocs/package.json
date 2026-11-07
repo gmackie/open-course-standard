@@ -1,0 +1,55 @@
+{
+  "name": "@open-course-standard/ocs",
+  "version": "1.1.0",
+  "description": "Reference implementation of the Open Course Standard (OCS) 1.1: read and validate course packages and activity exports, resolve modules into a deterministic lockfile, compose courses, verify publisher signatures and bundles, and export Thin Common Cartridge. Includes the `ocs` CLI.",
+  "license": "Apache-2.0",
+  "author": "Open Course Standard contributors",
+  "homepage": "https://github.com/gmackie/open-course-standard#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gmackie/open-course-standard.git",
+    "directory": "packages/ocs"
+  },
+  "bugs": "https://github.com/gmackie/open-course-standard/issues",
+  "keywords": ["open-course-standard", "ocs", "curriculum", "course", "education", "oer", "common-cartridge", "lockfile"],
+  "type": "module",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./node": {
+      "types": "./dist/node/index.d.ts",
+      "default": "./dist/node/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "ocs": "./dist/cli.js"
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "schemas": "node --experimental-strip-types scripts/generate-schemas.ts",
+    "schemas:check": "node --experimental-strip-types scripts/generate-schemas.ts --check",
+    "prepack": "pnpm run build"
+  },
+  "dependencies": {
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "ajv": "^8.20.0",
+    "typescript": "^6.0.3",
+    "vitest": "^5.0.5"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

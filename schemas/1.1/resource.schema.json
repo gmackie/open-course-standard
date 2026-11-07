@@ -1,0 +1,128 @@
+{
+  "$comment": "Generated from the reference implementation (packages/ocs/scripts/generate-schemas.ts); do not edit. License: CC-BY-4.0.",
+  "$id": "https://raw.githubusercontent.com/gmackie/open-course-standard/main/schemas/1.1/resource.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A resource release and the use the package makes of it. See https://github.com/gmackie/open-course-standard/blob/main/spec/ocs-1.1.md §7.3. Normative for structure (OCS 1.1 §1). Rules a schema cannot express, such as references between files, uniqueness within lists, and the digest and signature checks, are stated in the specification.",
+  "oneOf": [
+    {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[a-z][a-z0-9-]{0,62}$",
+          "type": "string"
+        },
+        "kind": {
+          "const": "release",
+          "type": "string"
+        },
+        "release": {
+          "additionalProperties": false,
+          "properties": {
+            "resourceId": {
+              "pattern": "^rsc_[a-z0-9][a-z0-9-]{0,62}$",
+              "type": "string"
+            },
+            "version": {
+              "pattern": "^\\d+\\.\\d+\\.\\d+$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "resourceId",
+            "version"
+          ],
+          "type": "object"
+        },
+        "title": {
+          "maxLength": 200,
+          "minLength": 1,
+          "not": {
+            "pattern": "<\\s*\\/?\\s*([sS][cC][rR][iI][pP][tT]|[iI][fF][rR][aA][mM][eE]|[oO][bB][jJ][eE][cC][tT]|[eE][mM][bB][eE][dD]|[aA][pP][pP][lL][eE][tT]|[sS][tT][yY][lL][eE]|[lL][iI][nN][kK]|[mM][eE][tT][aA]|[bB][aA][sS][eE]|[fF][oO][rR][mM]|[sS][vV][gG])\\b|\\b([jJ][aA][vV][aA][sS][cC][rR][iI][pP][tT]|[vV][bB][sS][cC][rR][iI][pP][tT])\\s*:|[dD][aA][tT][aA]\\s*:\\s*[tT][eE][xX][tT]\\/[hH][tT][mM][lL]"
+          },
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "use": {
+          "enum": [
+            "link",
+            "embed",
+            "excerpt",
+            "licensed-copy"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "title",
+        "release",
+        "use"
+      ],
+      "type": "object"
+    },
+    {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[a-z][a-z0-9-]{0,62}$",
+          "type": "string"
+        },
+        "kind": {
+          "const": "gadget-blueprint",
+          "type": "string"
+        },
+        "release": {
+          "additionalProperties": false,
+          "properties": {
+            "resourceId": {
+              "pattern": "^rsc_[a-z0-9][a-z0-9-]{0,62}$",
+              "type": "string"
+            },
+            "version": {
+              "pattern": "^\\d+\\.\\d+\\.\\d+$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "resourceId",
+            "version"
+          ],
+          "type": "object"
+        },
+        "releaseCommit": {
+          "pattern": "^[0-9a-f]{40}$",
+          "type": "string"
+        },
+        "title": {
+          "maxLength": 200,
+          "minLength": 1,
+          "not": {
+            "pattern": "<\\s*\\/?\\s*([sS][cC][rR][iI][pP][tT]|[iI][fF][rR][aA][mM][eE]|[oO][bB][jJ][eE][cC][tT]|[eE][mM][bB][eE][dD]|[aA][pP][pP][lL][eE][tT]|[sS][tT][yY][lL][eE]|[lL][iI][nN][kK]|[mM][eE][tT][aA]|[bB][aA][sS][eE]|[fF][oO][rR][mM]|[sS][vV][gG])\\b|\\b([jJ][aA][vV][aA][sS][cC][rR][iI][pP][tT]|[vV][bB][sS][cC][rR][iI][pP][tT])\\s*:|[dD][aA][tT][aA]\\s*:\\s*[tT][eE][xX][tT]\\/[hH][tT][mM][lL]"
+          },
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "use": {
+          "enum": [
+            "link",
+            "embed",
+            "excerpt",
+            "licensed-copy"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "title",
+        "release",
+        "releaseCommit",
+        "use"
+      ],
+      "type": "object"
+    }
+  ],
+  "title": "OCS resource reference (resources/<id>.json)"
+}

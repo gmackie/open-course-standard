@@ -9,7 +9,12 @@
     "node": ">=22.12"
   },
   "scripts": {
-    "check": "pnpm run check:docs",
-    "check:docs": "node scripts/check-docs.mjs"
+    "check": "pnpm run check:docs && pnpm run check:schemas && pnpm run typecheck && pnpm run test && pnpm run build",
+    "check:docs": "node scripts/check-docs.mjs",
+    "check:schemas": "pnpm --filter @open-course-standard/ocs schemas:check",
+    "typecheck": "pnpm --filter @open-course-standard/ocs typecheck",
+    "test": "pnpm --filter @open-course-standard/ocs test",
+    "build": "pnpm --filter @open-course-standard/ocs build",
+    "ocs": "node packages/ocs/dist/cli.js"
   }
 }

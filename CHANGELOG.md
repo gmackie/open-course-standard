@@ -14,6 +14,21 @@ versioning on its own.
   definition, a normative resolution procedure, producer/consumer/composer conformance classes,
   problem kinds, and a non-normative implementations appendix for EducateOS-specific notes.
 
+### Schemas
+
+- JSON Schema 2020-12 for all 13 OCS documents in `schemas/1.1/`, generated from the reference
+  implementation's validators, with stable `$id` URLs. The plain-text rule is expressed as a
+  case-folded `not`/`pattern`.
+
+### Reference implementation (`@open-course-standard/ocs` 1.1.0, not yet published to npm)
+
+- Standalone port of `@educateos/ocs`: no Cloudflare or EducateOS dependency, web-standard APIs
+  only (Node.js 20+ and browsers), Zod the only dependency.
+- `ocs` CLI: `validate`, `inspect`, `lock`, `verify`, `compose`, `export-thin-cc`.
+- Not ported: the Durable Object library (Cloudflare-specific), and the adapters to the EducateOS
+  curriculum service (`planInstallations`, `installCourse`, `templateInputFor`). The
+  `CourseInstallTarget` installation plan replaces them.
+
 ### Repository
 
 - Licensing split: code under Apache-2.0, specification, schemas, fixtures, examples and
