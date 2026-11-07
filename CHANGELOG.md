@@ -52,7 +52,10 @@ versioning on its own.
   carried over and adapted from the v0.1 proposal.
 - Design decision log ([docs/decisions.md](docs/decisions.md)): why OCS 1.1 is the core, what
   was kept from v0.1, and what is deferred.
-- CI runs on every pull request.
+- CI runs on every pull request and on main: docs, generated schemas, typecheck, unit tests,
+  build, schema validation of examples and fixtures, `ocs validate` on the examples and the
+  conformance suite on Node 22 and 24. It also packs the npm package and installs and runs it on
+  Node 20.
 
 ## History before this repository
 

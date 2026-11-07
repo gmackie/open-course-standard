@@ -55,9 +55,18 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm build
+      - name: Pack the npm package (not published)
+        run: pnpm --filter @open-course-standard/ocs pack --pack-destination "$RUNNER_TEMP/pack"
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+      - name: Install the packed package on Node 20 and run its CLI
+        run: |
+          mkdir "$RUNNER_TEMP/app" && cd "$RUNNER_TEMP/app"
+          npm init -y > /dev/null
+          npm install "$RUNNER_TEMP"/pack/open-course-standard-ocs-*.tgz
+          npx ocs validate "$GITHUB_WORKSPACE/examples/level-neutral"
+          node -e 'import("@open-course-standard/ocs").then((m) => { if (typeof m.resolveCourse !== "function") process.exit(1); })'
       - name: Library smoke test on Node 20
         run: node packages/ocs/scripts/smoke.mjs
       - name: Examples validate on Node 20

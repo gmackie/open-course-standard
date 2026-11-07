@@ -115,3 +115,11 @@ needs an RFC.
   every fixture and example.
 - The reference package is named `@open-course-standard/ocs`. It is ready to publish to npm but
   has not been published yet. Publishing needs the steward's approval.
+
+## D7. EducateOS keeps its own implementation for now (2026-11-07)
+
+EducateOS was not changed while this repository was set up. Follow-up SCHO-348 (EducateOS
+tracker) covers pointing EducateOS RFC 0001 at this specification, running this conformance suite
+against `@educateos/ocs` in EducateOS's CI, and deciding whether `@educateos/ocs` should depend on
+`@open-course-standard/ocs` once it is published to npm. Until then, the conformance suite is what
+keeps the two implementations equal.
