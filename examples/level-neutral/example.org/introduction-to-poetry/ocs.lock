@@ -1,0 +1,11 @@
+{
+  "lockVersion": 1,
+  "packages": [],
+  "root": {
+    "digest": "sha256:5a6e983885088ce2955c7e262d2a972df3a8147d9a19ebc004d8aaf8e075ab47",
+    "id": "example.org/introduction-to-poetry",
+    "modules": [],
+    "version": "1.0.0"
+  },
+  "specVersion": "1.0"
+}

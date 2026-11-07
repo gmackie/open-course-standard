@@ -1,0 +1,16 @@
+{
+  "description": "A tampered mirror: the source's recorded digest is not the digest of what it serves.",
+  "expect": {
+    "problem": "digest-mismatch"
+  },
+  "id": "resolve/published-digest-mismatch",
+  "input": {
+    "course": "course",
+    "store": "store"
+  },
+  "kind": "resolve",
+  "spec": [
+    "§10.1",
+    "§18"
+  ]
+}

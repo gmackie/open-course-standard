@@ -1,0 +1,11 @@
+{
+  "lockVersion": 1,
+  "packages": [],
+  "root": {
+    "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+    "id": "example.org/minimal",
+    "modules": [],
+    "version": "1.0.0"
+  },
+  "specVersion": "1.0"
+}

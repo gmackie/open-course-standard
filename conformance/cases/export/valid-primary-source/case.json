@@ -1,0 +1,15 @@
+{
+  "description": "A primary-source analysis naming its readings as sources.",
+  "expect": {
+    "digest": "sha256:ec24cccfa3624ea60a35306326072a2e25b1d8b16956df97f3aae23809ba2924",
+    "valid": true
+  },
+  "id": "export/valid-primary-source",
+  "input": {
+    "export": "export.json"
+  },
+  "kind": "export",
+  "spec": [
+    "§14.4"
+  ]
+}

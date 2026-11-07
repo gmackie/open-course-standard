@@ -1,0 +1,16 @@
+{
+  "id": "example.net/impostor",
+  "language": "en",
+  "modules": [],
+  "outline": [
+    {
+      "kind": "unit",
+      "unit": "rules"
+    }
+  ],
+  "overrides": [],
+  "specVersion": "1.0",
+  "standards": [],
+  "title": "Course example.net/impostor",
+  "version": "1.0.0"
+}

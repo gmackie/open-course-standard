@@ -1,0 +1,18 @@
+{
+  "description": "The same statement signed in another protocol's context.",
+  "expect": {
+    "ok": false,
+    "reason": "bad-signature"
+  },
+  "id": "publication/other-protocol-context",
+  "input": {
+    "at": "2026-11-07T00:00:00Z",
+    "envelope": "envelope.json",
+    "package": "package",
+    "trust": "trust.json"
+  },
+  "kind": "publication",
+  "spec": [
+    "§15"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "description": "The source serves another package under lab-safety 1.0.0.",
+  "expect": {
+    "problem": "identity-mismatch"
+  },
+  "id": "resolve/identity-mismatch",
+  "input": {
+    "course": "course",
+    "store": "store"
+  },
+  "kind": "resolve",
+  "spec": [
+    "§10.1"
+  ]
+}

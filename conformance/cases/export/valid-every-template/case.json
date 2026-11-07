@@ -1,0 +1,15 @@
+{
+  "description": "A writing task with every optional member.",
+  "expect": {
+    "digest": "sha256:60d29847e278a047c46bc1bf7706886743cc86343c174e32776f57a7167b4140",
+    "valid": true
+  },
+  "id": "export/valid-every-template",
+  "input": {
+    "export": "export.json"
+  },
+  "kind": "export",
+  "spec": [
+    "§14.4"
+  ]
+}

@@ -29,6 +29,21 @@ versioning on its own.
   curriculum service (`planInstallations`, `installCourse`, `templateInputFor`). The
   `CourseInstallTarget` installation plan replaces them.
 
+### Conformance suite
+
+- `conformance/`: 91 cases with expected results (37 package, 13 export, 22 resolve with
+  byte-identical lockfiles, 6 compose, 7 bundle, 6 publication), and `run.mjs`, a runner that
+  tests any implementation through a one-request-per-process JSON adapter. The reference
+  implementation's adapter is `ocs conformance-adapter`.
+
+### Examples
+
+- `examples/level-neutral/`: the five v0.1 examples converted to OCS 1.1 (poetry, secondary
+  biology with a portable assessment, undergraduate lab, graduate seminar, and a course composed
+  from two publishers' packages).
+- `examples/educateos/`: EducateOS's twelve sample courses, 270 activity exports and 13 signed
+  bundles, copied under their Apache-2.0 license.
+
 ### Repository
 
 - Licensing split: code under Apache-2.0, specification, schemas, fixtures, examples and

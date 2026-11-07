@@ -1,0 +1,19 @@
+{
+  "id": "start",
+  "items": [
+    {
+      "kind": "codex",
+      "ref": "welcome"
+    },
+    {
+      "kind": "activity",
+      "ref": "task"
+    },
+    {
+      "kind": "resource",
+      "ref": "reading"
+    }
+  ],
+  "standards": [],
+  "title": "   "
+}

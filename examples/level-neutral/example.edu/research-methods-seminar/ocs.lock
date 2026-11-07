@@ -1,0 +1,11 @@
+{
+  "lockVersion": 1,
+  "packages": [],
+  "root": {
+    "digest": "sha256:c723d5449732e1c9a16ee9802b8b10193e5a99b18e65f1b87b8954e2460720ab",
+    "id": "example.edu/research-methods-seminar",
+    "modules": [],
+    "version": "1.0.0"
+  },
+  "specVersion": "1.0"
+}

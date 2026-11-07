@@ -1,0 +1,15 @@
+{
+  "description": "An outline naming a unit the package does not have.",
+  "expect": {
+    "problem": "invalid-package",
+    "valid": false
+  },
+  "id": "package/outline-unknown-unit",
+  "input": {
+    "package": "package"
+  },
+  "kind": "package",
+  "spec": [
+    "§6.3"
+  ]
+}

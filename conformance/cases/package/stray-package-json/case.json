@@ -1,0 +1,16 @@
+{
+  "description": "A package.json beside the data files.",
+  "expect": {
+    "problem": "invalid-package",
+    "valid": false
+  },
+  "id": "package/stray-package-json",
+  "input": {
+    "package": "package"
+  },
+  "kind": "package",
+  "spec": [
+    "§5",
+    "§18"
+  ]
+}

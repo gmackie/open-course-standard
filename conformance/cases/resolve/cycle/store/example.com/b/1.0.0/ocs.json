@@ -1,0 +1,22 @@
+{
+  "id": "example.com/b",
+  "language": "en",
+  "modules": [
+    {
+      "name": "a",
+      "package": "example.com/a",
+      "range": "^1.0.0"
+    }
+  ],
+  "outline": [
+    {
+      "kind": "module",
+      "module": "a"
+    }
+  ],
+  "overrides": [],
+  "specVersion": "1.0",
+  "standards": [],
+  "title": "Course example.com/b",
+  "version": "1.0.0"
+}

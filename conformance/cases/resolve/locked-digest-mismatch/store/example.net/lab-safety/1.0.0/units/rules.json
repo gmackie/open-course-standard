@@ -1,0 +1,11 @@
+{
+  "id": "rules",
+  "items": [
+    {
+      "kind": "resource",
+      "ref": "rules-sheet"
+    }
+  ],
+  "standards": [],
+  "title": "Changed after locking"
+}

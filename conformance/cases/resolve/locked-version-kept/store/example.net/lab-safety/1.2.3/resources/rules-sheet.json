@@ -1,0 +1,10 @@
+{
+  "id": "rules-sheet",
+  "kind": "release",
+  "release": {
+    "resourceId": "rsc_rules-sheet",
+    "version": "1.0.0"
+  },
+  "title": "Resource rules-sheet",
+  "use": "licensed-copy"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "example.org/x",
+  "language": "en",
+  "modules": [],
+  "outline": [
+    {
+      "kind": "unit",
+      "unit": "a"
+    }
+  ],
+  "overrides": [
+    {
+      "kind": "hide",
+      "target": {
+        "modules": [
+          "ghost"
+        ],
+        "unit": "a"
+      }
+    }
+  ],
+  "specVersion": "1.0",
+  "standards": [],
+  "title": "Course example.org/x",
+  "version": "1.0.0"
+}

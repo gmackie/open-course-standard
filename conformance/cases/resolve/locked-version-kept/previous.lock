@@ -1,0 +1,24 @@
+{
+  "lockVersion": 1,
+  "packages": [
+    {
+      "digest": "sha256:5551f1ac04ee83b85dfa875b4434abf3ad8c561a884503b6ecc5da276c1593ab",
+      "id": "example.net/lab-safety",
+      "modules": [],
+      "version": "1.0.0"
+    }
+  ],
+  "root": {
+    "digest": "sha256:94d130822e830331cadede655e948af5bf1d488f4e54a5ef77c2ff711910b938",
+    "id": "example.org/course",
+    "modules": [
+      {
+        "name": "safety",
+        "package": "example.net/lab-safety",
+        "version": "1.0.0"
+      }
+    ],
+    "version": "1.0.0"
+  },
+  "specVersion": "1.0"
+}

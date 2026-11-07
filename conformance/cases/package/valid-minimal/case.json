@@ -1,0 +1,18 @@
+{
+  "description": "A one-unit course with a note, a district-local activity and a resource.",
+  "expect": {
+    "digest": "sha256:1b4850074db3dc12c15ca1ac2bd4de36a2742ec1a613d047c20256aeb545ef2a",
+    "valid": true
+  },
+  "id": "package/valid-minimal",
+  "input": {
+    "package": "package"
+  },
+  "kind": "package",
+  "spec": [
+    "§5",
+    "§6",
+    "§7",
+    "§9"
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "activity": {
+    "aiHelp": "hints-only",
+    "due": {
+      "days": 7,
+      "kind": "after-install"
+    },
+    "genre": "informative",
+    "gradeBand": "9-12",
+    "minWords": 250,
+    "minimumCitations": 1,
+    "overview": "Explain what two models of mitosis show and hide, then apply the idea to an unfamiliar case.",
+    "prompt": "Compare the diagram and the observed sample in the reading. For each, explain one thing it shows well and one thing it leaves out. Then predict what you would see in a cell that copies its chromosomes but does not separate them, and explain your reasoning.",
+    "resources": [
+      "two-models"
+    ],
+    "subject": "science",
+    "template": "writing-task",
+    "title": "Explaining models of cell division"
+  },
+  "alignments": [],
+  "id": "example.org/biology-foundations-cell-division-models",
+  "language": "en-US",
+  "readings": [
+    {
+      "attribution": "Written for the Open Course Standard examples. CC-BY-4.0.",
+      "body": "A textbook diagram shows mitosis as four tidy stages: prophase, metaphase, anaphase and telophase, with every chromosome drawn clearly. A stained onion root tip under a microscope shows many cells at once, each caught at a different moment, most of them between divisions, and the chromosomes are crowded and hard to count.",
+      "id": "two-models",
+      "title": "Two models of mitosis"
+    }
+  ],
+  "rubric": {
+    "criteria": [
+      {
+        "id": "reasoning",
+        "levels": [
+          {
+            "id": "beginning",
+            "label": "Describes the models",
+            "points": 1
+          },
+          {
+            "id": "developing",
+            "label": "Compares what they show",
+            "points": 2
+          },
+          {
+            "id": "secure",
+            "label": "Explains what each leaves out, with evidence",
+            "points": 3
+          }
+        ],
+        "title": "Reasoning about models"
+      },
+      {
+        "id": "transfer",
+        "levels": [
+          {
+            "id": "beginning",
+            "label": "Restates the process",
+            "points": 1
+          },
+          {
+            "id": "developing",
+            "label": "Makes a prediction",
+            "points": 2
+          },
+          {
+            "id": "secure",
+            "label": "Predicts and justifies from the model",
+            "points": 3
+          }
+        ],
+        "title": "Applies the idea to an unfamiliar case"
+      }
+    ],
+    "title": "Cell division models"
+  },
+  "specVersion": "1.1",
+  "version": "1.0.0"
+}

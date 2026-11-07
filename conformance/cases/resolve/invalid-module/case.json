@@ -1,0 +1,15 @@
+{
+  "description": "A module whose files are not a valid package.",
+  "expect": {
+    "problem": "invalid-package"
+  },
+  "id": "resolve/invalid-module",
+  "input": {
+    "course": "course",
+    "store": "store"
+  },
+  "kind": "resolve",
+  "spec": [
+    "§10.1"
+  ]
+}

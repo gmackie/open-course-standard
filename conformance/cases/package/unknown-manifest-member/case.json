@@ -1,0 +1,15 @@
+{
+  "description": "An install script in the manifest.",
+  "expect": {
+    "problem": "invalid-package",
+    "valid": false
+  },
+  "id": "package/unknown-manifest-member",
+  "input": {
+    "package": "package"
+  },
+  "kind": "package",
+  "spec": [
+    "§3.1"
+  ]
+}

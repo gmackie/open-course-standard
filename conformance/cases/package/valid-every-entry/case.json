@@ -1,0 +1,16 @@
+{
+  "description": "Every entry form: activity roles, a gadget-blueprint resource, all Codex note kinds, unit standards and summaries, subject and grade band, and a module with a rights cap and a digest pin.",
+  "expect": {
+    "digest": "sha256:c9ad87cf734757d0cd6fa7b06cdce1008d83eac26f2b5b5f02ea7a30256cb7e6",
+    "valid": true
+  },
+  "id": "package/valid-every-entry",
+  "input": {
+    "package": "package"
+  },
+  "kind": "package",
+  "spec": [
+    "§6",
+    "§7"
+  ]
+}

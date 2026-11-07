@@ -1,0 +1,18 @@
+{
+  "description": "Signed by a key the destination did not approve.",
+  "expect": {
+    "accepted": false,
+    "reason": "unknown-publisher"
+  },
+  "id": "bundle/unapproved-key",
+  "input": {
+    "at": "2026-11-07T00:00:00Z",
+    "bundle": "bundle.json",
+    "trust": "trust.json"
+  },
+  "kind": "bundle",
+  "spec": [
+    "§15.3",
+    "§16"
+  ]
+}

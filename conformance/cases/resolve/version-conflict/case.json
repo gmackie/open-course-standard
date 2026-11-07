@@ -1,0 +1,15 @@
+{
+  "description": "The course needs lab-safety ^1.2.0 but cells needs ~1.1.0: no version fits both.",
+  "expect": {
+    "problem": "version-conflict"
+  },
+  "id": "resolve/version-conflict",
+  "input": {
+    "course": "course",
+    "store": "store"
+  },
+  "kind": "resolve",
+  "spec": [
+    "§10.2"
+  ]
+}

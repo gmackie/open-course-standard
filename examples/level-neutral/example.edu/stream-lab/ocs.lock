@@ -1,0 +1,11 @@
+{
+  "lockVersion": 1,
+  "packages": [],
+  "root": {
+    "digest": "sha256:b48b9eef289d0c0ce5d82e2c99b36be3da45b80260776f9c6a3aa9dea9eb8f6e",
+    "id": "example.edu/stream-lab",
+    "modules": [],
+    "version": "1.0.0"
+  },
+  "specVersion": "1.0"
+}

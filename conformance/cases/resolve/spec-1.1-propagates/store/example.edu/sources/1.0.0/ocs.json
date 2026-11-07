@@ -1,0 +1,16 @@
+{
+  "id": "example.edu/sources",
+  "language": "en",
+  "modules": [],
+  "outline": [
+    {
+      "kind": "unit",
+      "unit": "letters"
+    }
+  ],
+  "overrides": [],
+  "specVersion": "1.1",
+  "standards": [],
+  "title": "Course example.edu/sources",
+  "version": "1.0.0"
+}

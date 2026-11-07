@@ -1,0 +1,15 @@
+{
+  "description": "A course with an empty outline.",
+  "expect": {
+    "problem": "invalid-package",
+    "valid": false
+  },
+  "id": "package/empty-outline",
+  "input": {
+    "package": "package"
+  },
+  "kind": "package",
+  "spec": [
+    "§6.3"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "description": "The module is not signed.",
+  "expect": {
+    "accepted": false,
+    "reason": "unsigned"
+  },
+  "id": "bundle/unsigned",
+  "input": {
+    "at": "2026-11-07T00:00:00Z",
+    "bundle": "bundle.json",
+    "trust": "trust.json"
+  },
+  "kind": "bundle",
+  "spec": [
+    "§15.3",
+    "§16"
+  ]
+}

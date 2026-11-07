@@ -1,0 +1,15 @@
+{
+  "description": "A declared module that is not placed in the outline.",
+  "expect": {
+    "problem": "invalid-package",
+    "valid": false
+  },
+  "id": "package/module-not-in-outline",
+  "input": {
+    "package": "package"
+  },
+  "kind": "package",
+  "spec": [
+    "§6.3"
+  ]
+}

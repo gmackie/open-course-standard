@@ -1,0 +1,35 @@
+{
+  "lockVersion": 1,
+  "packages": [
+    {
+      "digest": "sha256:b48b9eef289d0c0ce5d82e2c99b36be3da45b80260776f9c6a3aa9dea9eb8f6e",
+      "id": "example.edu/stream-lab",
+      "modules": [],
+      "version": "1.0.0"
+    },
+    {
+      "digest": "sha256:866c5f0763988af48b3587592affe49677700f7df1b4e7bb79d4d98a5facee23",
+      "id": "example.org/watershed-codex",
+      "modules": [],
+      "version": "1.0.0"
+    }
+  ],
+  "root": {
+    "digest": "sha256:e35112b03afb48a52430645d6bfe27cf31f3d325eb126bcd6eb478b69c5e01ae",
+    "id": "example.org/watershed-science",
+    "modules": [
+      {
+        "name": "codex",
+        "package": "example.org/watershed-codex",
+        "version": "1.0.0"
+      },
+      {
+        "name": "field",
+        "package": "example.edu/stream-lab",
+        "version": "1.0.0"
+      }
+    ],
+    "version": "1.0.0"
+  },
+  "specVersion": "1.0"
+}

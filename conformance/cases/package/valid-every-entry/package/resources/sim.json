@@ -1,0 +1,11 @@
+{
+  "id": "sim",
+  "kind": "gadget-blueprint",
+  "release": {
+    "resourceId": "rsc_sim",
+    "version": "1.0.0"
+  },
+  "releaseCommit": "0123456789abcdef0123456789abcdef01234567",
+  "title": "Membrane simulator",
+  "use": "link"
+}

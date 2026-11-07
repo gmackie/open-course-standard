@@ -1,0 +1,15 @@
+{
+  "description": "A module that no source has published.",
+  "expect": {
+    "problem": "unknown-package"
+  },
+  "id": "resolve/unknown-package",
+  "input": {
+    "course": "course",
+    "store": "store"
+  },
+  "kind": "resolve",
+  "spec": [
+    "§10.2"
+  ]
+}

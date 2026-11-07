@@ -1,0 +1,18 @@
+{
+  "description": "A package publication signed in the legacy context, which verifiers accept.",
+  "expect": {
+    "ok": true,
+    "signed": true
+  },
+  "id": "publication/package-legacy-context",
+  "input": {
+    "at": "2026-11-07T00:00:00Z",
+    "envelope": "envelope.json",
+    "package": "package",
+    "trust": "trust.json"
+  },
+  "kind": "publication",
+  "spec": [
+    "§15"
+  ]
+}

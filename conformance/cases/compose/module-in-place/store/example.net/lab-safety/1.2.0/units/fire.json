@@ -1,0 +1,11 @@
+{
+  "id": "fire",
+  "items": [
+    {
+      "kind": "resource",
+      "ref": "fire-sheet"
+    }
+  ],
+  "standards": [],
+  "title": "lab-safety fire"
+}

@@ -1,0 +1,7 @@
+{
+  "body": "Check water levels and weather before every visit, and keep the provided dataset ready as an alternative. Calibrate the turbidity meter against standards before and after the session and keep the log.",
+  "id": "safety-and-calibration",
+  "purpose": "context",
+  "title": "Safety and calibration notes for instructors",
+  "visibility": "teacher-only"
+}

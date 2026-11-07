@@ -1,0 +1,16 @@
+{
+  "id": "example.org/minimal",
+  "language": "en",
+  "modules": [],
+  "outline": [
+    {
+      "kind": "unit",
+      "unit": "start"
+    }
+  ],
+  "overrides": [],
+  "specVersion": "1.2",
+  "standards": [],
+  "title": "Course example.org/minimal",
+  "version": "1.0.0"
+}

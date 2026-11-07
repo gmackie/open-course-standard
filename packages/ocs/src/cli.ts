@@ -12,6 +12,7 @@ import { resolveActivityExports } from "./install-plan.ts";
 import { formatJson } from "./json.ts";
 import { keyIdFor } from "./keys.ts";
 import { InMemoryPackageLibrary } from "./library.ts";
+import { type ConformanceRequest, runConformanceCase } from "./node/conformance.ts";
 import { DirectoryStore, isPackageDirectory, readPackageDirectory } from "./node/store.ts";
 import { writeZip } from "./node/zip.ts";
 import { LOCK_PATH, type OcsPackage, readPackage } from "./package.ts";
@@ -45,6 +46,9 @@ Usage:
   ocs export-thin-cc <package-dir> --out <file.imscc | dir> [--locators <file.json>]
       Export the package's own units as a Thin Common Cartridge 1.3. --locators maps resource
       release IDs ("rsc_x" or "rsc_x@1.0.0") to public URLs.
+
+  ocs conformance-adapter
+      Answer one conformance suite request (JSON on stdin) for conformance/run.mjs.
 
 Trust files are publisher key documents ({ "domain", "keys" }) or trust configurations
 ({ "localDomains", "publishers" }). Exit status: 0 on success, 1 on a failed check, 2 on misuse.`;
@@ -301,6 +305,14 @@ async function main(argv: readonly string[]): Promise<number> {
   }
   if (command === "--version" || command === "-v") {
     process.stdout.write(`${VERSION}\n`);
+    return 0;
+  }
+  if (command === "conformance-adapter") {
+    // The conformance runner's protocol (conformance/README.md): one request on stdin, one response on stdout.
+    const chunks: Buffer[] = [];
+    for await (const chunk of process.stdin) chunks.push(chunk as Buffer);
+    const request = JSON.parse(Buffer.concat(chunks).toString("utf8")) as ConformanceRequest;
+    process.stdout.write(`${JSON.stringify(await runConformanceCase(request))}\n`);
     return 0;
   }
   const { values, positionals } = parseArgs({

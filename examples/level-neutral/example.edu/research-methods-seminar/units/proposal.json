@@ -1,0 +1,15 @@
+{
+  "id": "proposal",
+  "items": [
+    {
+      "kind": "codex",
+      "ref": "proposal-brief"
+    },
+    {
+      "kind": "codex",
+      "ref": "examiner-notes"
+    }
+  ],
+  "standards": [],
+  "title": "A defensible research proposal"
+}

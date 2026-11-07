@@ -1,0 +1,15 @@
+{
+  "description": "A reorder listing an item the unit does not have.",
+  "expect": {
+    "problem": "invalid-change"
+  },
+  "id": "compose/reorder-unknown-item",
+  "input": {
+    "course": "course",
+    "store": "store"
+  },
+  "kind": "compose",
+  "spec": [
+    "§12.3"
+  ]
+}

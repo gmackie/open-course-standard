@@ -1,0 +1,21 @@
+{
+  "id": "example.edu/research-methods-seminar",
+  "language": "en-US",
+  "modules": [],
+  "outline": [
+    {
+      "kind": "unit",
+      "unit": "critiquing-methods"
+    },
+    {
+      "kind": "unit",
+      "unit": "proposal"
+    }
+  ],
+  "overrides": [],
+  "specVersion": "1.0",
+  "standards": [],
+  "summary": "A graduate research seminar without exams or letter grades. Work is reviewed by an examiner, not scored.",
+  "title": "Research Methods Seminar",
+  "version": "1.0.0"
+}

@@ -1,0 +1,16 @@
+{
+  "description": "A 1.1 package whose activity is a portable reference.",
+  "expect": {
+    "digest": "sha256:9adf86dd1d293583e8b967bc03480a0883f9e44ba0ac91df191e2c0cea670e7a",
+    "valid": true
+  },
+  "id": "package/valid-portable-1.1",
+  "input": {
+    "package": "package"
+  },
+  "kind": "package",
+  "spec": [
+    "§8",
+    "§14.1"
+  ]
+}

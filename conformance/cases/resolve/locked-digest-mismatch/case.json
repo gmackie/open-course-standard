@@ -1,0 +1,16 @@
+{
+  "description": "The locked version's content changed after it was locked.",
+  "expect": {
+    "problem": "digest-mismatch"
+  },
+  "id": "resolve/locked-digest-mismatch",
+  "input": {
+    "course": "course",
+    "lock": "previous.lock",
+    "store": "store"
+  },
+  "kind": "resolve",
+  "spec": [
+    "§10.1"
+  ]
+}

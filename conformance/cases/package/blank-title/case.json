@@ -1,0 +1,15 @@
+{
+  "description": "A title that is only white space.",
+  "expect": {
+    "problem": "invalid-package",
+    "valid": false
+  },
+  "id": "package/blank-title",
+  "input": {
+    "package": "package"
+  },
+  "kind": "package",
+  "spec": [
+    "§3.2"
+  ]
+}

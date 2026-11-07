@@ -1,0 +1,15 @@
+{
+  "description": "A package ID without a publisher domain.",
+  "expect": {
+    "problem": "invalid-package",
+    "valid": false
+  },
+  "id": "package/bad-package-id",
+  "input": {
+    "package": "package"
+  },
+  "kind": "package",
+  "spec": [
+    "§4.1"
+  ]
+}

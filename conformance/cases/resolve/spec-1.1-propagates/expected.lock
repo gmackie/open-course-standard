@@ -1,0 +1,24 @@
+{
+  "lockVersion": 1,
+  "packages": [
+    {
+      "digest": "sha256:c3e41ff4dbdcd0f9009969fd84457005bf872c1f819fa6871542fbc909db5ed8",
+      "id": "example.edu/sources",
+      "modules": [],
+      "version": "1.0.0"
+    }
+  ],
+  "root": {
+    "digest": "sha256:91b7da4d52e00c2de309641ae113754e21fb55b06801e57303ecfbe069db9448",
+    "id": "example.org/course",
+    "modules": [
+      {
+        "name": "sources",
+        "package": "example.edu/sources",
+        "version": "1.0.0"
+      }
+    ],
+    "version": "1.0.0"
+  },
+  "specVersion": "1.1"
+}

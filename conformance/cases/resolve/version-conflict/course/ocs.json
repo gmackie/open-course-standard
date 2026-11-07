@@ -1,0 +1,35 @@
+{
+  "id": "example.org/course",
+  "language": "en",
+  "modules": [
+    {
+      "name": "cells",
+      "package": "example.com/cells-core",
+      "range": "^2.0.0"
+    },
+    {
+      "name": "safety",
+      "package": "example.net/lab-safety",
+      "range": "^1.2.0"
+    }
+  ],
+  "outline": [
+    {
+      "kind": "unit",
+      "unit": "intro"
+    },
+    {
+      "kind": "module",
+      "module": "cells"
+    },
+    {
+      "kind": "module",
+      "module": "safety"
+    }
+  ],
+  "overrides": [],
+  "specVersion": "1.0",
+  "standards": [],
+  "title": "Course example.org/course",
+  "version": "1.0.0"
+}

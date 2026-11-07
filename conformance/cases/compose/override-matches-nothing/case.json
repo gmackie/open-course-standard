@@ -1,0 +1,15 @@
+{
+  "description": "An override naming a unit the module no longer has.",
+  "expect": {
+    "problem": "invalid-change"
+  },
+  "id": "compose/override-matches-nothing",
+  "input": {
+    "course": "course",
+    "store": "store"
+  },
+  "kind": "compose",
+  "spec": [
+    "§12.3"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "example.edu/intro-hydrology-lab",
+  "language": "en-US",
+  "modules": [],
+  "outline": [
+    {
+      "kind": "unit",
+      "unit": "stream-investigation"
+    }
+  ],
+  "overrides": [],
+  "specVersion": "1.0",
+  "standards": [],
+  "summary": "Undergraduate fieldwork and reproducible measurement. It needs no grade band: the course is valid without one.",
+  "title": "Introductory Hydrology Laboratory",
+  "version": "1.0.0"
+}

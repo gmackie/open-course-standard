@@ -1,0 +1,16 @@
+{
+  "description": "With a lockfile at 1.0.0, a published 1.2.3 is not picked up: a locked version is kept while it fits.",
+  "expect": {
+    "lock": "expected.lock"
+  },
+  "id": "resolve/locked-version-kept",
+  "input": {
+    "course": "course",
+    "lock": "previous.lock",
+    "store": "store"
+  },
+  "kind": "resolve",
+  "spec": [
+    "§10.3"
+  ]
+}

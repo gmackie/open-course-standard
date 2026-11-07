@@ -1,0 +1,15 @@
+{
+  "description": "An exact version selects that version.",
+  "expect": {
+    "lock": "expected.lock"
+  },
+  "id": "resolve/exact-version",
+  "input": {
+    "course": "course",
+    "store": "store"
+  },
+  "kind": "resolve",
+  "spec": [
+    "§4.4"
+  ]
+}

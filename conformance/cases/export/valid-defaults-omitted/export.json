@@ -1,0 +1,30 @@
+{
+  "activity": {
+    "aiHelp": "hints-only",
+    "due": {
+      "days": 7,
+      "kind": "after-install"
+    },
+    "gradeBand": "3-5",
+    "overview": "Listen to a short poem and talk about one image in it.",
+    "passage": "The fog comes on little cat feet.",
+    "questions": [
+      {
+        "prompt": "What animal does the fog move like?"
+      }
+    ],
+    "subject": "english-language-arts",
+    "template": "read-and-respond",
+    "title": "An image in a poem"
+  },
+  "alignments": [
+    {
+      "competencyUri": "https://standards.example.org/competency/42",
+      "frameworkKey": "example-framework"
+    }
+  ],
+  "id": "example.org/poem-image",
+  "language": "en",
+  "specVersion": "1.1",
+  "version": "1.0.0"
+}

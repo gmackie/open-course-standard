@@ -1,0 +1,15 @@
+{
+  "description": "A file over 262,144 bytes.",
+  "expect": {
+    "problem": "invalid-package",
+    "valid": false
+  },
+  "id": "package/file-too-large",
+  "input": {
+    "package": "package"
+  },
+  "kind": "package",
+  "spec": [
+    "§5"
+  ]
+}

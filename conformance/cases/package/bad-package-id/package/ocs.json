@@ -1,0 +1,16 @@
+{
+  "id": "biology-9",
+  "language": "en",
+  "modules": [],
+  "outline": [
+    {
+      "kind": "unit",
+      "unit": "start"
+    }
+  ],
+  "overrides": [],
+  "specVersion": "1.0",
+  "standards": [],
+  "title": "Course biology-9",
+  "version": "1.0.0"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "diagram",
+  "kind": "release",
+  "release": {
+    "resourceId": "rsc_diagram",
+    "version": "1.0.0"
+  },
+  "title": "Resource diagram",
+  "use": "excerpt"
+}

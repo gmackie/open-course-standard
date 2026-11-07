@@ -1,0 +1,11 @@
+{
+  "lockVersion": 1,
+  "packages": [],
+  "root": {
+    "digest": "sha256:5267bd777dfc55e1f9fe4f033aeeb04521414846e665cc583ec672a8cb09d517",
+    "id": "example.org/biology-foundations",
+    "modules": [],
+    "version": "1.0.0"
+  },
+  "specVersion": "1.1"
+}

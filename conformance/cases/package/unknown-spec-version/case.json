@@ -1,0 +1,15 @@
+{
+  "description": "A specVersion this version does not define.",
+  "expect": {
+    "problem": "invalid-package",
+    "valid": false
+  },
+  "id": "package/unknown-spec-version",
+  "input": {
+    "package": "package"
+  },
+  "kind": "package",
+  "spec": [
+    "§8"
+  ]
+}

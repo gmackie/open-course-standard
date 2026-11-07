@@ -1,0 +1,16 @@
+{
+  "description": "A problem with an answer: answers belong in teacher-only notes.",
+  "expect": {
+    "problem": "invalid-export",
+    "valid": false
+  },
+  "id": "export/answer-in-problem-set",
+  "input": {
+    "export": "export.json"
+  },
+  "kind": "export",
+  "spec": [
+    "§14.2",
+    "§14.4"
+  ]
+}

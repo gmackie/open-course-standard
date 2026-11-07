@@ -1,0 +1,461 @@
+{
+  "cases": [
+    {
+      "description": "A one-unit course with a note, a district-local activity and a resource.",
+      "id": "package/valid-minimal",
+      "kind": "package"
+    },
+    {
+      "description": "The same files as valid-minimal, minified with members reversed: the digest must equal valid-minimal's.",
+      "id": "package/digest-ignores-formatting",
+      "kind": "package"
+    },
+    {
+      "description": "valid-minimal with an ocs.lock: the lockfile is not part of the digest, so the digest must equal valid-minimal's.",
+      "id": "package/digest-ignores-lockfile",
+      "kind": "package"
+    },
+    {
+      "description": "valid-minimal with one note's body changed: the digest must differ from valid-minimal's.",
+      "id": "package/digest-follows-content",
+      "kind": "package"
+    },
+    {
+      "description": "Every entry form: activity roles, a gadget-blueprint resource, all Codex note kinds, unit standards and summaries, subject and grade band, and a module with a rights cap and a digest pin.",
+      "id": "package/valid-every-entry",
+      "kind": "package"
+    },
+    {
+      "description": "A 1.1 package whose activity is a portable reference.",
+      "id": "package/valid-portable-1.1",
+      "kind": "package"
+    },
+    {
+      "description": "Ordinary text with < and > is plain text.",
+      "id": "package/valid-plain-text-comparisons",
+      "kind": "package"
+    },
+    {
+      "description": "A package with no ocs.json.",
+      "id": "package/missing-manifest",
+      "kind": "package"
+    },
+    {
+      "description": "A script beside the data files.",
+      "id": "package/stray-script",
+      "kind": "package"
+    },
+    {
+      "description": "A package.json beside the data files.",
+      "id": "package/stray-package-json",
+      "kind": "package"
+    },
+    {
+      "description": "An entry in a nested directory.",
+      "id": "package/nested-entry-path",
+      "kind": "package"
+    },
+    {
+      "description": "An entry that is not JSON.",
+      "id": "package/entry-not-json",
+      "kind": "package"
+    },
+    {
+      "description": "A file over 262,144 bytes.",
+      "id": "package/file-too-large",
+      "kind": "package"
+    },
+    {
+      "description": "An install script in the manifest.",
+      "id": "package/unknown-manifest-member",
+      "kind": "package"
+    },
+    {
+      "description": "An unknown member in a unit.",
+      "id": "package/unknown-unit-member",
+      "kind": "package"
+    },
+    {
+      "description": "A unit title holding a script tag.",
+      "id": "package/active-content-script",
+      "kind": "package"
+    },
+    {
+      "description": "A note body holding a javascript: URL.",
+      "id": "package/active-content-javascript-url",
+      "kind": "package"
+    },
+    {
+      "description": "A resource title holding an SVG tag.",
+      "id": "package/active-content-svg",
+      "kind": "package"
+    },
+    {
+      "description": "A title that is only white space.",
+      "id": "package/blank-title",
+      "kind": "package"
+    },
+    {
+      "description": "An entry whose id differs from its file name.",
+      "id": "package/id-file-name-mismatch",
+      "kind": "package"
+    },
+    {
+      "description": "A unit item naming an activity that does not exist.",
+      "id": "package/dangling-unit-item",
+      "kind": "package"
+    },
+    {
+      "description": "The same item twice in one unit.",
+      "id": "package/duplicate-unit-item",
+      "kind": "package"
+    },
+    {
+      "description": "An answer key visible to students.",
+      "id": "package/answer-key-for-students",
+      "kind": "package"
+    },
+    {
+      "description": "A course with an empty outline.",
+      "id": "package/empty-outline",
+      "kind": "package"
+    },
+    {
+      "description": "An outline naming a unit the package does not have.",
+      "id": "package/outline-unknown-unit",
+      "kind": "package"
+    },
+    {
+      "description": "A declared module that is not placed in the outline.",
+      "id": "package/module-not-in-outline",
+      "kind": "package"
+    },
+    {
+      "description": "The same package included twice.",
+      "id": "package/module-package-twice",
+      "kind": "package"
+    },
+    {
+      "description": "A unit and a module with the same name.",
+      "id": "package/unit-and-module-same-name",
+      "kind": "package"
+    },
+    {
+      "description": "A module digest pin on a range that is not exact.",
+      "id": "package/digest-pin-on-range",
+      "kind": "package"
+    },
+    {
+      "description": "An override whose first module is not declared.",
+      "id": "package/override-unknown-module",
+      "kind": "package"
+    },
+    {
+      "description": "A portable activity in a package that declares 1.0.",
+      "id": "package/portable-in-1.0",
+      "kind": "package"
+    },
+    {
+      "description": "A specVersion this version does not define.",
+      "id": "package/unknown-spec-version",
+      "kind": "package"
+    },
+    {
+      "description": "A package ID without a publisher domain.",
+      "id": "package/bad-package-id",
+      "kind": "package"
+    },
+    {
+      "description": "A two-part version.",
+      "id": "package/bad-version",
+      "kind": "package"
+    },
+    {
+      "description": "A pre-release version, which 1.1 does not allow.",
+      "id": "package/prerelease-version",
+      "kind": "package"
+    },
+    {
+      "description": "A module range with a wildcard.",
+      "id": "package/bad-range",
+      "kind": "package"
+    },
+    {
+      "description": "A module range with ||.",
+      "id": "package/or-range",
+      "kind": "package"
+    },
+    {
+      "description": "A read-and-respond export with a reading, a rubric and an alignment.",
+      "id": "export/valid-read-and-respond",
+      "kind": "export"
+    },
+    {
+      "description": "An export that leaves every defaulted member out. The digest covers the file as written.",
+      "id": "export/valid-defaults-omitted",
+      "kind": "export"
+    },
+    {
+      "description": "A writing task with every optional member.",
+      "id": "export/valid-every-template",
+      "kind": "export"
+    },
+    {
+      "description": "A primary-source analysis naming its readings as sources.",
+      "id": "export/valid-primary-source",
+      "kind": "export"
+    },
+    {
+      "description": "valid-read-and-respond, minified: the digest must equal valid-read-and-respond's.",
+      "id": "export/digest-ignores-formatting",
+      "kind": "export"
+    },
+    {
+      "description": "A problem with an answer: answers belong in teacher-only notes.",
+      "id": "export/answer-in-problem-set",
+      "kind": "export"
+    },
+    {
+      "description": "A fixed due date.",
+      "id": "export/fixed-due-date",
+      "kind": "export"
+    },
+    {
+      "description": "An activity naming a reading the export does not have.",
+      "id": "export/unknown-reading",
+      "kind": "export"
+    },
+    {
+      "description": "A question holding an iframe.",
+      "id": "export/active-content",
+      "kind": "export"
+    },
+    {
+      "description": "Rubric levels not listed lowest first.",
+      "id": "export/rubric-levels-descending",
+      "kind": "export"
+    },
+    {
+      "description": "An export that declares 1.0.",
+      "id": "export/spec-version-1.0",
+      "kind": "export"
+    },
+    {
+      "description": "An export carrying a district scope.",
+      "id": "export/district-local-scope",
+      "kind": "export"
+    },
+    {
+      "description": "The same alignment twice.",
+      "id": "export/duplicate-alignment",
+      "kind": "export"
+    },
+    {
+      "description": "^1.0.0 selects the highest 1.x version, 1.2.3.",
+      "id": "resolve/highest-compatible",
+      "kind": "resolve"
+    },
+    {
+      "description": "~1.1.0 selects 1.1.0, not 1.2.3.",
+      "id": "resolve/tilde-range",
+      "kind": "resolve"
+    },
+    {
+      "description": ">=1.1.0 <2.0.0 selects 1.2.3.",
+      "id": "resolve/comparison-range",
+      "kind": "resolve"
+    },
+    {
+      "description": "An exact version selects that version.",
+      "id": "resolve/exact-version",
+      "kind": "resolve"
+    },
+    {
+      "description": "^0.2.0 does not accept 0.3.0.",
+      "id": "resolve/zero-major-caret",
+      "kind": "resolve"
+    },
+    {
+      "description": "With a lockfile at 1.0.0, a published 1.2.3 is not picked up: a locked version is kept while it fits.",
+      "id": "resolve/locked-version-kept",
+      "kind": "resolve"
+    },
+    {
+      "description": "The course now needs ^1.1.0, so the locked 1.0.0 is replaced by the highest fitting version.",
+      "id": "resolve/locked-version-no-longer-fits",
+      "kind": "resolve"
+    },
+    {
+      "description": "The locked version's content changed after it was locked.",
+      "id": "resolve/locked-digest-mismatch",
+      "kind": "resolve"
+    },
+    {
+      "description": "The course and a module both include lab-safety; the whole course gets one version that satisfies both (1.1.4).",
+      "id": "resolve/diamond-one-version",
+      "kind": "resolve"
+    },
+    {
+      "description": "The course needs lab-safety ^1.2.0 but cells needs ~1.1.0: no version fits both.",
+      "id": "resolve/version-conflict",
+      "kind": "resolve"
+    },
+    {
+      "description": "A module that no source has published.",
+      "id": "resolve/unknown-package",
+      "kind": "resolve"
+    },
+    {
+      "description": "Only 2.0.0 is published, the course needs ^1.0.0.",
+      "id": "resolve/no-fitting-version",
+      "kind": "resolve"
+    },
+    {
+      "description": "Two modules include each other.",
+      "id": "resolve/cycle",
+      "kind": "resolve"
+    },
+    {
+      "description": "A module that includes the course.",
+      "id": "resolve/includes-the-course",
+      "kind": "resolve"
+    },
+    {
+      "description": "An exact module pinned by the right digest.",
+      "id": "resolve/digest-pin-matches",
+      "kind": "resolve"
+    },
+    {
+      "description": "An exact module pinned by another digest.",
+      "id": "resolve/digest-pin-mismatch",
+      "kind": "resolve"
+    },
+    {
+      "description": "A tampered mirror: the source's recorded digest is not the digest of what it serves.",
+      "id": "resolve/published-digest-mismatch",
+      "kind": "resolve"
+    },
+    {
+      "description": "The source serves another package under lab-safety 1.0.0.",
+      "id": "resolve/identity-mismatch",
+      "kind": "resolve"
+    },
+    {
+      "description": "A module whose files are not a valid package.",
+      "id": "resolve/invalid-module",
+      "kind": "resolve"
+    },
+    {
+      "description": "A 1.0 course that includes a 1.1 module gets a 1.1 lockfile.",
+      "id": "resolve/spec-1.1-propagates",
+      "kind": "resolve"
+    },
+    {
+      "description": "A course of 1.0 packages gets a 1.0 lockfile.",
+      "id": "resolve/spec-1.0-stays",
+      "kind": "resolve"
+    },
+    {
+      "description": "resolve/highest-compatible with every store file minified and reordered: the lockfile must be byte-identical.",
+      "id": "resolve/determinism-reformatted-store",
+      "kind": "resolve"
+    },
+    {
+      "description": "A module's units appear where the module is placed, after the course's own unit, with provenance.",
+      "id": "compose/module-in-place",
+      "kind": "compose"
+    },
+    {
+      "description": "Hide a unit and an item, rename a unit and an item, reorder a module's units.",
+      "id": "compose/overrides",
+      "kind": "compose"
+    },
+    {
+      "description": "An override naming a unit the module no longer has.",
+      "id": "compose/override-matches-nothing",
+      "kind": "compose"
+    },
+    {
+      "description": "A reorder listing an item the unit does not have.",
+      "id": "compose/reorder-unknown-item",
+      "kind": "compose"
+    },
+    {
+      "description": "A module's overrides apply first and the course's last; rights caps narrow the use along the path; standards are collected once each.",
+      "id": "compose/nested-overrides-and-rights",
+      "kind": "compose"
+    },
+    {
+      "description": "Two modules include the same safety unit: it appears once, at its first position, and the second is reported as repeated.",
+      "id": "compose/repeated-shared-unit",
+      "kind": "compose"
+    },
+    {
+      "description": "Every package and export signed by the publisher's approved key.",
+      "id": "bundle/valid-signed",
+      "kind": "bundle"
+    },
+    {
+      "description": "The module is not signed.",
+      "id": "bundle/unsigned",
+      "kind": "bundle"
+    },
+    {
+      "description": "Nothing needs a signature from the destination's own domain.",
+      "id": "bundle/local-domain-unsigned",
+      "kind": "bundle"
+    },
+    {
+      "description": "Signed by a key the destination did not approve.",
+      "id": "bundle/unapproved-key",
+      "kind": "bundle"
+    },
+    {
+      "description": "Signed by a key that retired before the verification time.",
+      "id": "bundle/retired-key",
+      "kind": "bundle"
+    },
+    {
+      "description": "The module's signature is for other content.",
+      "id": "bundle/signature-for-other-content",
+      "kind": "bundle"
+    },
+    {
+      "description": "A bundled file changed after the bundle was made, so it no longer matches its recorded digest.",
+      "id": "bundle/tampered-part",
+      "kind": "bundle"
+    },
+    {
+      "description": "A package publication signed by the approved key.",
+      "id": "publication/package-signed",
+      "kind": "publication"
+    },
+    {
+      "description": "A package publication signed in the legacy context, which verifiers accept.",
+      "id": "publication/package-legacy-context",
+      "kind": "publication"
+    },
+    {
+      "description": "An export publication signature offered for a package with the same ID, version and digest: the contexts differ.",
+      "id": "publication/export-signature-as-package",
+      "kind": "publication"
+    },
+    {
+      "description": "An export publication signed by the approved key.",
+      "id": "publication/export-signed",
+      "kind": "publication"
+    },
+    {
+      "description": "The same statement signed in another protocol's context.",
+      "id": "publication/other-protocol-context",
+      "kind": "publication"
+    },
+    {
+      "description": "A signed statement edited after signing.",
+      "id": "publication/tampered-statement",
+      "kind": "publication"
+    }
+  ],
+  "suite": "OCS 1.1 conformance",
+  "version": "1.1.0"
+}

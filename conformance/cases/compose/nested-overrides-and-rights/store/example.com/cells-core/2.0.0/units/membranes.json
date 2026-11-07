@@ -1,0 +1,20 @@
+{
+  "id": "membranes",
+  "items": [
+    {
+      "kind": "resource",
+      "ref": "diagram"
+    }
+  ],
+  "standards": [
+    {
+      "competencyUri": "https://standards.example.org/competency/42",
+      "frameworkKey": "example-framework"
+    },
+    {
+      "competencyUri": "https://standards.example.org/competency/43",
+      "frameworkKey": "example-framework"
+    }
+  ],
+  "title": "Membranes"
+}

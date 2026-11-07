@@ -1,0 +1,15 @@
+{
+  "description": "An entry in a nested directory.",
+  "expect": {
+    "problem": "invalid-package",
+    "valid": false
+  },
+  "id": "package/nested-entry-path",
+  "input": {
+    "package": "package"
+  },
+  "kind": "package",
+  "spec": [
+    "§5"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "description": "Only 2.0.0 is published, the course needs ^1.0.0.",
+  "expect": {
+    "problem": "version-conflict"
+  },
+  "id": "resolve/no-fitting-version",
+  "input": {
+    "course": "course",
+    "store": "store"
+  },
+  "kind": "resolve",
+  "spec": [
+    "§10.2"
+  ]
+}

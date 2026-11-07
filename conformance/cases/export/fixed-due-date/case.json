@@ -1,0 +1,15 @@
+{
+  "description": "A fixed due date.",
+  "expect": {
+    "problem": "invalid-export",
+    "valid": false
+  },
+  "id": "export/fixed-due-date",
+  "input": {
+    "export": "export.json"
+  },
+  "kind": "export",
+  "spec": [
+    "§14.4"
+  ]
+}

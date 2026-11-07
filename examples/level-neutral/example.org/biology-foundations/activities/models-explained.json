@@ -1,0 +1,12 @@
+{
+  "definition": {
+    "portable": {
+      "digest": "sha256:bbe64d621c36ed1932d40214df5878d5550d7032b37db31bcbee47b4b5d10d2b",
+      "id": "example.org/biology-foundations-cell-division-models",
+      "version": "1.0.0"
+    }
+  },
+  "id": "models-explained",
+  "role": "assessment",
+  "title": "Explaining models of cell division"
+}

@@ -1,0 +1,10 @@
+{
+  "keyId": "ed25519-yAlRsGEEG0oRLVQgGasc-cwZV6fXkx8094abp3mBPC0",
+  "payload": {
+    "digest": "sha256:f5f764c93de7f9a0065fd21db62a22e1efd70a3912a3ce91c7b4edf8609b4f99",
+    "exportId": "example.net/poem-image",
+    "publishedAt": "2026-11-01T00:00:00Z",
+    "version": "1.0.0"
+  },
+  "signature": "7T235w7sIJaE92IN4LZBsgKzW4T_IyWibFLv99oWbdw9nYH0mn_l7LDXZ06riEzsAjH1EdJsxr402jxb74C8DQ"
+}

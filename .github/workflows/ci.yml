@@ -28,8 +28,20 @@ jobs:
           node-version: ${{ matrix.node }}
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - name: Docs, schemas, typecheck, tests and build
-        run: pnpm check
+      - name: Docs and generated schemas
+        run: pnpm check:docs && pnpm check:schemas
+      - name: Typecheck
+        run: pnpm typecheck
+      - name: Unit tests
+        run: pnpm test
+      - name: Build
+        run: pnpm build
+      - name: Schema validation of examples and fixtures
+        run: pnpm check:example-schemas
+      - name: Examples validate (ocs validate)
+        run: pnpm check:examples
+      - name: Conformance suite (reference implementation)
+        run: pnpm conformance
 
   node20:
     name: runtime (Node 20)
@@ -48,5 +60,7 @@ jobs:
           node-version: 20
       - name: Library smoke test on Node 20
         run: node packages/ocs/scripts/smoke.mjs
-      - name: CLI on Node 20
-        run: node packages/ocs/dist/cli.js --version
+      - name: Examples validate on Node 20
+        run: node packages/ocs/dist/cli.js validate examples/level-neutral examples/educateos
+      - name: Conformance suite on Node 20
+        run: node conformance/run.mjs

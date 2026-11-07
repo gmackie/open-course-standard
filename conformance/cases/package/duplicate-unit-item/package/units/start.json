@@ -1,0 +1,15 @@
+{
+  "id": "start",
+  "items": [
+    {
+      "kind": "codex",
+      "ref": "welcome"
+    },
+    {
+      "kind": "codex",
+      "ref": "welcome"
+    }
+  ],
+  "standards": [],
+  "title": "Unit start"
+}

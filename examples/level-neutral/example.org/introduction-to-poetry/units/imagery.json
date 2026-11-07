@@ -1,0 +1,15 @@
+{
+  "id": "imagery",
+  "items": [
+    {
+      "kind": "codex",
+      "ref": "read-a-poem"
+    },
+    {
+      "kind": "codex",
+      "ref": "facilitator-notes"
+    }
+  ],
+  "standards": [],
+  "title": "Poetry, imagery and interpretation"
+}

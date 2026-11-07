@@ -1,0 +1,89 @@
+{
+  "hidden": [],
+  "packageId": "example.org/course",
+  "repeated": [],
+  "standards": [
+    {
+      "competencyUri": "https://standards.example.org/competency/42",
+      "frameworkKey": "example-framework"
+    },
+    {
+      "competencyUri": "https://standards.example.org/competency/43",
+      "frameworkKey": "example-framework"
+    }
+  ],
+  "units": [
+    {
+      "items": [
+        {
+          "key": "intro#welcome",
+          "kind": "codex",
+          "renamed": false,
+          "title": "Note welcome"
+        }
+      ],
+      "key": "intro",
+      "provenance": {
+        "digest": "sha256:56b1878ef91a214c84c991741ba2a62ce004e4d02052d5ba139d542fc37a30a3",
+        "modules": [],
+        "packageId": "example.org/course",
+        "version": "1.0.0"
+      },
+      "renamed": false,
+      "title": "Unit intro"
+    },
+    {
+      "items": [
+        {
+          "key": "cells/safety:rules#poster",
+          "kind": "resource",
+          "renamed": false,
+          "title": "Resource poster",
+          "use": "embed"
+        },
+        {
+          "key": "cells/safety:rules#video",
+          "kind": "resource",
+          "renamed": false,
+          "title": "Resource video",
+          "use": "link"
+        }
+      ],
+      "key": "cells/safety:rules",
+      "provenance": {
+        "digest": "sha256:b56ba1fa220c908e702b5ae8e11991f0a5e9a8d9214b10d014c732c80c604a01",
+        "modules": [
+          "cells",
+          "safety"
+        ],
+        "packageId": "example.net/lab-safety",
+        "version": "1.0.0"
+      },
+      "renamed": true,
+      "title": "Biology lab rules"
+    },
+    {
+      "items": [
+        {
+          "key": "cells:membranes#diagram",
+          "kind": "resource",
+          "renamed": false,
+          "title": "Resource diagram",
+          "use": "embed"
+        }
+      ],
+      "key": "cells:membranes",
+      "provenance": {
+        "digest": "sha256:f27a3e4bdd7078f3354ca9a99f9bcdbe4a6f107eb51ab516163f686d568073f0",
+        "modules": [
+          "cells"
+        ],
+        "packageId": "example.com/cells-core",
+        "version": "2.0.0"
+      },
+      "renamed": false,
+      "title": "Membranes"
+    }
+  ],
+  "version": "1.0.0"
+}

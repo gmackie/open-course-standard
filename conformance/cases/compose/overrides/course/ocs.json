@@ -1,0 +1,67 @@
+{
+  "id": "example.org/course",
+  "language": "en",
+  "modules": [
+    {
+      "name": "safety",
+      "package": "example.net/lab-safety",
+      "range": "^1.0.0"
+    }
+  ],
+  "outline": [
+    {
+      "kind": "unit",
+      "unit": "intro"
+    },
+    {
+      "kind": "module",
+      "module": "safety"
+    }
+  ],
+  "overrides": [
+    {
+      "kind": "hide",
+      "target": {
+        "modules": [
+          "safety"
+        ],
+        "unit": "fire"
+      }
+    },
+    {
+      "kind": "rename",
+      "target": {
+        "modules": [
+          "safety"
+        ],
+        "unit": "spills"
+      },
+      "title": "Cleaning up spills"
+    },
+    {
+      "kind": "reorder",
+      "order": [
+        "spills"
+      ],
+      "target": {
+        "modules": [
+          "safety"
+        ]
+      }
+    },
+    {
+      "kind": "hide",
+      "target": {
+        "item": "rules-sheet",
+        "modules": [
+          "safety"
+        ],
+        "unit": "rules"
+      }
+    }
+  ],
+  "specVersion": "1.0",
+  "standards": [],
+  "title": "Course example.org/course",
+  "version": "1.0.0"
+}

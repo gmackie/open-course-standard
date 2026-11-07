@@ -5,16 +5,16 @@ This repository holds two kinds of work under two licenses.
 
 1. Code: Apache License 2.0
    The reference implementation and command-line tool (packages/), the conformance
-   runner and its scripts (conformance/*.mjs, conformance/lib/), the repository scripts
+   runner and its tools (conformance/run.mjs, conformance/tools/), the repository scripts
    (scripts/) and the CI configuration (.github/) are licensed under the Apache License,
    Version 2.0. The full text is in LICENSES/Apache-2.0.txt.
    SPDX-License-Identifier: Apache-2.0
 
 2. Specification, schemas, fixtures and examples: Creative Commons Attribution 4.0
    The specification text (spec/), the JSON Schemas (schemas/), the conformance fixtures
-   (conformance/cases/), the examples (examples/) and the other documentation are
-   licensed under the Creative Commons Attribution 4.0 International License. The full
-   text is in LICENSES/CC-BY-4.0.txt.
+   (conformance/cases/ and conformance/keys/), the examples (examples/) and the other
+   documentation are licensed under the Creative Commons Attribution 4.0 International
+   License. The full text is in LICENSES/CC-BY-4.0.txt.
    SPDX-License-Identifier: CC-BY-4.0
 
    Attribute as: "Open Course Standard (OCS), https://github.com/gmackie/open-course-standard".

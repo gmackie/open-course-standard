@@ -1,0 +1,15 @@
+{
+  "description": "A resource title holding an SVG tag.",
+  "expect": {
+    "problem": "invalid-package",
+    "valid": false
+  },
+  "id": "package/active-content-svg",
+  "input": {
+    "package": "package"
+  },
+  "kind": "package",
+  "spec": [
+    "§3.2"
+  ]
+}

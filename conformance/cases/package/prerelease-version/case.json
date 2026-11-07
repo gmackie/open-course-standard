@@ -1,0 +1,15 @@
+{
+  "description": "A pre-release version, which 1.1 does not allow.",
+  "expect": {
+    "problem": "invalid-package",
+    "valid": false
+  },
+  "id": "package/prerelease-version",
+  "input": {
+    "package": "package"
+  },
+  "kind": "package",
+  "spec": [
+    "§4.3"
+  ]
+}

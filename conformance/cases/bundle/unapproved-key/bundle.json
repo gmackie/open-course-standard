@@ -1,0 +1,69 @@
+{
+  "course": {
+    "digest": "sha256:9bf97d4a940447a530f384144374408c29130808d3d68b4abf5c65e5bb3b90b5",
+    "id": "example.net/course",
+    "version": "1.0.0"
+  },
+  "exports": [
+    {
+      "digest": "sha256:f5f764c93de7f9a0065fd21db62a22e1efd70a3912a3ce91c7b4edf8609b4f99",
+      "id": "example.net/poem-image",
+      "signature": {
+        "keyId": "ed25519-yAlRsGEEG0oRLVQgGasc-cwZV6fXkx8094abp3mBPC0",
+        "payload": {
+          "digest": "sha256:f5f764c93de7f9a0065fd21db62a22e1efd70a3912a3ce91c7b4edf8609b4f99",
+          "exportId": "example.net/poem-image",
+          "publishedAt": "2026-11-01T00:00:00Z",
+          "version": "1.0.0"
+        },
+        "signature": "7T235w7sIJaE92IN4LZBsgKzW4T_IyWibFLv99oWbdw9nYH0mn_l7LDXZ06riEzsAjH1EdJsxr402jxb74C8DQ"
+      },
+      "text": "{\n  \"activity\": {\n    \"aiHelp\": \"hints-only\",\n    \"due\": {\n      \"days\": 7,\n      \"kind\": \"after-install\"\n    },\n    \"gradeBand\": \"3-5\",\n    \"overview\": \"Listen to a short poem and talk about one image in it.\",\n    \"passage\": \"The fog comes on little cat feet.\",\n    \"questions\": [\n      {\n        \"prompt\": \"What animal does the fog move like?\"\n      }\n    ],\n    \"resources\": [\n      \"fog\"\n    ],\n    \"subject\": \"english-language-arts\",\n    \"template\": \"read-and-respond\",\n    \"title\": \"An image in a poem\"\n  },\n  \"alignments\": [\n    {\n      \"competencyUri\": \"https://standards.example.org/competency/42\",\n      \"frameworkKey\": \"example-framework\"\n    }\n  ],\n  \"id\": \"example.net/poem-image\",\n  \"language\": \"en\",\n  \"readings\": [\n    {\n      \"attribution\": \"Carl Sandburg, Fog (1916). Public domain.\",\n      \"body\": \"The fog comes on little cat feet.\",\n      \"id\": \"fog\",\n      \"title\": \"Fog (excerpt)\"\n    }\n  ],\n  \"rubric\": {\n    \"criteria\": [\n      {\n        \"id\": \"image\",\n        \"levels\": [\n          {\n            \"id\": \"not-yet\",\n            \"label\": \"Not yet\",\n            \"points\": 0\n          },\n          {\n            \"id\": \"yes\",\n            \"label\": \"Yes\",\n            \"points\": 2\n          }\n        ],\n        \"title\": \"Names the image\"\n      }\n    ],\n    \"title\": \"Talking about an image\"\n  },\n  \"specVersion\": \"1.1\",\n  \"version\": \"1.0.0\"\n}\n",
+      "version": "1.0.0"
+    }
+  ],
+  "format": "educateos.ocs-bundle.v1",
+  "packages": [
+    {
+      "digest": "sha256:9bf97d4a940447a530f384144374408c29130808d3d68b4abf5c65e5bb3b90b5",
+      "files": {
+        "codex/welcome.json": "{\n  \"body\": \"About welcome.\",\n  \"id\": \"welcome\",\n  \"purpose\": \"context\",\n  \"title\": \"Note welcome\",\n  \"visibility\": \"students\"\n}\n",
+        "ocs.json": "{\n  \"id\": \"example.net/course\",\n  \"language\": \"en\",\n  \"modules\": [\n    {\n      \"name\": \"safety\",\n      \"package\": \"example.net/lab-safety\",\n      \"range\": \"1.0.0\"\n    }\n  ],\n  \"outline\": [\n    {\n      \"kind\": \"unit\",\n      \"unit\": \"intro\"\n    },\n    {\n      \"kind\": \"module\",\n      \"module\": \"safety\"\n    }\n  ],\n  \"overrides\": [],\n  \"specVersion\": \"1.0\",\n  \"standards\": [],\n  \"title\": \"Course example.net/course\",\n  \"version\": \"1.0.0\"\n}\n",
+        "ocs.lock": "{\n  \"lockVersion\": 1,\n  \"packages\": [\n    {\n      \"digest\": \"sha256:5551f1ac04ee83b85dfa875b4434abf3ad8c561a884503b6ecc5da276c1593ab\",\n      \"id\": \"example.net/lab-safety\",\n      \"modules\": [],\n      \"version\": \"1.0.0\"\n    }\n  ],\n  \"root\": {\n    \"digest\": \"sha256:9bf97d4a940447a530f384144374408c29130808d3d68b4abf5c65e5bb3b90b5\",\n    \"id\": \"example.net/course\",\n    \"modules\": [\n      {\n        \"name\": \"safety\",\n        \"package\": \"example.net/lab-safety\",\n        \"version\": \"1.0.0\"\n      }\n    ],\n    \"version\": \"1.0.0\"\n  },\n  \"specVersion\": \"1.0\"\n}\n",
+        "units/intro.json": "{\n  \"id\": \"intro\",\n  \"items\": [\n    {\n      \"kind\": \"codex\",\n      \"ref\": \"welcome\"\n    }\n  ],\n  \"standards\": [],\n  \"title\": \"Unit intro\"\n}\n"
+      },
+      "id": "example.net/course",
+      "signature": {
+        "keyId": "ed25519-yAlRsGEEG0oRLVQgGasc-cwZV6fXkx8094abp3mBPC0",
+        "payload": {
+          "digest": "sha256:9bf97d4a940447a530f384144374408c29130808d3d68b4abf5c65e5bb3b90b5",
+          "packageId": "example.net/course",
+          "publishedAt": "2026-11-01T00:00:00Z",
+          "version": "1.0.0"
+        },
+        "signature": "pZMDlucNUQOrGKexhXiEjy6GUQWYqjpIgzbbftgn0sVkWk62T-KOOb7uM1Y-uut0e9jG8Xdoc9lOR7kcegJGAA"
+      },
+      "version": "1.0.0"
+    },
+    {
+      "digest": "sha256:5551f1ac04ee83b85dfa875b4434abf3ad8c561a884503b6ecc5da276c1593ab",
+      "files": {
+        "ocs.json": "{\n  \"id\": \"example.net/lab-safety\",\n  \"language\": \"en\",\n  \"modules\": [],\n  \"outline\": [\n    {\n      \"kind\": \"unit\",\n      \"unit\": \"rules\"\n    }\n  ],\n  \"overrides\": [],\n  \"specVersion\": \"1.0\",\n  \"standards\": [],\n  \"title\": \"Course example.net/lab-safety\",\n  \"version\": \"1.0.0\"\n}\n",
+        "resources/rules-sheet.json": "{\n  \"id\": \"rules-sheet\",\n  \"kind\": \"release\",\n  \"release\": {\n    \"resourceId\": \"rsc_rules-sheet\",\n    \"version\": \"1.0.0\"\n  },\n  \"title\": \"Resource rules-sheet\",\n  \"use\": \"licensed-copy\"\n}\n",
+        "units/rules.json": "{\n  \"id\": \"rules\",\n  \"items\": [\n    {\n      \"kind\": \"resource\",\n      \"ref\": \"rules-sheet\"\n    }\n  ],\n  \"standards\": [],\n  \"title\": \"lab-safety rules\"\n}\n"
+      },
+      "id": "example.net/lab-safety",
+      "signature": {
+        "keyId": "ed25519-FooLx5dk5YC8MrJJmPZQzjlPMdL35TioGLdfW6jfiaM",
+        "payload": {
+          "digest": "sha256:5551f1ac04ee83b85dfa875b4434abf3ad8c561a884503b6ecc5da276c1593ab",
+          "packageId": "example.net/lab-safety",
+          "publishedAt": "2026-11-01T00:00:00Z",
+          "version": "1.0.0"
+        },
+        "signature": "z8G-PVfuPNPMhAIGUmlyAEsa9IXWRwSlpZDjODHNUZkwhZ0GhsDugMHr86xAs58MaaggGjFt_5FDWO-f0MlZCg"
+      },
+      "version": "1.0.0"
+    }
+  ]
+}

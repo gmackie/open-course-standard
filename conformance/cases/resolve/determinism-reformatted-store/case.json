@@ -1,0 +1,17 @@
+{
+  "description": "resolve/highest-compatible with every store file minified and reordered: the lockfile must be byte-identical.",
+  "expect": {
+    "lock": "expected.lock"
+  },
+  "id": "resolve/determinism-reformatted-store",
+  "input": {
+    "course": "course",
+    "store": "store"
+  },
+  "kind": "resolve",
+  "spec": [
+    "§3.3",
+    "§10.2",
+    "§11"
+  ]
+}

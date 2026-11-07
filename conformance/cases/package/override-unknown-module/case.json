@@ -1,0 +1,16 @@
+{
+  "description": "An override whose first module is not declared.",
+  "expect": {
+    "problem": "invalid-package",
+    "valid": false
+  },
+  "id": "package/override-unknown-module",
+  "input": {
+    "package": "package"
+  },
+  "kind": "package",
+  "spec": [
+    "§6.3",
+    "§12.3"
+  ]
+}

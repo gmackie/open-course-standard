@@ -1,0 +1,43 @@
+{
+  "id": "example.com/cells-core",
+  "language": "en",
+  "modules": [
+    {
+      "name": "safety",
+      "package": "example.net/lab-safety",
+      "range": "^1.0.0",
+      "rights": "excerpt"
+    }
+  ],
+  "outline": [
+    {
+      "kind": "module",
+      "module": "safety"
+    },
+    {
+      "kind": "unit",
+      "unit": "membranes"
+    }
+  ],
+  "overrides": [
+    {
+      "kind": "rename",
+      "target": {
+        "modules": [
+          "safety"
+        ],
+        "unit": "rules"
+      },
+      "title": "Cells lab rules"
+    }
+  ],
+  "specVersion": "1.0",
+  "standards": [
+    {
+      "competencyUri": "https://standards.example.org/competency/42",
+      "frameworkKey": "example-framework"
+    }
+  ],
+  "title": "Course example.com/cells-core",
+  "version": "2.0.0"
+}

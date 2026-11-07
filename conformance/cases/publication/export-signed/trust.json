@@ -1,0 +1,14 @@
+{
+  "localDomains": [],
+  "publishers": [
+    {
+      "domain": "example.net",
+      "keys": [
+        {
+          "keyId": "ed25519-yAlRsGEEG0oRLVQgGasc-cwZV6fXkx8094abp3mBPC0",
+          "publicKey": "TN_Bo-1aXpETBSc0X75-rBWSfUyXJlGIYXI0atW1R3Q"
+        }
+      ]
+    }
+  ]
+}

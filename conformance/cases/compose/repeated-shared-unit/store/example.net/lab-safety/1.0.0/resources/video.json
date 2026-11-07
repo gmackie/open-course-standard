@@ -1,0 +1,10 @@
+{
+  "id": "video",
+  "kind": "release",
+  "release": {
+    "resourceId": "rsc_video",
+    "version": "1.0.0"
+  },
+  "title": "Resource video",
+  "use": "link"
+}

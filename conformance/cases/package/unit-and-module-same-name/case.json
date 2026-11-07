@@ -1,0 +1,15 @@
+{
+  "description": "A unit and a module with the same name.",
+  "expect": {
+    "problem": "invalid-package",
+    "valid": false
+  },
+  "id": "package/unit-and-module-same-name",
+  "input": {
+    "package": "package"
+  },
+  "kind": "package",
+  "spec": [
+    "§6.3"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "description": "Two modules include the same safety unit: it appears once, at its first position, and the second is reported as repeated.",
+  "expect": {
+    "outline": "expected-outline.json"
+  },
+  "id": "compose/repeated-shared-unit",
+  "input": {
+    "course": "course",
+    "store": "store"
+  },
+  "kind": "compose",
+  "spec": [
+    "§12.4"
+  ]
+}

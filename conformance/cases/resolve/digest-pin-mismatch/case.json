@@ -1,0 +1,15 @@
+{
+  "description": "An exact module pinned by another digest.",
+  "expect": {
+    "problem": "digest-mismatch"
+  },
+  "id": "resolve/digest-pin-mismatch",
+  "input": {
+    "course": "course",
+    "store": "store"
+  },
+  "kind": "resolve",
+  "spec": [
+    "§10.1"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "description": "An answer key visible to students.",
+  "expect": {
+    "problem": "invalid-package",
+    "valid": false
+  },
+  "id": "package/answer-key-for-students",
+  "input": {
+    "package": "package"
+  },
+  "kind": "package",
+  "spec": [
+    "§7.4"
+  ]
+}

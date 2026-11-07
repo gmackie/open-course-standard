@@ -1,0 +1,10 @@
+{
+  "id": "fire-sheet",
+  "kind": "release",
+  "release": {
+    "resourceId": "rsc_fire-sheet",
+    "version": "1.0.0"
+  },
+  "title": "Resource fire-sheet",
+  "use": "licensed-copy"
+}

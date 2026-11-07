@@ -1,0 +1,26 @@
+{
+  "id": "example.edu/sources",
+  "language": "en",
+  "modules": [
+    {
+      "name": "safety",
+      "package": "example.net/lab-safety",
+      "range": "^1.0.0"
+    }
+  ],
+  "outline": [
+    {
+      "kind": "module",
+      "module": "safety"
+    },
+    {
+      "kind": "unit",
+      "unit": "letters"
+    }
+  ],
+  "overrides": [],
+  "specVersion": "1.0",
+  "standards": [],
+  "title": "Course example.edu/sources",
+  "version": "1.0.0"
+}

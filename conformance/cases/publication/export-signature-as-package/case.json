@@ -1,0 +1,18 @@
+{
+  "description": "An export publication signature offered for a package with the same ID, version and digest: the contexts differ.",
+  "expect": {
+    "ok": false,
+    "reason": "bad-signature"
+  },
+  "id": "publication/export-signature-as-package",
+  "input": {
+    "at": "2026-11-07T00:00:00Z",
+    "envelope": "envelope.json",
+    "package": "package",
+    "trust": "trust.json"
+  },
+  "kind": "publication",
+  "spec": [
+    "§15"
+  ]
+}
