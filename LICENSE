@@ -1,0 +1,36 @@
+Open Course Standard: licensing
+===============================
+
+This repository holds two kinds of work under two licenses.
+
+1. Code: Apache License 2.0
+   The reference implementation and command-line tool (packages/), the conformance
+   runner and its scripts (conformance/*.mjs, conformance/lib/), the repository scripts
+   (scripts/) and the CI configuration (.github/) are licensed under the Apache License,
+   Version 2.0. The full text is in LICENSES/Apache-2.0.txt.
+   SPDX-License-Identifier: Apache-2.0
+
+2. Specification, schemas, fixtures and examples: Creative Commons Attribution 4.0
+   The specification text (spec/), the JSON Schemas (schemas/), the conformance fixtures
+   (conformance/cases/), the examples (examples/) and the other documentation are
+   licensed under the Creative Commons Attribution 4.0 International License. The full
+   text is in LICENSES/CC-BY-4.0.txt.
+   SPDX-License-Identifier: CC-BY-4.0
+
+   Attribute as: "Open Course Standard (OCS), https://github.com/gmackie/open-course-standard".
+
+Exceptions
+
+- examples/educateos/ holds sample courses copied from the EducateOS repository
+  (https://github.com/gmackie/educate-os), where they are published under the Apache
+  License 2.0. They remain under Apache-2.0 here; see examples/educateos/LICENSE.md.
+  Readings quoted in them are public-domain texts or were written for EducateOS, as each
+  reading's "attribution" field says.
+- A file whose header names another license is under that license.
+
+The JSON Schemas are licensed CC-BY-4.0 so that anyone can copy them into an
+implementation. A schema copied into an Apache-2.0 code base keeps its CC-BY-4.0 notice.
+
+Nothing in an OCS package is licensed by this repository. Every course package carries the
+rights of its own publisher, and a package that does not state its license grants no
+rights to redistribute it.
