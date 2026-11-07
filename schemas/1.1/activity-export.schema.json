@@ -1,0 +1,1309 @@
+{
+  "$comment": "Generated from the reference implementation (packages/ocs/scripts/generate-schemas.ts); do not edit. License: CC-BY-4.0.",
+  "$id": "https://raw.githubusercontent.com/gmackie/open-course-standard/main/schemas/1.1/activity-export.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "A portable activity definition: its template inputs, rubric, alignments and readings. See https://github.com/gmackie/open-course-standard/blob/main/spec/ocs-1.1.md §14.2. Normative for structure (OCS 1.1 §1). Rules a schema cannot express, such as references between files, uniqueness within lists, and the digest and signature checks, are stated in the specification.",
+  "properties": {
+    "activity": {
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "additionalArtifactTypes": {
+              "default": [],
+              "items": {
+                "enum": [
+                  "document",
+                  "notebook",
+                  "spreadsheet",
+                  "presentation",
+                  "dataset",
+                  "image",
+                  "audio",
+                  "video",
+                  "interactive",
+                  "evidence",
+                  "portfolio",
+                  "external-ref"
+                ],
+                "type": "string"
+              },
+              "maxItems": 12,
+              "type": "array"
+            },
+            "aiHelp": {
+              "enum": [
+                "full",
+                "hints-only",
+                "none"
+              ],
+              "type": "string"
+            },
+            "collaboration": {
+              "default": "individual",
+              "enum": [
+                "individual",
+                "group"
+              ],
+              "type": "string"
+            },
+            "due": {
+              "oneOf": [
+                {
+                  "additionalProperties": false,
+                  "properties": {
+                    "kind": {
+                      "const": "none",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "kind"
+                  ],
+                  "type": "object"
+                },
+                {
+                  "additionalProperties": false,
+                  "properties": {
+                    "days": {
+                      "maximum": 365,
+                      "minimum": 1,
+                      "type": "integer"
+                    },
+                    "kind": {
+                      "const": "after-install",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "kind",
+                    "days"
+                  ],
+                  "type": "object"
+                }
+              ]
+            },
+            "genre": {
+              "enum": [
+                "argument",
+                "informative",
+                "narrative",
+                "literary-analysis"
+              ],
+              "type": "string"
+            },
+            "gradeBand": {
+              "pattern": "^(K|\\d{1,2})(-\\d{1,2})?$",
+              "type": "string"
+            },
+            "minWords": {
+              "maximum": 20000,
+              "minimum": 1,
+              "type": "integer"
+            },
+            "minimumCitations": {
+              "maximum": 50,
+              "minimum": 0,
+              "type": "integer"
+            },
+            "overview": {
+              "maxLength": 5000,
+              "minLength": 1,
+              "not": {
+                "pattern": "<\\s*\\/?\\s*([sS][cC][rR][iI][pP][tT]|[iI][fF][rR][aA][mM][eE]|[oO][bB][jJ][eE][cC][tT]|[eE][mM][bB][eE][dD]|[aA][pP][pP][lL][eE][tT]|[sS][tT][yY][lL][eE]|[lL][iI][nN][kK]|[mM][eE][tT][aA]|[bB][aA][sS][eE]|[fF][oO][rR][mM]|[sS][vV][gG])\\b|\\b([jJ][aA][vV][aA][sS][cC][rR][iI][pP][tT]|[vV][bB][sS][cC][rR][iI][pP][tT])\\s*:|[dD][aA][tT][aA]\\s*:\\s*[tT][eE][xX][tT]\\/[hH][tT][mM][lL]"
+              },
+              "pattern": "\\S",
+              "type": "string"
+            },
+            "prompt": {
+              "maxLength": 5000,
+              "minLength": 1,
+              "not": {
+                "pattern": "<\\s*\\/?\\s*([sS][cC][rR][iI][pP][tT]|[iI][fF][rR][aA][mM][eE]|[oO][bB][jJ][eE][cC][tT]|[eE][mM][bB][eE][dD]|[aA][pP][pP][lL][eE][tT]|[sS][tT][yY][lL][eE]|[lL][iI][nN][kK]|[mM][eE][tT][aA]|[bB][aA][sS][eE]|[fF][oO][rR][mM]|[sS][vV][gG])\\b|\\b([jJ][aA][vV][aA][sS][cC][rR][iI][pP][tT]|[vV][bB][sS][cC][rR][iI][pP][tT])\\s*:|[dD][aA][tT][aA]\\s*:\\s*[tT][eE][xX][tT]\\/[hH][tT][mM][lL]"
+              },
+              "pattern": "\\S",
+              "type": "string"
+            },
+            "resources": {
+              "default": [],
+              "items": {
+                "pattern": "^[a-z][a-z0-9-]{0,62}$",
+                "type": "string"
+              },
+              "maxItems": 20,
+              "type": "array"
+            },
+            "subject": {
+              "enum": [
+                "english-language-arts",
+                "science",
+                "history-social-studies",
+                "mathematics",
+                "arts",
+                "world-languages",
+                "computer-science",
+                "health-physical-education",
+                "social-emotional-learning",
+                "other"
+              ],
+              "type": "string"
+            },
+            "template": {
+              "const": "writing-task",
+              "type": "string"
+            },
+            "title": {
+              "maxLength": 200,
+              "minLength": 1,
+              "not": {
+                "pattern": "<\\s*\\/?\\s*([sS][cC][rR][iI][pP][tT]|[iI][fF][rR][aA][mM][eE]|[oO][bB][jJ][eE][cC][tT]|[eE][mM][bB][eE][dD]|[aA][pP][pP][lL][eE][tT]|[sS][tT][yY][lL][eE]|[lL][iI][nN][kK]|[mM][eE][tT][aA]|[bB][aA][sS][eE]|[fF][oO][rR][mM]|[sS][vV][gG])\\b|\\b([jJ][aA][vV][aA][sS][cC][rR][iI][pP][tT]|[vV][bB][sS][cC][rR][iI][pP][tT])\\s*:|[dD][aA][tT][aA]\\s*:\\s*[tT][eE][xX][tT]\\/[hH][tT][mM][lL]"
+              },
+              "pattern": "\\S",
+              "type": "string"
+            }
+          },
+          "required": [
+            "template",
+            "title",
+            "subject",
+            "gradeBand",
+            "overview",
+            "aiHelp",
+            "due",
+            "prompt",
+            "genre",
+            "minimumCitations"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "additionalArtifactTypes": {
+              "default": [],
+              "items": {
+                "enum": [
+                  "document",
+                  "notebook",
+                  "spreadsheet",
+                  "presentation",
+                  "dataset",
+                  "image",
+                  "audio",
+                  "video",
+                  "interactive",
+                  "evidence",
+                  "portfolio",
+                  "external-ref"
+                ],
+                "type": "string"
+              },
+              "maxItems": 12,
+              "type": "array"
+            },
+            "aiHelp": {
+              "enum": [
+                "full",
+                "hints-only",
+                "none"
+              ],
+              "type": "string"
+            },
+            "analysisPrompt": {
+              "maxLength": 5000,
+              "minLength": 1,
+              "not": {
+                "pattern": "<\\s*\\/?\\s*([sS][cC][rR][iI][pP][tT]|[iI][fF][rR][aA][mM][eE]|[oO][bB][jJ][eE][cC][tT]|[eE][mM][bB][eE][dD]|[aA][pP][pP][lL][eE][tT]|[sS][tT][yY][lL][eE]|[lL][iI][nN][kK]|[mM][eE][tT][aA]|[bB][aA][sS][eE]|[fF][oO][rR][mM]|[sS][vV][gG])\\b|\\b([jJ][aA][vV][aA][sS][cC][rR][iI][pP][tT]|[vV][bB][sS][cC][rR][iI][pP][tT])\\s*:|[dD][aA][tT][aA]\\s*:\\s*[tT][eE][xX][tT]\\/[hH][tT][mM][lL]"
+              },
+              "pattern": "\\S",
+              "type": "string"
+            },
+            "collaboration": {
+              "default": "individual",
+              "enum": [
+                "individual",
+                "group"
+              ],
+              "type": "string"
+            },
+            "dataColumns": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "name": {
+                    "maxLength": 100,
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "unit": {
+                    "maxLength": 50,
+                    "minLength": 1,
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "name"
+                ],
+                "type": "object"
+              },
+              "maxItems": 30,
+              "minItems": 1,
+              "type": "array"
+            },
+            "due": {
+              "oneOf": [
+                {
+                  "additionalProperties": false,
+                  "properties": {
+                    "kind": {
+                      "const": "none",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "kind"
+                  ],
+                  "type": "object"
+                },
+                {
+                  "additionalProperties": false,
+                  "properties": {
+                    "days": {
+                      "maximum": 365,
+                      "minimum": 1,
+                      "type": "integer"
+                    },
+                    "kind": {
+                      "const": "after-install",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "kind",
+                    "days"
+                  ],
+                  "type": "object"
+                }
+              ]
+            },
+            "gradeBand": {
+              "pattern": "^(K|\\d{1,2})(-\\d{1,2})?$",
+              "type": "string"
+            },
+            "methodPrompt": {
+              "maxLength": 5000,
+              "minLength": 1,
+              "not": {
+                "pattern": "<\\s*\\/?\\s*([sS][cC][rR][iI][pP][tT]|[iI][fF][rR][aA][mM][eE]|[oO][bB][jJ][eE][cC][tT]|[eE][mM][bB][eE][dD]|[aA][pP][pP][lL][eE][tT]|[sS][tT][yY][lL][eE]|[lL][iI][nN][kK]|[mM][eE][tT][aA]|[bB][aA][sS][eE]|[fF][oO][rR][mM]|[sS][vV][gG])\\b|\\b([jJ][aA][vV][aA][sS][cC][rR][iI][pP][tT]|[vV][bB][sS][cC][rR][iI][pP][tT])\\s*:|[dD][aA][tT][aA]\\s*:\\s*[tT][eE][xX][tT]\\/[hH][tT][mM][lL]"
+              },
+              "pattern": "\\S",
+              "type": "string"
+            },
+            "overview": {
+              "maxLength": 5000,
+              "minLength": 1,
+              "not": {
+                "pattern": "<\\s*\\/?\\s*([sS][cC][rR][iI][pP][tT]|[iI][fF][rR][aA][mM][eE]|[oO][bB][jJ][eE][cC][tT]|[eE][mM][bB][eE][dD]|[aA][pP][pP][lL][eE][tT]|[sS][tT][yY][lL][eE]|[lL][iI][nN][kK]|[mM][eE][tT][aA]|[bB][aA][sS][eE]|[fF][oO][rR][mM]|[sS][vV][gG])\\b|\\b([jJ][aA][vV][aA][sS][cC][rR][iI][pP][tT]|[vV][bB][sS][cC][rR][iI][pP][tT])\\s*:|[dD][aA][tT][aA]\\s*:\\s*[tT][eE][xX][tT]\\/[hH][tT][mM][lL]"
+              },
+              "pattern": "\\S",
+              "type": "string"
+            },
+            "question": {
+              "maxLength": 2000,
+              "minLength": 1,
+              "not": {
+                "pattern": "<\\s*\\/?\\s*([sS][cC][rR][iI][pP][tT]|[iI][fF][rR][aA][mM][eE]|[oO][bB][jJ][eE][cC][tT]|[eE][mM][bB][eE][dD]|[aA][pP][pP][lL][eE][tT]|[sS][tT][yY][lL][eE]|[lL][iI][nN][kK]|[mM][eE][tT][aA]|[bB][aA][sS][eE]|[fF][oO][rR][mM]|[sS][vV][gG])\\b|\\b([jJ][aA][vV][aA][sS][cC][rR][iI][pP][tT]|[vV][bB][sS][cC][rR][iI][pP][tT])\\s*:|[dD][aA][tT][aA]\\s*:\\s*[tT][eE][xX][tT]\\/[hH][tT][mM][lL]"
+              },
+              "pattern": "\\S",
+              "type": "string"
+            },
+            "resources": {
+              "default": [],
+              "items": {
+                "pattern": "^[a-z][a-z0-9-]{0,62}$",
+                "type": "string"
+              },
+              "maxItems": 20,
+              "type": "array"
+            },
+            "subject": {
+              "enum": [
+                "english-language-arts",
+                "science",
+                "history-social-studies",
+                "mathematics",
+                "arts",
+                "world-languages",
+                "computer-science",
+                "health-physical-education",
+                "social-emotional-learning",
+                "other"
+              ],
+              "type": "string"
+            },
+            "template": {
+              "const": "science-investigation",
+              "type": "string"
+            },
+            "title": {
+              "maxLength": 200,
+              "minLength": 1,
+              "not": {
+                "pattern": "<\\s*\\/?\\s*([sS][cC][rR][iI][pP][tT]|[iI][fF][rR][aA][mM][eE]|[oO][bB][jJ][eE][cC][tT]|[eE][mM][bB][eE][dD]|[aA][pP][pP][lL][eE][tT]|[sS][tT][yY][lL][eE]|[lL][iI][nN][kK]|[mM][eE][tT][aA]|[bB][aA][sS][eE]|[fF][oO][rR][mM]|[sS][vV][gG])\\b|\\b([jJ][aA][vV][aA][sS][cC][rR][iI][pP][tT]|[vV][bB][sS][cC][rR][iI][pP][tT])\\s*:|[dD][aA][tT][aA]\\s*:\\s*[tT][eE][xX][tT]\\/[hH][tT][mM][lL]"
+              },
+              "pattern": "\\S",
+              "type": "string"
+            }
+          },
+          "required": [
+            "template",
+            "title",
+            "subject",
+            "gradeBand",
+            "overview",
+            "aiHelp",
+            "due",
+            "question",
+            "methodPrompt",
+            "dataColumns",
+            "analysisPrompt"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "additionalArtifactTypes": {
+              "default": [],
+              "items": {
+                "enum": [
+                  "document",
+                  "notebook",
+                  "spreadsheet",
+                  "presentation",
+                  "dataset",
+                  "image",
+                  "audio",
+                  "video",
+                  "interactive",
+                  "evidence",
+                  "portfolio",
+                  "external-ref"
+                ],
+                "type": "string"
+              },
+              "maxItems": 12,
+              "type": "array"
+            },
+            "aiHelp": {
+              "enum": [
+                "full",
+                "hints-only",
+                "none"
+              ],
+              "type": "string"
+            },
+            "claimPrompt": {
+              "maxLength": 5000,
+              "minLength": 1,
+              "not": {
+                "pattern": "<\\s*\\/?\\s*([sS][cC][rR][iI][pP][tT]|[iI][fF][rR][aA][mM][eE]|[oO][bB][jJ][eE][cC][tT]|[eE][mM][bB][eE][dD]|[aA][pP][pP][lL][eE][tT]|[sS][tT][yY][lL][eE]|[lL][iI][nN][kK]|[mM][eE][tT][aA]|[bB][aA][sS][eE]|[fF][oO][rR][mM]|[sS][vV][gG])\\b|\\b([jJ][aA][vV][aA][sS][cC][rR][iI][pP][tT]|[vV][bB][sS][cC][rR][iI][pP][tT])\\s*:|[dD][aA][tT][aA]\\s*:\\s*[tT][eE][xX][tT]\\/[hH][tT][mM][lL]"
+              },
+              "pattern": "\\S",
+              "type": "string"
+            },
+            "collaboration": {
+              "default": "individual",
+              "enum": [
+                "individual",
+                "group"
+              ],
+              "type": "string"
+            },
+            "contextualizationQuestions": {
+              "items": {
+                "maxLength": 1000,
+                "minLength": 1,
+                "not": {
+                  "pattern": "<\\s*\\/?\\s*([sS][cC][rR][iI][pP][tT]|[iI][fF][rR][aA][mM][eE]|[oO][bB][jJ][eE][cC][tT]|[eE][mM][bB][eE][dD]|[aA][pP][pP][lL][eE][tT]|[sS][tT][yY][lL][eE]|[lL][iI][nN][kK]|[mM][eE][tT][aA]|[bB][aA][sS][eE]|[fF][oO][rR][mM]|[sS][vV][gG])\\b|\\b([jJ][aA][vV][aA][sS][cC][rR][iI][pP][tT]|[vV][bB][sS][cC][rR][iI][pP][tT])\\s*:|[dD][aA][tT][aA]\\s*:\\s*[tT][eE][xX][tT]\\/[hH][tT][mM][lL]"
+                },
+                "pattern": "\\S",
+                "type": "string"
+              },
+              "maxItems": 20,
+              "minItems": 1,
+              "type": "array"
+            },
+            "due": {
+              "oneOf": [
+                {
+                  "additionalProperties": false,
+                  "properties": {
+                    "kind": {
+                      "const": "none",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "kind"
+                  ],
+                  "type": "object"
+                },
+                {
+                  "additionalProperties": false,
+                  "properties": {
+                    "days": {
+                      "maximum": 365,
+                      "minimum": 1,
+                      "type": "integer"
+                    },
+                    "kind": {
+                      "const": "after-install",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "kind",
+                    "days"
+                  ],
+                  "type": "object"
+                }
+              ]
+            },
+            "gradeBand": {
+              "pattern": "^(K|\\d{1,2})(-\\d{1,2})?$",
+              "type": "string"
+            },
+            "minimumEvidence": {
+              "maximum": 20,
+              "minimum": 1,
+              "type": "integer"
+            },
+            "overview": {
+              "maxLength": 5000,
+              "minLength": 1,
+              "not": {
+                "pattern": "<\\s*\\/?\\s*([sS][cC][rR][iI][pP][tT]|[iI][fF][rR][aA][mM][eE]|[oO][bB][jJ][eE][cC][tT]|[eE][mM][bB][eE][dD]|[aA][pP][pP][lL][eE][tT]|[sS][tT][yY][lL][eE]|[lL][iI][nN][kK]|[mM][eE][tT][aA]|[bB][aA][sS][eE]|[fF][oO][rR][mM]|[sS][vV][gG])\\b|\\b([jJ][aA][vV][aA][sS][cC][rR][iI][pP][tT]|[vV][bB][sS][cC][rR][iI][pP][tT])\\s*:|[dD][aA][tT][aA]\\s*:\\s*[tT][eE][xX][tT]\\/[hH][tT][mM][lL]"
+              },
+              "pattern": "\\S",
+              "type": "string"
+            },
+            "resources": {
+              "default": [],
+              "items": {
+                "pattern": "^[a-z][a-z0-9-]{0,62}$",
+                "type": "string"
+              },
+              "maxItems": 20,
+              "type": "array"
+            },
+            "sources": {
+              "items": {
+                "pattern": "^[a-z][a-z0-9-]{0,62}$",
+                "type": "string"
+              },
+              "maxItems": 20,
+              "minItems": 1,
+              "type": "array"
+            },
+            "sourcingQuestions": {
+              "items": {
+                "maxLength": 1000,
+                "minLength": 1,
+                "not": {
+                  "pattern": "<\\s*\\/?\\s*([sS][cC][rR][iI][pP][tT]|[iI][fF][rR][aA][mM][eE]|[oO][bB][jJ][eE][cC][tT]|[eE][mM][bB][eE][dD]|[aA][pP][pP][lL][eE][tT]|[sS][tT][yY][lL][eE]|[lL][iI][nN][kK]|[mM][eE][tT][aA]|[bB][aA][sS][eE]|[fF][oO][rR][mM]|[sS][vV][gG])\\b|\\b([jJ][aA][vV][aA][sS][cC][rR][iI][pP][tT]|[vV][bB][sS][cC][rR][iI][pP][tT])\\s*:|[dD][aA][tT][aA]\\s*:\\s*[tT][eE][xX][tT]\\/[hH][tT][mM][lL]"
+                },
+                "pattern": "\\S",
+                "type": "string"
+              },
+              "maxItems": 20,
+              "minItems": 1,
+              "type": "array"
+            },
+            "subject": {
+              "enum": [
+                "english-language-arts",
+                "science",
+                "history-social-studies",
+                "mathematics",
+                "arts",
+                "world-languages",
+                "computer-science",
+                "health-physical-education",
+                "social-emotional-learning",
+                "other"
+              ],
+              "type": "string"
+            },
+            "template": {
+              "const": "primary-source-analysis",
+              "type": "string"
+            },
+            "title": {
+              "maxLength": 200,
+              "minLength": 1,
+              "not": {
+                "pattern": "<\\s*\\/?\\s*([sS][cC][rR][iI][pP][tT]|[iI][fF][rR][aA][mM][eE]|[oO][bB][jJ][eE][cC][tT]|[eE][mM][bB][eE][dD]|[aA][pP][pP][lL][eE][tT]|[sS][tT][yY][lL][eE]|[lL][iI][nN][kK]|[mM][eE][tT][aA]|[bB][aA][sS][eE]|[fF][oO][rR][mM]|[sS][vV][gG])\\b|\\b([jJ][aA][vV][aA][sS][cC][rR][iI][pP][tT]|[vV][bB][sS][cC][rR][iI][pP][tT])\\s*:|[dD][aA][tT][aA]\\s*:\\s*[tT][eE][xX][tT]\\/[hH][tT][mM][lL]"
+              },
+              "pattern": "\\S",
+              "type": "string"
+            }
+          },
+          "required": [
+            "template",
+            "title",
+            "subject",
+            "gradeBand",
+            "overview",
+            "aiHelp",
+            "due",
+            "sources",
+            "sourcingQuestions",
+            "contextualizationQuestions",
+            "claimPrompt",
+            "minimumEvidence"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "additionalArtifactTypes": {
+              "default": [],
+              "items": {
+                "enum": [
+                  "document",
+                  "notebook",
+                  "spreadsheet",
+                  "presentation",
+                  "dataset",
+                  "image",
+                  "audio",
+                  "video",
+                  "interactive",
+                  "evidence",
+                  "portfolio",
+                  "external-ref"
+                ],
+                "type": "string"
+              },
+              "maxItems": 12,
+              "type": "array"
+            },
+            "aiHelp": {
+              "enum": [
+                "full",
+                "hints-only",
+                "none"
+              ],
+              "type": "string"
+            },
+            "collaboration": {
+              "default": "individual",
+              "enum": [
+                "individual",
+                "group"
+              ],
+              "type": "string"
+            },
+            "due": {
+              "oneOf": [
+                {
+                  "additionalProperties": false,
+                  "properties": {
+                    "kind": {
+                      "const": "none",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "kind"
+                  ],
+                  "type": "object"
+                },
+                {
+                  "additionalProperties": false,
+                  "properties": {
+                    "days": {
+                      "maximum": 365,
+                      "minimum": 1,
+                      "type": "integer"
+                    },
+                    "kind": {
+                      "const": "after-install",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "kind",
+                    "days"
+                  ],
+                  "type": "object"
+                }
+              ]
+            },
+            "gradeBand": {
+              "pattern": "^(K|\\d{1,2})(-\\d{1,2})?$",
+              "type": "string"
+            },
+            "overview": {
+              "maxLength": 5000,
+              "minLength": 1,
+              "not": {
+                "pattern": "<\\s*\\/?\\s*([sS][cC][rR][iI][pP][tT]|[iI][fF][rR][aA][mM][eE]|[oO][bB][jJ][eE][cC][tT]|[eE][mM][bB][eE][dD]|[aA][pP][pP][lL][eE][tT]|[sS][tT][yY][lL][eE]|[lL][iI][nN][kK]|[mM][eE][tT][aA]|[bB][aA][sS][eE]|[fF][oO][rR][mM]|[sS][vV][gG])\\b|\\b([jJ][aA][vV][aA][sS][cC][rR][iI][pP][tT]|[vV][bB][sS][cC][rR][iI][pP][tT])\\s*:|[dD][aA][tT][aA]\\s*:\\s*[tT][eE][xX][tT]\\/[hH][tT][mM][lL]"
+              },
+              "pattern": "\\S",
+              "type": "string"
+            },
+            "problems": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "prompt": {
+                    "maxLength": 5000,
+                    "minLength": 1,
+                    "not": {
+                      "pattern": "<\\s*\\/?\\s*([sS][cC][rR][iI][pP][tT]|[iI][fF][rR][aA][mM][eE]|[oO][bB][jJ][eE][cC][tT]|[eE][mM][bB][eE][dD]|[aA][pP][pP][lL][eE][tT]|[sS][tT][yY][lL][eE]|[lL][iI][nN][kK]|[mM][eE][tT][aA]|[bB][aA][sS][eE]|[fF][oO][rR][mM]|[sS][vV][gG])\\b|\\b([jJ][aA][vV][aA][sS][cC][rR][iI][pP][tT]|[vV][bB][sS][cC][rR][iI][pP][tT])\\s*:|[dD][aA][tT][aA]\\s*:\\s*[tT][eE][xX][tT]\\/[hH][tT][mM][lL]"
+                    },
+                    "pattern": "\\S",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "prompt"
+                ],
+                "type": "object"
+              },
+              "maxItems": 50,
+              "minItems": 1,
+              "type": "array"
+            },
+            "resources": {
+              "default": [],
+              "items": {
+                "pattern": "^[a-z][a-z0-9-]{0,62}$",
+                "type": "string"
+              },
+              "maxItems": 20,
+              "type": "array"
+            },
+            "showWork": {
+              "type": "boolean"
+            },
+            "subject": {
+              "enum": [
+                "english-language-arts",
+                "science",
+                "history-social-studies",
+                "mathematics",
+                "arts",
+                "world-languages",
+                "computer-science",
+                "health-physical-education",
+                "social-emotional-learning",
+                "other"
+              ],
+              "type": "string"
+            },
+            "template": {
+              "const": "problem-set",
+              "type": "string"
+            },
+            "title": {
+              "maxLength": 200,
+              "minLength": 1,
+              "not": {
+                "pattern": "<\\s*\\/?\\s*([sS][cC][rR][iI][pP][tT]|[iI][fF][rR][aA][mM][eE]|[oO][bB][jJ][eE][cC][tT]|[eE][mM][bB][eE][dD]|[aA][pP][pP][lL][eE][tT]|[sS][tT][yY][lL][eE]|[lL][iI][nN][kK]|[mM][eE][tT][aA]|[bB][aA][sS][eE]|[fF][oO][rR][mM]|[sS][vV][gG])\\b|\\b([jJ][aA][vV][aA][sS][cC][rR][iI][pP][tT]|[vV][bB][sS][cC][rR][iI][pP][tT])\\s*:|[dD][aA][tT][aA]\\s*:\\s*[tT][eE][xX][tT]\\/[hH][tT][mM][lL]"
+              },
+              "pattern": "\\S",
+              "type": "string"
+            }
+          },
+          "required": [
+            "template",
+            "title",
+            "subject",
+            "gradeBand",
+            "overview",
+            "aiHelp",
+            "due",
+            "problems",
+            "showWork"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "additionalArtifactTypes": {
+              "default": [],
+              "items": {
+                "enum": [
+                  "document",
+                  "notebook",
+                  "spreadsheet",
+                  "presentation",
+                  "dataset",
+                  "image",
+                  "audio",
+                  "video",
+                  "interactive",
+                  "evidence",
+                  "portfolio",
+                  "external-ref"
+                ],
+                "type": "string"
+              },
+              "maxItems": 12,
+              "type": "array"
+            },
+            "aiHelp": {
+              "enum": [
+                "full",
+                "hints-only",
+                "none"
+              ],
+              "type": "string"
+            },
+            "collaboration": {
+              "default": "individual",
+              "enum": [
+                "individual",
+                "group"
+              ],
+              "type": "string"
+            },
+            "drawPrompt": {
+              "maxLength": 500,
+              "minLength": 1,
+              "not": {
+                "pattern": "<\\s*\\/?\\s*([sS][cC][rR][iI][pP][tT]|[iI][fF][rR][aA][mM][eE]|[oO][bB][jJ][eE][cC][tT]|[eE][mM][bB][eE][dD]|[aA][pP][pP][lL][eE][tT]|[sS][tT][yY][lL][eE]|[lL][iI][nN][kK]|[mM][eE][tT][aA]|[bB][aA][sS][eE]|[fF][oO][rR][mM]|[sS][vV][gG])\\b|\\b([jJ][aA][vV][aA][sS][cC][rR][iI][pP][tT]|[vV][bB][sS][cC][rR][iI][pP][tT])\\s*:|[dD][aA][tT][aA]\\s*:\\s*[tT][eE][xX][tT]\\/[hH][tT][mM][lL]"
+              },
+              "pattern": "\\S",
+              "type": "string"
+            },
+            "due": {
+              "oneOf": [
+                {
+                  "additionalProperties": false,
+                  "properties": {
+                    "kind": {
+                      "const": "none",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "kind"
+                  ],
+                  "type": "object"
+                },
+                {
+                  "additionalProperties": false,
+                  "properties": {
+                    "days": {
+                      "maximum": 365,
+                      "minimum": 1,
+                      "type": "integer"
+                    },
+                    "kind": {
+                      "const": "after-install",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "kind",
+                    "days"
+                  ],
+                  "type": "object"
+                }
+              ]
+            },
+            "gradeBand": {
+              "pattern": "^(K|\\d{1,2})(-\\d{1,2})?$",
+              "type": "string"
+            },
+            "lookPrompt": {
+              "maxLength": 1000,
+              "minLength": 1,
+              "not": {
+                "pattern": "<\\s*\\/?\\s*([sS][cC][rR][iI][pP][tT]|[iI][fF][rR][aA][mM][eE]|[oO][bB][jJ][eE][cC][tT]|[eE][mM][bB][eE][dD]|[aA][pP][pP][lL][eE][tT]|[sS][tT][yY][lL][eE]|[lL][iI][nN][kK]|[mM][eE][tT][aA]|[bB][aA][sS][eE]|[fF][oO][rR][mM]|[sS][vV][gG])\\b|\\b([jJ][aA][vV][aA][sS][cC][rR][iI][pP][tT]|[vV][bB][sS][cC][rR][iI][pP][tT])\\s*:|[dD][aA][tT][aA]\\s*:\\s*[tT][eE][xX][tT]\\/[hH][tT][mM][lL]"
+              },
+              "pattern": "\\S",
+              "type": "string"
+            },
+            "overview": {
+              "maxLength": 5000,
+              "minLength": 1,
+              "not": {
+                "pattern": "<\\s*\\/?\\s*([sS][cC][rR][iI][pP][tT]|[iI][fF][rR][aA][mM][eE]|[oO][bB][jJ][eE][cC][tT]|[eE][mM][bB][eE][dD]|[aA][pP][pP][lL][eE][tT]|[sS][tT][yY][lL][eE]|[lL][iI][nN][kK]|[mM][eE][tT][aA]|[bB][aA][sS][eE]|[fF][oO][rR][mM]|[sS][vV][gG])\\b|\\b([jJ][aA][vV][aA][sS][cC][rR][iI][pP][tT]|[vV][bB][sS][cC][rR][iI][pP][tT])\\s*:|[dD][aA][tT][aA]\\s*:\\s*[tT][eE][xX][tT]\\/[hH][tT][mM][lL]"
+              },
+              "pattern": "\\S",
+              "type": "string"
+            },
+            "resources": {
+              "default": [],
+              "items": {
+                "pattern": "^[a-z][a-z0-9-]{0,62}$",
+                "type": "string"
+              },
+              "maxItems": 20,
+              "type": "array"
+            },
+            "sentenceFrames": {
+              "default": [],
+              "items": {
+                "maxLength": 200,
+                "minLength": 1,
+                "not": {
+                  "pattern": "<\\s*\\/?\\s*([sS][cC][rR][iI][pP][tT]|[iI][fF][rR][aA][mM][eE]|[oO][bB][jJ][eE][cC][tT]|[eE][mM][bB][eE][dD]|[aA][pP][pP][lL][eE][tT]|[sS][tT][yY][lL][eE]|[lL][iI][nN][kK]|[mM][eE][tT][aA]|[bB][aA][sS][eE]|[fF][oO][rR][mM]|[sS][vV][gG])\\b|\\b([jJ][aA][vV][aA][sS][cC][rR][iI][pP][tT]|[vV][bB][sS][cC][rR][iI][pP][tT])\\s*:|[dD][aA][tT][aA]\\s*:\\s*[tT][eE][xX][tT]\\/[hH][tT][mM][lL]"
+                },
+                "pattern": "\\S",
+                "type": "string"
+              },
+              "maxItems": 10,
+              "type": "array"
+            },
+            "subject": {
+              "enum": [
+                "english-language-arts",
+                "science",
+                "history-social-studies",
+                "mathematics",
+                "arts",
+                "world-languages",
+                "computer-science",
+                "health-physical-education",
+                "social-emotional-learning",
+                "other"
+              ],
+              "type": "string"
+            },
+            "tellAboutIt": {
+              "default": true,
+              "type": "boolean"
+            },
+            "template": {
+              "const": "picture-response",
+              "type": "string"
+            },
+            "title": {
+              "maxLength": 200,
+              "minLength": 1,
+              "not": {
+                "pattern": "<\\s*\\/?\\s*([sS][cC][rR][iI][pP][tT]|[iI][fF][rR][aA][mM][eE]|[oO][bB][jJ][eE][cC][tT]|[eE][mM][bB][eE][dD]|[aA][pP][pP][lL][eE][tT]|[sS][tT][yY][lL][eE]|[lL][iI][nN][kK]|[mM][eE][tT][aA]|[bB][aA][sS][eE]|[fF][oO][rR][mM]|[sS][vV][gG])\\b|\\b([jJ][aA][vV][aA][sS][cC][rR][iI][pP][tT]|[vV][bB][sS][cC][rR][iI][pP][tT])\\s*:|[dD][aA][tT][aA]\\s*:\\s*[tT][eE][xX][tT]\\/[hH][tT][mM][lL]"
+              },
+              "pattern": "\\S",
+              "type": "string"
+            }
+          },
+          "required": [
+            "template",
+            "title",
+            "subject",
+            "gradeBand",
+            "overview",
+            "aiHelp",
+            "due",
+            "lookPrompt",
+            "drawPrompt"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "additionalArtifactTypes": {
+              "default": [],
+              "items": {
+                "enum": [
+                  "document",
+                  "notebook",
+                  "spreadsheet",
+                  "presentation",
+                  "dataset",
+                  "image",
+                  "audio",
+                  "video",
+                  "interactive",
+                  "evidence",
+                  "portfolio",
+                  "external-ref"
+                ],
+                "type": "string"
+              },
+              "maxItems": 12,
+              "type": "array"
+            },
+            "aiHelp": {
+              "enum": [
+                "full",
+                "hints-only",
+                "none"
+              ],
+              "type": "string"
+            },
+            "answerBy": {
+              "default": "speaking",
+              "enum": [
+                "speaking",
+                "drawing",
+                "writing"
+              ],
+              "type": "string"
+            },
+            "collaboration": {
+              "default": "individual",
+              "enum": [
+                "individual",
+                "group"
+              ],
+              "type": "string"
+            },
+            "due": {
+              "oneOf": [
+                {
+                  "additionalProperties": false,
+                  "properties": {
+                    "kind": {
+                      "const": "none",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "kind"
+                  ],
+                  "type": "object"
+                },
+                {
+                  "additionalProperties": false,
+                  "properties": {
+                    "days": {
+                      "maximum": 365,
+                      "minimum": 1,
+                      "type": "integer"
+                    },
+                    "kind": {
+                      "const": "after-install",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "kind",
+                    "days"
+                  ],
+                  "type": "object"
+                }
+              ]
+            },
+            "gradeBand": {
+              "pattern": "^(K|\\d{1,2})(-\\d{1,2})?$",
+              "type": "string"
+            },
+            "overview": {
+              "maxLength": 5000,
+              "minLength": 1,
+              "not": {
+                "pattern": "<\\s*\\/?\\s*([sS][cC][rR][iI][pP][tT]|[iI][fF][rR][aA][mM][eE]|[oO][bB][jJ][eE][cC][tT]|[eE][mM][bB][eE][dD]|[aA][pP][pP][lL][eE][tT]|[sS][tT][yY][lL][eE]|[lL][iI][nN][kK]|[mM][eE][tT][aA]|[bB][aA][sS][eE]|[fF][oO][rR][mM]|[sS][vV][gG])\\b|\\b([jJ][aA][vV][aA][sS][cC][rR][iI][pP][tT]|[vV][bB][sS][cC][rR][iI][pP][tT])\\s*:|[dD][aA][tT][aA]\\s*:\\s*[tT][eE][xX][tT]\\/[hH][tT][mM][lL]"
+              },
+              "pattern": "\\S",
+              "type": "string"
+            },
+            "passage": {
+              "maxLength": 3000,
+              "minLength": 1,
+              "not": {
+                "pattern": "<\\s*\\/?\\s*([sS][cC][rR][iI][pP][tT]|[iI][fF][rR][aA][mM][eE]|[oO][bB][jJ][eE][cC][tT]|[eE][mM][bB][eE][dD]|[aA][pP][pP][lL][eE][tT]|[sS][tT][yY][lL][eE]|[lL][iI][nN][kK]|[mM][eE][tT][aA]|[bB][aA][sS][eE]|[fF][oO][rR][mM]|[sS][vV][gG])\\b|\\b([jJ][aA][vV][aA][sS][cC][rR][iI][pP][tT]|[vV][bB][sS][cC][rR][iI][pP][tT])\\s*:|[dD][aA][tT][aA]\\s*:\\s*[tT][eE][xX][tT]\\/[hH][tT][mM][lL]"
+              },
+              "pattern": "\\S",
+              "type": "string"
+            },
+            "questions": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "answerBy": {
+                    "enum": [
+                      "speaking",
+                      "drawing",
+                      "writing"
+                    ],
+                    "type": "string"
+                  },
+                  "prompt": {
+                    "maxLength": 500,
+                    "minLength": 1,
+                    "not": {
+                      "pattern": "<\\s*\\/?\\s*([sS][cC][rR][iI][pP][tT]|[iI][fF][rR][aA][mM][eE]|[oO][bB][jJ][eE][cC][tT]|[eE][mM][bB][eE][dD]|[aA][pP][pP][lL][eE][tT]|[sS][tT][yY][lL][eE]|[lL][iI][nN][kK]|[mM][eE][tT][aA]|[bB][aA][sS][eE]|[fF][oO][rR][mM]|[sS][vV][gG])\\b|\\b([jJ][aA][vV][aA][sS][cC][rR][iI][pP][tT]|[vV][bB][sS][cC][rR][iI][pP][tT])\\s*:|[dD][aA][tT][aA]\\s*:\\s*[tT][eE][xX][tT]\\/[hH][tT][mM][lL]"
+                    },
+                    "pattern": "\\S",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "prompt"
+                ],
+                "type": "object"
+              },
+              "maxItems": 10,
+              "minItems": 1,
+              "type": "array"
+            },
+            "resources": {
+              "default": [],
+              "items": {
+                "pattern": "^[a-z][a-z0-9-]{0,62}$",
+                "type": "string"
+              },
+              "maxItems": 20,
+              "type": "array"
+            },
+            "sentenceFrames": {
+              "default": [],
+              "items": {
+                "maxLength": 200,
+                "minLength": 1,
+                "not": {
+                  "pattern": "<\\s*\\/?\\s*([sS][cC][rR][iI][pP][tT]|[iI][fF][rR][aA][mM][eE]|[oO][bB][jJ][eE][cC][tT]|[eE][mM][bB][eE][dD]|[aA][pP][pP][lL][eE][tT]|[sS][tT][yY][lL][eE]|[lL][iI][nN][kK]|[mM][eE][tT][aA]|[bB][aA][sS][eE]|[fF][oO][rR][mM]|[sS][vV][gG])\\b|\\b([jJ][aA][vV][aA][sS][cC][rR][iI][pP][tT]|[vV][bB][sS][cC][rR][iI][pP][tT])\\s*:|[dD][aA][tT][aA]\\s*:\\s*[tT][eE][xX][tT]\\/[hH][tT][mM][lL]"
+                },
+                "pattern": "\\S",
+                "type": "string"
+              },
+              "maxItems": 10,
+              "type": "array"
+            },
+            "subject": {
+              "enum": [
+                "english-language-arts",
+                "science",
+                "history-social-studies",
+                "mathematics",
+                "arts",
+                "world-languages",
+                "computer-science",
+                "health-physical-education",
+                "social-emotional-learning",
+                "other"
+              ],
+              "type": "string"
+            },
+            "template": {
+              "const": "read-and-respond",
+              "type": "string"
+            },
+            "title": {
+              "maxLength": 200,
+              "minLength": 1,
+              "not": {
+                "pattern": "<\\s*\\/?\\s*([sS][cC][rR][iI][pP][tT]|[iI][fF][rR][aA][mM][eE]|[oO][bB][jJ][eE][cC][tT]|[eE][mM][bB][eE][dD]|[aA][pP][pP][lL][eE][tT]|[sS][tT][yY][lL][eE]|[lL][iI][nN][kK]|[mM][eE][tT][aA]|[bB][aA][sS][eE]|[fF][oO][rR][mM]|[sS][vV][gG])\\b|\\b([jJ][aA][vV][aA][sS][cC][rR][iI][pP][tT]|[vV][bB][sS][cC][rR][iI][pP][tT])\\s*:|[dD][aA][tT][aA]\\s*:\\s*[tT][eE][xX][tT]\\/[hH][tT][mM][lL]"
+              },
+              "pattern": "\\S",
+              "type": "string"
+            }
+          },
+          "required": [
+            "template",
+            "title",
+            "subject",
+            "gradeBand",
+            "overview",
+            "aiHelp",
+            "due",
+            "passage",
+            "questions"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "alignments": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "competencyUri": {
+            "maxLength": 2048,
+            "minLength": 1,
+            "type": "string"
+          },
+          "frameworkKey": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "frameworkKey",
+          "competencyUri"
+        ],
+        "type": "object"
+      },
+      "maxItems": 20,
+      "type": "array"
+    },
+    "id": {
+      "maxLength": 200,
+      "pattern": "^[a-z0-9]([a-z0-9-]*[a-z0-9])?(\\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)+\\/[a-z][a-z0-9-]{0,62}$",
+      "type": "string"
+    },
+    "language": {
+      "pattern": "^[A-Za-z]{2,8}(-[A-Za-z0-9]{1,8})*$",
+      "type": "string"
+    },
+    "readings": {
+      "default": [],
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "attribution": {
+            "maxLength": 500,
+            "minLength": 1,
+            "not": {
+              "pattern": "<\\s*\\/?\\s*([sS][cC][rR][iI][pP][tT]|[iI][fF][rR][aA][mM][eE]|[oO][bB][jJ][eE][cC][tT]|[eE][mM][bB][eE][dD]|[aA][pP][pP][lL][eE][tT]|[sS][tT][yY][lL][eE]|[lL][iI][nN][kK]|[mM][eE][tT][aA]|[bB][aA][sS][eE]|[fF][oO][rR][mM]|[sS][vV][gG])\\b|\\b([jJ][aA][vV][aA][sS][cC][rR][iI][pP][tT]|[vV][bB][sS][cC][rR][iI][pP][tT])\\s*:|[dD][aA][tT][aA]\\s*:\\s*[tT][eE][xX][tT]\\/[hH][tT][mM][lL]"
+            },
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "body": {
+            "maxLength": 20000,
+            "minLength": 1,
+            "not": {
+              "pattern": "<\\s*\\/?\\s*([sS][cC][rR][iI][pP][tT]|[iI][fF][rR][aA][mM][eE]|[oO][bB][jJ][eE][cC][tT]|[eE][mM][bB][eE][dD]|[aA][pP][pP][lL][eE][tT]|[sS][tT][yY][lL][eE]|[lL][iI][nN][kK]|[mM][eE][tT][aA]|[bB][aA][sS][eE]|[fF][oO][rR][mM]|[sS][vV][gG])\\b|\\b([jJ][aA][vV][aA][sS][cC][rR][iI][pP][tT]|[vV][bB][sS][cC][rR][iI][pP][tT])\\s*:|[dD][aA][tT][aA]\\s*:\\s*[tT][eE][xX][tT]\\/[hH][tT][mM][lL]"
+            },
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "id": {
+            "pattern": "^[a-z][a-z0-9-]{0,62}$",
+            "type": "string"
+          },
+          "title": {
+            "maxLength": 200,
+            "minLength": 1,
+            "not": {
+              "pattern": "<\\s*\\/?\\s*([sS][cC][rR][iI][pP][tT]|[iI][fF][rR][aA][mM][eE]|[oO][bB][jJ][eE][cC][tT]|[eE][mM][bB][eE][dD]|[aA][pP][pP][lL][eE][tT]|[sS][tT][yY][lL][eE]|[lL][iI][nN][kK]|[mM][eE][tT][aA]|[bB][aA][sS][eE]|[fF][oO][rR][mM]|[sS][vV][gG])\\b|\\b([jJ][aA][vV][aA][sS][cC][rR][iI][pP][tT]|[vV][bB][sS][cC][rR][iI][pP][tT])\\s*:|[dD][aA][tT][aA]\\s*:\\s*[tT][eE][xX][tT]\\/[hH][tT][mM][lL]"
+            },
+            "pattern": "\\S",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "body"
+        ],
+        "type": "object"
+      },
+      "maxItems": 20,
+      "type": "array"
+    },
+    "rubric": {
+      "additionalProperties": false,
+      "properties": {
+        "criteria": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "description": {
+                "maxLength": 2000,
+                "minLength": 1,
+                "not": {
+                  "pattern": "<\\s*\\/?\\s*([sS][cC][rR][iI][pP][tT]|[iI][fF][rR][aA][mM][eE]|[oO][bB][jJ][eE][cC][tT]|[eE][mM][bB][eE][dD]|[aA][pP][pP][lL][eE][tT]|[sS][tT][yY][lL][eE]|[lL][iI][nN][kK]|[mM][eE][tT][aA]|[bB][aA][sS][eE]|[fF][oO][rR][mM]|[sS][vV][gG])\\b|\\b([jJ][aA][vV][aA][sS][cC][rR][iI][pP][tT]|[vV][bB][sS][cC][rR][iI][pP][tT])\\s*:|[dD][aA][tT][aA]\\s*:\\s*[tT][eE][xX][tT]\\/[hH][tT][mM][lL]"
+                },
+                "pattern": "\\S",
+                "type": "string"
+              },
+              "id": {
+                "pattern": "^[a-z0-9][a-z0-9-]{0,62}$",
+                "type": "string"
+              },
+              "levels": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "id": {
+                      "pattern": "^[a-z0-9][a-z0-9-]{0,62}$",
+                      "type": "string"
+                    },
+                    "label": {
+                      "maxLength": 200,
+                      "minLength": 1,
+                      "not": {
+                        "pattern": "<\\s*\\/?\\s*([sS][cC][rR][iI][pP][tT]|[iI][fF][rR][aA][mM][eE]|[oO][bB][jJ][eE][cC][tT]|[eE][mM][bB][eE][dD]|[aA][pP][pP][lL][eE][tT]|[sS][tT][yY][lL][eE]|[lL][iI][nN][kK]|[mM][eE][tT][aA]|[bB][aA][sS][eE]|[fF][oO][rR][mM]|[sS][vV][gG])\\b|\\b([jJ][aA][vV][aA][sS][cC][rR][iI][pP][tT]|[vV][bB][sS][cC][rR][iI][pP][tT])\\s*:|[dD][aA][tT][aA]\\s*:\\s*[tT][eE][xX][tT]\\/[hH][tT][mM][lL]"
+                      },
+                      "pattern": "\\S",
+                      "type": "string"
+                    },
+                    "points": {
+                      "maximum": 1000,
+                      "minimum": 0,
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "label",
+                    "points"
+                  ],
+                  "type": "object"
+                },
+                "maxItems": 10,
+                "minItems": 1,
+                "type": "array"
+              },
+              "title": {
+                "maxLength": 200,
+                "minLength": 1,
+                "not": {
+                  "pattern": "<\\s*\\/?\\s*([sS][cC][rR][iI][pP][tT]|[iI][fF][rR][aA][mM][eE]|[oO][bB][jJ][eE][cC][tT]|[eE][mM][bB][eE][dD]|[aA][pP][pP][lL][eE][tT]|[sS][tT][yY][lL][eE]|[lL][iI][nN][kK]|[mM][eE][tT][aA]|[bB][aA][sS][eE]|[fF][oO][rR][mM]|[sS][vV][gG])\\b|\\b([jJ][aA][vV][aA][sS][cC][rR][iI][pP][tT]|[vV][bB][sS][cC][rR][iI][pP][tT])\\s*:|[dD][aA][tT][aA]\\s*:\\s*[tT][eE][xX][tT]\\/[hH][tT][mM][lL]"
+                },
+                "pattern": "\\S",
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "title",
+              "levels"
+            ],
+            "type": "object"
+          },
+          "maxItems": 50,
+          "minItems": 1,
+          "type": "array"
+        },
+        "title": {
+          "maxLength": 200,
+          "minLength": 1,
+          "not": {
+            "pattern": "<\\s*\\/?\\s*([sS][cC][rR][iI][pP][tT]|[iI][fF][rR][aA][mM][eE]|[oO][bB][jJ][eE][cC][tT]|[eE][mM][bB][eE][dD]|[aA][pP][pP][lL][eE][tT]|[sS][tT][yY][lL][eE]|[lL][iI][nN][kK]|[mM][eE][tT][aA]|[bB][aA][sS][eE]|[fF][oO][rR][mM]|[sS][vV][gG])\\b|\\b([jJ][aA][vV][aA][sS][cC][rR][iI][pP][tT]|[vV][bB][sS][cC][rR][iI][pP][tT])\\s*:|[dD][aA][tT][aA]\\s*:\\s*[tT][eE][xX][tT]\\/[hH][tT][mM][lL]"
+          },
+          "pattern": "\\S",
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "criteria"
+      ],
+      "type": "object"
+    },
+    "specVersion": {
+      "const": "1.1",
+      "type": "string"
+    },
+    "version": {
+      "pattern": "^(0|[1-9]\\d{0,8})\\.(0|[1-9]\\d{0,8})\\.(0|[1-9]\\d{0,8})$",
+      "type": "string"
+    }
+  },
+  "required": [
+    "specVersion",
+    "id",
+    "version",
+    "language",
+    "activity",
+    "alignments"
+  ],
+  "title": "OCS activity definition export",
+  "type": "object"
+}

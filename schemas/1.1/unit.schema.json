@@ -1,0 +1,89 @@
+{
+  "$comment": "Generated from the reference implementation (packages/ocs/scripts/generate-schemas.ts); do not edit. License: CC-BY-4.0.",
+  "$id": "https://raw.githubusercontent.com/gmackie/open-course-standard/main/schemas/1.1/unit.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "A unit: an ordered sequence of items taught together. See https://github.com/gmackie/open-course-standard/blob/main/spec/ocs-1.1.md §7.1. Normative for structure (OCS 1.1 §1). Rules a schema cannot express, such as references between files, uniqueness within lists, and the digest and signature checks, are stated in the specification.",
+  "properties": {
+    "id": {
+      "pattern": "^[a-z][a-z0-9-]{0,62}$",
+      "type": "string"
+    },
+    "items": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "kind": {
+            "enum": [
+              "activity",
+              "resource",
+              "codex"
+            ],
+            "type": "string"
+          },
+          "ref": {
+            "pattern": "^[a-z][a-z0-9-]{0,62}$",
+            "type": "string"
+          }
+        },
+        "required": [
+          "kind",
+          "ref"
+        ],
+        "type": "object"
+      },
+      "maxItems": 200,
+      "type": "array"
+    },
+    "standards": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "competencyUri": {
+            "maxLength": 2048,
+            "minLength": 1,
+            "type": "string"
+          },
+          "frameworkKey": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "frameworkKey",
+          "competencyUri"
+        ],
+        "type": "object"
+      },
+      "maxItems": 50,
+      "type": "array"
+    },
+    "summary": {
+      "maxLength": 5000,
+      "minLength": 1,
+      "not": {
+        "pattern": "<\\s*\\/?\\s*([sS][cC][rR][iI][pP][tT]|[iI][fF][rR][aA][mM][eE]|[oO][bB][jJ][eE][cC][tT]|[eE][mM][bB][eE][dD]|[aA][pP][pP][lL][eE][tT]|[sS][tT][yY][lL][eE]|[lL][iI][nN][kK]|[mM][eE][tT][aA]|[bB][aA][sS][eE]|[fF][oO][rR][mM]|[sS][vV][gG])\\b|\\b([jJ][aA][vV][aA][sS][cC][rR][iI][pP][tT]|[vV][bB][sS][cC][rR][iI][pP][tT])\\s*:|[dD][aA][tT][aA]\\s*:\\s*[tT][eE][xX][tT]\\/[hH][tT][mM][lL]"
+      },
+      "pattern": "\\S",
+      "type": "string"
+    },
+    "title": {
+      "maxLength": 200,
+      "minLength": 1,
+      "not": {
+        "pattern": "<\\s*\\/?\\s*([sS][cC][rR][iI][pP][tT]|[iI][fF][rR][aA][mM][eE]|[oO][bB][jJ][eE][cC][tT]|[eE][mM][bB][eE][dD]|[aA][pP][pP][lL][eE][tT]|[sS][tT][yY][lL][eE]|[lL][iI][nN][kK]|[mM][eE][tT][aA]|[bB][aA][sS][eE]|[fF][oO][rR][mM]|[sS][vV][gG])\\b|\\b([jJ][aA][vV][aA][sS][cC][rR][iI][pP][tT]|[vV][bB][sS][cC][rR][iI][pP][tT])\\s*:|[dD][aA][tT][aA]\\s*:\\s*[tT][eE][xX][tT]\\/[hH][tT][mM][lL]"
+      },
+      "pattern": "\\S",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "title",
+    "standards",
+    "items"
+  ],
+  "title": "OCS unit (units/<id>.json)",
+  "type": "object"
+}

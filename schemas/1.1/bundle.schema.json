@@ -1,0 +1,197 @@
+{
+  "$comment": "Generated from the reference implementation (packages/ocs/scripts/generate-schemas.ts); do not edit. License: CC-BY-4.0.",
+  "$defs": {
+    "__schema0": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        },
+        {
+          "items": {
+            "$ref": "#/$defs/__schema0"
+          },
+          "type": "array"
+        },
+        {
+          "additionalProperties": {
+            "$ref": "#/$defs/__schema0"
+          },
+          "propertyNames": {
+            "type": "string"
+          },
+          "type": "object"
+        }
+      ]
+    }
+  },
+  "$id": "https://raw.githubusercontent.com/gmackie/open-course-standard/main/schemas/1.1/bundle.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "A course, the packages it includes and the exports they name, with digests and signatures, in one document. See https://github.com/gmackie/open-course-standard/blob/main/spec/ocs-1.1.md §16. Normative for structure (OCS 1.1 §1). Rules a schema cannot express, such as references between files, uniqueness within lists, and the digest and signature checks, are stated in the specification.",
+  "properties": {
+    "course": {
+      "additionalProperties": false,
+      "properties": {
+        "digest": {
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "id": {
+          "maxLength": 200,
+          "pattern": "^[a-z0-9]([a-z0-9-]*[a-z0-9])?(\\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)+\\/[a-z][a-z0-9-]{0,62}$",
+          "type": "string"
+        },
+        "version": {
+          "pattern": "^(0|[1-9]\\d{0,8})\\.(0|[1-9]\\d{0,8})\\.(0|[1-9]\\d{0,8})$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "version",
+        "digest"
+      ],
+      "type": "object"
+    },
+    "exports": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "digest": {
+            "pattern": "^sha256:[0-9a-f]{64}$",
+            "type": "string"
+          },
+          "id": {
+            "maxLength": 200,
+            "pattern": "^[a-z0-9]([a-z0-9-]*[a-z0-9])?(\\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)+\\/[a-z][a-z0-9-]{0,62}$",
+            "type": "string"
+          },
+          "signature": {
+            "additionalProperties": false,
+            "properties": {
+              "keyId": {
+                "pattern": "^ed25519-[A-Za-z0-9_-]{43}$",
+                "type": "string"
+              },
+              "payload": {
+                "$ref": "#/$defs/__schema0"
+              },
+              "signature": {
+                "maxLength": 86,
+                "minLength": 86,
+                "pattern": "^[A-Za-z0-9_-]*$",
+                "type": "string"
+              }
+            },
+            "required": [
+              "payload",
+              "signature",
+              "keyId"
+            ],
+            "type": "object"
+          },
+          "text": {
+            "type": "string"
+          },
+          "version": {
+            "pattern": "^(0|[1-9]\\d{0,8})\\.(0|[1-9]\\d{0,8})\\.(0|[1-9]\\d{0,8})$",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "version",
+          "digest",
+          "text"
+        ],
+        "type": "object"
+      },
+      "maxItems": 500,
+      "type": "array"
+    },
+    "format": {
+      "const": "educateos.ocs-bundle.v1",
+      "type": "string"
+    },
+    "packages": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "digest": {
+            "pattern": "^sha256:[0-9a-f]{64}$",
+            "type": "string"
+          },
+          "files": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "propertyNames": {
+              "type": "string"
+            },
+            "type": "object"
+          },
+          "id": {
+            "maxLength": 200,
+            "pattern": "^[a-z0-9]([a-z0-9-]*[a-z0-9])?(\\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)+\\/[a-z][a-z0-9-]{0,62}$",
+            "type": "string"
+          },
+          "signature": {
+            "additionalProperties": false,
+            "properties": {
+              "keyId": {
+                "pattern": "^ed25519-[A-Za-z0-9_-]{43}$",
+                "type": "string"
+              },
+              "payload": {
+                "$ref": "#/$defs/__schema0"
+              },
+              "signature": {
+                "maxLength": 86,
+                "minLength": 86,
+                "pattern": "^[A-Za-z0-9_-]*$",
+                "type": "string"
+              }
+            },
+            "required": [
+              "payload",
+              "signature",
+              "keyId"
+            ],
+            "type": "object"
+          },
+          "version": {
+            "pattern": "^(0|[1-9]\\d{0,8})\\.(0|[1-9]\\d{0,8})\\.(0|[1-9]\\d{0,8})$",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "version",
+          "digest",
+          "files"
+        ],
+        "type": "object"
+      },
+      "maxItems": 100,
+      "minItems": 1,
+      "type": "array"
+    }
+  },
+  "required": [
+    "format",
+    "course",
+    "packages",
+    "exports"
+  ],
+  "title": "OCS bundle",
+  "type": "object"
+}

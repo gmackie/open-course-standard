@@ -1,0 +1,135 @@
+{
+  "$comment": "Generated from the reference implementation (packages/ocs/scripts/generate-schemas.ts); do not edit. License: CC-BY-4.0.",
+  "$id": "https://raw.githubusercontent.com/gmackie/open-course-standard/main/schemas/1.1/ocs-lock.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "The lockfile of an OCS course: the exact version and digest of every package it includes. See https://github.com/gmackie/open-course-standard/blob/main/spec/ocs-1.1.md §11. Normative for structure (OCS 1.1 §1). Rules a schema cannot express, such as references between files, uniqueness within lists, and the digest and signature checks, are stated in the specification.",
+  "properties": {
+    "lockVersion": {
+      "const": 1,
+      "type": "number"
+    },
+    "packages": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "digest": {
+            "pattern": "^sha256:[0-9a-f]{64}$",
+            "type": "string"
+          },
+          "id": {
+            "maxLength": 200,
+            "pattern": "^[a-z0-9]([a-z0-9-]*[a-z0-9])?(\\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)+\\/[a-z][a-z0-9-]{0,62}$",
+            "type": "string"
+          },
+          "modules": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "name": {
+                  "pattern": "^[a-z][a-z0-9-]{0,62}$",
+                  "type": "string"
+                },
+                "package": {
+                  "maxLength": 200,
+                  "pattern": "^[a-z0-9]([a-z0-9-]*[a-z0-9])?(\\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)+\\/[a-z][a-z0-9-]{0,62}$",
+                  "type": "string"
+                },
+                "version": {
+                  "pattern": "^(0|[1-9]\\d{0,8})\\.(0|[1-9]\\d{0,8})\\.(0|[1-9]\\d{0,8})$",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "package",
+                "version"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "version": {
+            "pattern": "^(0|[1-9]\\d{0,8})\\.(0|[1-9]\\d{0,8})\\.(0|[1-9]\\d{0,8})$",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "version",
+          "digest",
+          "modules"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "root": {
+      "additionalProperties": false,
+      "properties": {
+        "digest": {
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "id": {
+          "maxLength": 200,
+          "pattern": "^[a-z0-9]([a-z0-9-]*[a-z0-9])?(\\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)+\\/[a-z][a-z0-9-]{0,62}$",
+          "type": "string"
+        },
+        "modules": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "pattern": "^[a-z][a-z0-9-]{0,62}$",
+                "type": "string"
+              },
+              "package": {
+                "maxLength": 200,
+                "pattern": "^[a-z0-9]([a-z0-9-]*[a-z0-9])?(\\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)+\\/[a-z][a-z0-9-]{0,62}$",
+                "type": "string"
+              },
+              "version": {
+                "pattern": "^(0|[1-9]\\d{0,8})\\.(0|[1-9]\\d{0,8})\\.(0|[1-9]\\d{0,8})$",
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "package",
+              "version"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "version": {
+          "pattern": "^(0|[1-9]\\d{0,8})\\.(0|[1-9]\\d{0,8})\\.(0|[1-9]\\d{0,8})$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "version",
+        "digest",
+        "modules"
+      ],
+      "type": "object"
+    },
+    "specVersion": {
+      "enum": [
+        "1.0",
+        "1.1"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "lockVersion",
+    "specVersion",
+    "root",
+    "packages"
+  ],
+  "title": "OCS lockfile (ocs.lock)",
+  "type": "object"
+}

@@ -1,0 +1,94 @@
+{
+  "$comment": "Generated from the reference implementation (packages/ocs/scripts/generate-schemas.ts); do not edit. License: CC-BY-4.0.",
+  "$id": "https://raw.githubusercontent.com/gmackie/open-course-standard/main/schemas/1.1/activity.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "A pointer to an activity definition, district-local or portable. See https://github.com/gmackie/open-course-standard/blob/main/spec/ocs-1.1.md §7.2. Normative for structure (OCS 1.1 §1). Rules a schema cannot express, such as references between files, uniqueness within lists, and the digest and signature checks, are stated in the specification.",
+  "properties": {
+    "definition": {
+      "anyOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "definitionId": {
+              "pattern": "^adf_[a-z0-9][a-z0-9-]{0,62}$",
+              "type": "string"
+            },
+            "version": {
+              "exclusiveMinimum": 0,
+              "maximum": 9007199254740991,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "definitionId",
+            "version"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "portable": {
+              "additionalProperties": false,
+              "properties": {
+                "digest": {
+                  "pattern": "^sha256:[0-9a-f]{64}$",
+                  "type": "string"
+                },
+                "id": {
+                  "maxLength": 200,
+                  "pattern": "^[a-z0-9]([a-z0-9-]*[a-z0-9])?(\\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)+\\/[a-z][a-z0-9-]{0,62}$",
+                  "type": "string"
+                },
+                "version": {
+                  "pattern": "^(0|[1-9]\\d{0,8})\\.(0|[1-9]\\d{0,8})\\.(0|[1-9]\\d{0,8})$",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "version",
+                "digest"
+              ],
+              "type": "object"
+            }
+          },
+          "required": [
+            "portable"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "id": {
+      "pattern": "^[a-z][a-z0-9-]{0,62}$",
+      "type": "string"
+    },
+    "role": {
+      "enum": [
+        "lesson",
+        "assignment",
+        "assessment"
+      ],
+      "type": "string"
+    },
+    "title": {
+      "maxLength": 200,
+      "minLength": 1,
+      "not": {
+        "pattern": "<\\s*\\/?\\s*([sS][cC][rR][iI][pP][tT]|[iI][fF][rR][aA][mM][eE]|[oO][bB][jJ][eE][cC][tT]|[eE][mM][bB][eE][dD]|[aA][pP][pP][lL][eE][tT]|[sS][tT][yY][lL][eE]|[lL][iI][nN][kK]|[mM][eE][tT][aA]|[bB][aA][sS][eE]|[fF][oO][rR][mM]|[sS][vV][gG])\\b|\\b([jJ][aA][vV][aA][sS][cC][rR][iI][pP][tT]|[vV][bB][sS][cC][rR][iI][pP][tT])\\s*:|[dD][aA][tT][aA]\\s*:\\s*[tT][eE][xX][tT]\\/[hH][tT][mM][lL]"
+      },
+      "pattern": "\\S",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "title",
+    "role",
+    "definition"
+  ],
+  "title": "OCS activity reference (activities/<id>.json)",
+  "type": "object"
+}
