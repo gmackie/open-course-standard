@@ -58,7 +58,7 @@ The key words **MUST**, **MUST NOT**, **REQUIRED**, **SHALL**, **SHALL NOT**, **
 are to be interpreted as described in BCP 14 ([RFC 2119], [RFC 8174]) when, and only when, they
 appear in all capitals, as shown here.
 
-The JSON Schemas in `schemas/1.1/` (in this repository) are normative for the structure of every
+The JSON Schemas in [`schemas/1.1/`](../schemas/1.1/) are normative for the structure of every
 document this specification defines. Where this text states a rule a schema cannot express
 (for example, that a unit item names an existing entry), the rule is normative in addition to
 the schema. If the text and a schema disagree, the text is authoritative and the disagreement is
@@ -994,7 +994,7 @@ A conforming composer is a conforming consumer that also:
 
 ### 21.5 Conformance suite
 
-The conformance suite in `conformance/` (in this repository) has valid and invalid fixtures with
+The conformance suite in [`conformance/`](../conformance/) has valid and invalid fixtures with
 their expected results, including byte-identical lockfiles and digest, composition, integrity and
 signature cases. Passing it is necessary but not sufficient for conformance.
 
@@ -1004,7 +1004,7 @@ This appendix records implementation notes that are not part of the standard.
 
 ### A.1 Reference implementation
 
-`packages/ocs` (`@open-course-standard/ocs`, in this repository) is the reference implementation:
+[`packages/ocs`](../packages/ocs/) (`@open-course-standard/ocs`) is the reference implementation:
 a TypeScript library for Node.js 20+ and browsers, with the `ocs` command-line tool. It is
 generated from, and tested against, the same validators as the JSON Schemas.
 
