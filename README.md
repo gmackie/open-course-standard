@@ -13,9 +13,8 @@ Specification" and is now maintained here as an independent standard. EducateOS 
 implementation of it.
 
 > **Status:** the repository is being assembled in a series of pull requests (tracked as
-> SCHO-346). This first one sets up licensing, governance and contribution rules. The
-> specification, JSON Schemas, reference implementation, conformance suite and examples
-> follow.
+> SCHO-346). The [specification](spec/ocs-1.1.md) is in place. The JSON Schemas, reference
+> implementation, conformance suite and examples follow.
 
 ## What OCS is for
 

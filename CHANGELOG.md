@@ -6,6 +6,14 @@ versioning on its own.
 
 ## Unreleased
 
+### Specification
+
+- OCS 1.1 published as the vendor-neutral Open Course Standard (`spec/ocs-1.1.md`). Same format
+  as the EducateOS "Open Course Specification" 1.1: format versions, signing contexts and the
+  bundle format are unchanged. Adds RFC 2119 language, an exact canonical JSON and digest
+  definition, a normative resolution procedure, producer/consumer/composer conformance classes,
+  problem kinds, and a non-normative implementations appendix for EducateOS-specific notes.
+
 ### Repository
 
 - Licensing split: code under Apache-2.0, specification, schemas, fixtures, examples and
