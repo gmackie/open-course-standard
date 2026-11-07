@@ -1,0 +1,26 @@
+{
+  "id": "example.com/cells-core",
+  "language": "en",
+  "modules": [
+    {
+      "name": "safety",
+      "package": "example.net/lab-safety",
+      "range": "~1.1.0"
+    }
+  ],
+  "outline": [
+    {
+      "kind": "unit",
+      "unit": "membranes"
+    },
+    {
+      "kind": "module",
+      "module": "safety"
+    }
+  ],
+  "overrides": [],
+  "specVersion": "1.0",
+  "standards": [],
+  "title": "Course example.com/cells-core",
+  "version": "2.1.0"
+}

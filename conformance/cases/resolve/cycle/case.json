@@ -1,0 +1,15 @@
+{
+  "description": "Two modules include each other.",
+  "expect": {
+    "problem": "cycle"
+  },
+  "id": "resolve/cycle",
+  "input": {
+    "course": "course",
+    "store": "store"
+  },
+  "kind": "resolve",
+  "spec": [
+    "§10.5"
+  ]
+}

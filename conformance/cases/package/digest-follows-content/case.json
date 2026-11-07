@@ -1,0 +1,15 @@
+{
+  "description": "valid-minimal with one note's body changed: the digest must differ from valid-minimal's.",
+  "expect": {
+    "digest": "sha256:272a2685b3e36040566113d7b633f886c5d3500b04eb1ee59779a1447645c16b",
+    "valid": true
+  },
+  "id": "package/digest-follows-content",
+  "input": {
+    "package": "package"
+  },
+  "kind": "package",
+  "spec": [
+    "§9"
+  ]
+}

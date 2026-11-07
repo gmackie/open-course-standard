@@ -1,0 +1,15 @@
+{
+  "description": "^0.2.0 does not accept 0.3.0.",
+  "expect": {
+    "lock": "expected.lock"
+  },
+  "id": "resolve/zero-major-caret",
+  "input": {
+    "course": "course",
+    "store": "store"
+  },
+  "kind": "resolve",
+  "spec": [
+    "§4.4"
+  ]
+}

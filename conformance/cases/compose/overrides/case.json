@@ -1,0 +1,15 @@
+{
+  "description": "Hide a unit and an item, rename a unit and an item, reorder a module's units.",
+  "expect": {
+    "outline": "expected-outline.json"
+  },
+  "id": "compose/overrides",
+  "input": {
+    "course": "course",
+    "store": "store"
+  },
+  "kind": "compose",
+  "spec": [
+    "§12.3"
+  ]
+}

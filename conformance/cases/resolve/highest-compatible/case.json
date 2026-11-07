@@ -1,0 +1,16 @@
+{
+  "description": "^1.0.0 selects the highest 1.x version, 1.2.3.",
+  "expect": {
+    "lock": "expected.lock"
+  },
+  "id": "resolve/highest-compatible",
+  "input": {
+    "course": "course",
+    "store": "store"
+  },
+  "kind": "resolve",
+  "spec": [
+    "§10.2",
+    "§11"
+  ]
+}

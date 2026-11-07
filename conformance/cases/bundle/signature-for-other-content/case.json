@@ -1,0 +1,18 @@
+{
+  "description": "The module's signature is for other content.",
+  "expect": {
+    "accepted": false,
+    "reason": "wrong-package"
+  },
+  "id": "bundle/signature-for-other-content",
+  "input": {
+    "at": "2026-11-07T00:00:00Z",
+    "bundle": "bundle.json",
+    "trust": "trust.json"
+  },
+  "kind": "bundle",
+  "spec": [
+    "§15.3",
+    "§16"
+  ]
+}

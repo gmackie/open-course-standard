@@ -1,0 +1,16 @@
+{
+  "description": "valid-minimal with an ocs.lock: the lockfile is not part of the digest, so the digest must equal valid-minimal's.",
+  "expect": {
+    "digest": "sha256:1b4850074db3dc12c15ca1ac2bd4de36a2742ec1a613d047c20256aeb545ef2a",
+    "valid": true
+  },
+  "id": "package/digest-ignores-lockfile",
+  "input": {
+    "package": "package"
+  },
+  "kind": "package",
+  "spec": [
+    "§9",
+    "§11"
+  ]
+}

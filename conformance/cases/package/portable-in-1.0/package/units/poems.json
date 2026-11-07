@@ -1,0 +1,11 @@
+{
+  "id": "poems",
+  "items": [
+    {
+      "kind": "activity",
+      "ref": "image"
+    }
+  ],
+  "standards": [],
+  "title": "Unit poems"
+}

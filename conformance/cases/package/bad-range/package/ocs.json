@@ -1,0 +1,22 @@
+{
+  "id": "example.org/x",
+  "language": "en",
+  "modules": [
+    {
+      "name": "safety",
+      "package": "example.net/lab-safety",
+      "range": "1.x"
+    }
+  ],
+  "outline": [
+    {
+      "kind": "module",
+      "module": "safety"
+    }
+  ],
+  "overrides": [],
+  "specVersion": "1.0",
+  "standards": [],
+  "title": "Course example.org/x",
+  "version": "1.0.0"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "rules",
+  "items": [
+    {
+      "kind": "resource",
+      "ref": "poster"
+    },
+    {
+      "kind": "resource",
+      "ref": "video"
+    }
+  ],
+  "standards": [],
+  "title": "Unit rules"
+}

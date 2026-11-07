@@ -1,0 +1,11 @@
+{
+  "id": "start",
+  "items": [
+    {
+      "kind": "activity",
+      "ref": "missing"
+    }
+  ],
+  "standards": [],
+  "title": "Unit start"
+}

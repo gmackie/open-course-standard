@@ -1,0 +1,16 @@
+{
+  "description": "An entry that is not JSON.",
+  "expect": {
+    "problem": "invalid-package",
+    "valid": false
+  },
+  "id": "package/entry-not-json",
+  "input": {
+    "package": "package"
+  },
+  "kind": "package",
+  "spec": [
+    "§3.1",
+    "§5"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "example.net/lab-safety",
+  "language": "en",
+  "modules": [],
+  "outline": [
+    {
+      "kind": "unit",
+      "unit": "rules"
+    }
+  ],
+  "overrides": [],
+  "specVersion": "1.0",
+  "standards": [],
+  "title": "Course example.net/lab-safety",
+  "version": "0.2.0"
+}

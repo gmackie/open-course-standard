@@ -1,0 +1,10 @@
+{
+  "id": "poster",
+  "kind": "release",
+  "release": {
+    "resourceId": "rsc_poster",
+    "version": "1.0.0"
+  },
+  "title": "Resource poster",
+  "use": "licensed-copy"
+}

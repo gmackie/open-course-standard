@@ -1,0 +1,45 @@
+{
+  "id": "cells",
+  "items": [
+    {
+      "kind": "activity",
+      "ref": "look"
+    },
+    {
+      "kind": "activity",
+      "ref": "lab"
+    },
+    {
+      "kind": "activity",
+      "ref": "check"
+    },
+    {
+      "kind": "resource",
+      "ref": "sim"
+    },
+    {
+      "kind": "resource",
+      "ref": "diagram"
+    },
+    {
+      "kind": "codex",
+      "ref": "overview"
+    },
+    {
+      "kind": "codex",
+      "ref": "guide"
+    },
+    {
+      "kind": "codex",
+      "ref": "key"
+    }
+  ],
+  "standards": [
+    {
+      "competencyUri": "https://standards.example.org/competency/42",
+      "frameworkKey": "example-framework"
+    }
+  ],
+  "summary": "Cells and membranes.",
+  "title": "Cells"
+}

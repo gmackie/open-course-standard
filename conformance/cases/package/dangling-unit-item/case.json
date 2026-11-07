@@ -1,0 +1,15 @@
+{
+  "description": "A unit item naming an activity that does not exist.",
+  "expect": {
+    "problem": "invalid-package",
+    "valid": false
+  },
+  "id": "package/dangling-unit-item",
+  "input": {
+    "package": "package"
+  },
+  "kind": "package",
+  "spec": [
+    "§7.1"
+  ]
+}

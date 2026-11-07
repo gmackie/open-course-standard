@@ -1,0 +1,94 @@
+{
+  "hidden": [],
+  "packageId": "example.org/course",
+  "repeated": [],
+  "standards": [],
+  "units": [
+    {
+      "items": [
+        {
+          "key": "intro#welcome",
+          "kind": "codex",
+          "renamed": false,
+          "title": "Note welcome"
+        }
+      ],
+      "key": "intro",
+      "provenance": {
+        "digest": "sha256:94d130822e830331cadede655e948af5bf1d488f4e54a5ef77c2ff711910b938",
+        "modules": [],
+        "packageId": "example.org/course",
+        "version": "1.0.0"
+      },
+      "renamed": false,
+      "title": "Unit intro"
+    },
+    {
+      "items": [
+        {
+          "key": "safety:rules#rules-sheet",
+          "kind": "resource",
+          "renamed": false,
+          "title": "Resource rules-sheet",
+          "use": "licensed-copy"
+        }
+      ],
+      "key": "safety:rules",
+      "provenance": {
+        "digest": "sha256:820d5bd5ce7685a8bae35256a3bdb96a8832f2922ca9bb701cd3c45f92f4dc48",
+        "modules": [
+          "safety"
+        ],
+        "packageId": "example.net/lab-safety",
+        "version": "1.2.0"
+      },
+      "renamed": false,
+      "title": "lab-safety rules"
+    },
+    {
+      "items": [
+        {
+          "key": "safety:spills#spills-sheet",
+          "kind": "resource",
+          "renamed": false,
+          "title": "Resource spills-sheet",
+          "use": "licensed-copy"
+        }
+      ],
+      "key": "safety:spills",
+      "provenance": {
+        "digest": "sha256:820d5bd5ce7685a8bae35256a3bdb96a8832f2922ca9bb701cd3c45f92f4dc48",
+        "modules": [
+          "safety"
+        ],
+        "packageId": "example.net/lab-safety",
+        "version": "1.2.0"
+      },
+      "renamed": false,
+      "title": "lab-safety spills"
+    },
+    {
+      "items": [
+        {
+          "key": "safety:fire#fire-sheet",
+          "kind": "resource",
+          "renamed": false,
+          "title": "Resource fire-sheet",
+          "use": "licensed-copy"
+        }
+      ],
+      "key": "safety:fire",
+      "provenance": {
+        "digest": "sha256:820d5bd5ce7685a8bae35256a3bdb96a8832f2922ca9bb701cd3c45f92f4dc48",
+        "modules": [
+          "safety"
+        ],
+        "packageId": "example.net/lab-safety",
+        "version": "1.2.0"
+      },
+      "renamed": false,
+      "title": "lab-safety fire"
+    }
+  ],
+  "version": "1.0.0"
+}

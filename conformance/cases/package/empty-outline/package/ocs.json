@@ -1,0 +1,11 @@
+{
+  "id": "example.org/empty",
+  "language": "en",
+  "modules": [],
+  "outline": [],
+  "overrides": [],
+  "specVersion": "1.0",
+  "standards": [],
+  "title": "Course example.org/empty",
+  "version": "1.0.0"
+}

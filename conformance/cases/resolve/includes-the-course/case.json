@@ -1,0 +1,15 @@
+{
+  "description": "A module that includes the course.",
+  "expect": {
+    "problem": "cycle"
+  },
+  "id": "resolve/includes-the-course",
+  "input": {
+    "course": "course",
+    "store": "store"
+  },
+  "kind": "resolve",
+  "spec": [
+    "§10.5"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "spills",
+  "items": [
+    {
+      "kind": "resource",
+      "ref": "spills-sheet"
+    }
+  ],
+  "standards": [],
+  "title": "lab-safety spills"
+}

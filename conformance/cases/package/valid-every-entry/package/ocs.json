@@ -1,0 +1,47 @@
+{
+  "gradeBand": "9-12",
+  "id": "example.org/every-entry",
+  "language": "en",
+  "modules": [
+    {
+      "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "name": "safety",
+      "package": "example.net/lab-safety",
+      "range": "1.0.0",
+      "rights": "embed"
+    }
+  ],
+  "outline": [
+    {
+      "kind": "unit",
+      "unit": "cells"
+    },
+    {
+      "kind": "module",
+      "module": "safety"
+    }
+  ],
+  "overrides": [
+    {
+      "kind": "hide",
+      "target": {
+        "item": "goggles",
+        "modules": [
+          "safety"
+        ],
+        "unit": "rules"
+      }
+    }
+  ],
+  "specVersion": "1.0",
+  "standards": [
+    {
+      "competencyUri": "https://standards.example.org/competency/42",
+      "frameworkKey": "example-framework"
+    }
+  ],
+  "subject": "science",
+  "summary": "Every entry form.",
+  "title": "Course example.org/every-entry",
+  "version": "2.3.4"
+}

@@ -1,0 +1,15 @@
+{
+  "description": "The same package included twice.",
+  "expect": {
+    "problem": "invalid-package",
+    "valid": false
+  },
+  "id": "package/module-package-twice",
+  "input": {
+    "package": "package"
+  },
+  "kind": "package",
+  "spec": [
+    "§6.2"
+  ]
+}

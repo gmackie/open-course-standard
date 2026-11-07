@@ -1,0 +1,15 @@
+{
+  "description": "A portable activity in a package that declares 1.0.",
+  "expect": {
+    "problem": "invalid-package",
+    "valid": false
+  },
+  "id": "package/portable-in-1.0",
+  "input": {
+    "package": "package"
+  },
+  "kind": "package",
+  "spec": [
+    "§8"
+  ]
+}

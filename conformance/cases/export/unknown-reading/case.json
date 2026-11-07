@@ -1,0 +1,15 @@
+{
+  "description": "An activity naming a reading the export does not have.",
+  "expect": {
+    "problem": "invalid-export",
+    "valid": false
+  },
+  "id": "export/unknown-reading",
+  "input": {
+    "export": "export.json"
+  },
+  "kind": "export",
+  "spec": [
+    "§14.2"
+  ]
+}

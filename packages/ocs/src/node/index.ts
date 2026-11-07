@@ -2,3 +2,4 @@
 // directories and ZIP output. Import from `@open-course-standard/ocs/node`.
 export * from "./store.ts";
 export * from "./zip.ts";
+export * from "./conformance.ts";

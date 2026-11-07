@@ -1,0 +1,18 @@
+{
+  "description": "An export publication signed by the approved key.",
+  "expect": {
+    "ok": true,
+    "signed": true
+  },
+  "id": "publication/export-signed",
+  "input": {
+    "at": "2026-11-07T00:00:00Z",
+    "envelope": "envelope.json",
+    "export": "export.json",
+    "trust": "trust.json"
+  },
+  "kind": "publication",
+  "spec": [
+    "§15"
+  ]
+}

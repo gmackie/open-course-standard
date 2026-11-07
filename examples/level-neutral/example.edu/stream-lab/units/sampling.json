@@ -1,0 +1,15 @@
+{
+  "id": "sampling",
+  "items": [
+    {
+      "kind": "codex",
+      "ref": "sampling"
+    },
+    {
+      "kind": "codex",
+      "ref": "site-safety"
+    }
+  ],
+  "standards": [],
+  "title": "Stream sampling"
+}

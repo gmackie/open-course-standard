@@ -1,0 +1,15 @@
+{
+  "description": "The same item twice in one unit.",
+  "expect": {
+    "problem": "invalid-package",
+    "valid": false
+  },
+  "id": "package/duplicate-unit-item",
+  "input": {
+    "package": "package"
+  },
+  "kind": "package",
+  "spec": [
+    "§7.1"
+  ]
+}

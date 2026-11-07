@@ -1,0 +1,64 @@
+{
+  "activity": {
+    "additionalArtifactTypes": [
+      "image"
+    ],
+    "aiHelp": "hints-only",
+    "collaboration": "group",
+    "due": {
+      "days": 7,
+      "kind": "after-install"
+    },
+    "genre": "narrative",
+    "gradeBand": "3-5",
+    "minWords": 50,
+    "minimumCitations": 1,
+    "overview": "Listen to a short poem and talk about one image in it.",
+    "prompt": "Write about the fog.",
+    "resources": [
+      "fog"
+    ],
+    "subject": "english-language-arts",
+    "template": "writing-task",
+    "title": "An image in a poem"
+  },
+  "alignments": [
+    {
+      "competencyUri": "https://standards.example.org/competency/42",
+      "frameworkKey": "example-framework"
+    }
+  ],
+  "id": "example.org/poem-image",
+  "language": "en",
+  "readings": [
+    {
+      "attribution": "Carl Sandburg, Fog (1916). Public domain.",
+      "body": "The fog comes on little cat feet.",
+      "id": "fog",
+      "title": "Fog (excerpt)"
+    }
+  ],
+  "rubric": {
+    "criteria": [
+      {
+        "id": "image",
+        "levels": [
+          {
+            "id": "not-yet",
+            "label": "Not yet",
+            "points": 0
+          },
+          {
+            "id": "yes",
+            "label": "Yes",
+            "points": 2
+          }
+        ],
+        "title": "Names the image"
+      }
+    ],
+    "title": "Talking about an image"
+  },
+  "specVersion": "1.1",
+  "version": "1.0.0"
+}

@@ -1,0 +1,15 @@
+{
+  "description": "A note body holding a javascript: URL.",
+  "expect": {
+    "problem": "invalid-package",
+    "valid": false
+  },
+  "id": "package/active-content-javascript-url",
+  "input": {
+    "package": "package"
+  },
+  "kind": "package",
+  "spec": [
+    "§3.2"
+  ]
+}

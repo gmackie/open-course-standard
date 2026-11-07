@@ -1,0 +1,17 @@
+{
+  "description": "Every package and export signed by the publisher's approved key.",
+  "expect": {
+    "accepted": true
+  },
+  "id": "bundle/valid-signed",
+  "input": {
+    "at": "2026-11-07T00:00:00Z",
+    "bundle": "bundle.json",
+    "trust": "trust.json"
+  },
+  "kind": "bundle",
+  "spec": [
+    "§15.3",
+    "§16"
+  ]
+}

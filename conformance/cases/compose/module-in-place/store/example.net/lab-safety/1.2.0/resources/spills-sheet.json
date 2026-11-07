@@ -1,0 +1,10 @@
+{
+  "id": "spills-sheet",
+  "kind": "release",
+  "release": {
+    "resourceId": "rsc_spills-sheet",
+    "version": "1.0.0"
+  },
+  "title": "Resource spills-sheet",
+  "use": "licensed-copy"
+}

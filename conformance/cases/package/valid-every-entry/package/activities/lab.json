@@ -1,0 +1,9 @@
+{
+  "definition": {
+    "definitionId": "adf_lab",
+    "version": 1
+  },
+  "id": "lab",
+  "role": "assignment",
+  "title": "Activity lab"
+}

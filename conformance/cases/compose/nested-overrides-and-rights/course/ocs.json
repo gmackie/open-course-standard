@@ -1,0 +1,55 @@
+{
+  "id": "example.org/course",
+  "language": "en",
+  "modules": [
+    {
+      "name": "cells",
+      "package": "example.com/cells-core",
+      "range": "^2.0.0",
+      "rights": "embed"
+    }
+  ],
+  "outline": [
+    {
+      "kind": "unit",
+      "unit": "intro"
+    },
+    {
+      "kind": "module",
+      "module": "cells"
+    }
+  ],
+  "overrides": [
+    {
+      "kind": "rename",
+      "target": {
+        "modules": [
+          "cells",
+          "safety"
+        ],
+        "unit": "rules"
+      },
+      "title": "Biology lab rules"
+    },
+    {
+      "kind": "reorder",
+      "order": [
+        "membranes"
+      ],
+      "target": {
+        "modules": [
+          "cells"
+        ]
+      }
+    }
+  ],
+  "specVersion": "1.0",
+  "standards": [
+    {
+      "competencyUri": "https://standards.example.org/competency/42",
+      "frameworkKey": "example-framework"
+    }
+  ],
+  "title": "Course example.org/course",
+  "version": "1.0.0"
+}

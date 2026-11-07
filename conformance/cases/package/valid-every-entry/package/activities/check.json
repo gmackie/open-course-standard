@@ -1,0 +1,9 @@
+{
+  "definition": {
+    "definitionId": "adf_check",
+    "version": 1
+  },
+  "id": "check",
+  "role": "assessment",
+  "title": "Activity check"
+}

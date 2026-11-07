@@ -1,0 +1,15 @@
+{
+  "description": "The same alignment twice.",
+  "expect": {
+    "problem": "invalid-export",
+    "valid": false
+  },
+  "id": "export/duplicate-alignment",
+  "input": {
+    "export": "export.json"
+  },
+  "kind": "export",
+  "spec": [
+    "§14.2"
+  ]
+}

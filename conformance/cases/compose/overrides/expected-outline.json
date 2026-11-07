@@ -1,0 +1,67 @@
+{
+  "hidden": [
+    "safety:rules#rules-sheet",
+    "safety:fire"
+  ],
+  "packageId": "example.org/course",
+  "repeated": [],
+  "standards": [],
+  "units": [
+    {
+      "items": [
+        {
+          "key": "intro#welcome",
+          "kind": "codex",
+          "renamed": false,
+          "title": "Note welcome"
+        }
+      ],
+      "key": "intro",
+      "provenance": {
+        "digest": "sha256:4114958095251c1330020a5f897aaad9af24dd7ebc62f99c751da06b9ce9f2f8",
+        "modules": [],
+        "packageId": "example.org/course",
+        "version": "1.0.0"
+      },
+      "renamed": false,
+      "title": "Unit intro"
+    },
+    {
+      "items": [
+        {
+          "key": "safety:spills#spills-sheet",
+          "kind": "resource",
+          "renamed": false,
+          "title": "Resource spills-sheet",
+          "use": "licensed-copy"
+        }
+      ],
+      "key": "safety:spills",
+      "provenance": {
+        "digest": "sha256:820d5bd5ce7685a8bae35256a3bdb96a8832f2922ca9bb701cd3c45f92f4dc48",
+        "modules": [
+          "safety"
+        ],
+        "packageId": "example.net/lab-safety",
+        "version": "1.2.0"
+      },
+      "renamed": true,
+      "title": "Cleaning up spills"
+    },
+    {
+      "items": [],
+      "key": "safety:rules",
+      "provenance": {
+        "digest": "sha256:820d5bd5ce7685a8bae35256a3bdb96a8832f2922ca9bb701cd3c45f92f4dc48",
+        "modules": [
+          "safety"
+        ],
+        "packageId": "example.net/lab-safety",
+        "version": "1.2.0"
+      },
+      "renamed": false,
+      "title": "lab-safety rules"
+    }
+  ],
+  "version": "1.0.0"
+}

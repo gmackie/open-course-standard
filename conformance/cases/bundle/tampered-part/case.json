@@ -1,0 +1,18 @@
+{
+  "description": "A bundled file changed after the bundle was made, so it no longer matches its recorded digest.",
+  "expect": {
+    "accepted": false,
+    "reason": "invalid"
+  },
+  "id": "bundle/tampered-part",
+  "input": {
+    "at": "2026-11-07T00:00:00Z",
+    "bundle": "bundle.json",
+    "trust": "trust.json"
+  },
+  "kind": "bundle",
+  "spec": [
+    "§15.3",
+    "§16"
+  ]
+}

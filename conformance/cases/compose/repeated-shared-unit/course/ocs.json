@@ -1,0 +1,35 @@
+{
+  "id": "example.org/course",
+  "language": "en",
+  "modules": [
+    {
+      "name": "cells",
+      "package": "example.com/cells-core",
+      "range": "^2.0.0"
+    },
+    {
+      "name": "sources",
+      "package": "example.edu/sources",
+      "range": "^1.0.0"
+    }
+  ],
+  "outline": [
+    {
+      "kind": "unit",
+      "unit": "intro"
+    },
+    {
+      "kind": "module",
+      "module": "cells"
+    },
+    {
+      "kind": "module",
+      "module": "sources"
+    }
+  ],
+  "overrides": [],
+  "specVersion": "1.0",
+  "standards": [],
+  "title": "Course example.org/course",
+  "version": "1.0.0"
+}

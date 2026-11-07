@@ -1,0 +1,17 @@
+{
+  "description": "Nothing needs a signature from the destination's own domain.",
+  "expect": {
+    "accepted": true
+  },
+  "id": "bundle/local-domain-unsigned",
+  "input": {
+    "at": "2026-11-07T00:00:00Z",
+    "bundle": "bundle.json",
+    "trust": "trust.json"
+  },
+  "kind": "bundle",
+  "spec": [
+    "§15.3",
+    "§16"
+  ]
+}

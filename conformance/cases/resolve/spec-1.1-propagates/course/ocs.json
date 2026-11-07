@@ -1,0 +1,26 @@
+{
+  "id": "example.org/course",
+  "language": "en",
+  "modules": [
+    {
+      "name": "sources",
+      "package": "example.edu/sources",
+      "range": "^1.0.0"
+    }
+  ],
+  "outline": [
+    {
+      "kind": "unit",
+      "unit": "intro"
+    },
+    {
+      "kind": "module",
+      "module": "sources"
+    }
+  ],
+  "overrides": [],
+  "specVersion": "1.0",
+  "standards": [],
+  "title": "Course example.org/course",
+  "version": "1.0.0"
+}

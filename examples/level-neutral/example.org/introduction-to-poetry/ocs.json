@@ -1,0 +1,17 @@
+{
+  "id": "example.org/introduction-to-poetry",
+  "language": "en-US",
+  "modules": [],
+  "outline": [
+    {
+      "kind": "unit",
+      "unit": "imagery"
+    }
+  ],
+  "overrides": [],
+  "specVersion": "1.0",
+  "standards": [],
+  "summary": "A tiny, level-neutral course: read a poem, notice an image, and compare readings. It needs no grade level, term, institution or exam.",
+  "title": "Introduction to Poetry",
+  "version": "1.0.0"
+}

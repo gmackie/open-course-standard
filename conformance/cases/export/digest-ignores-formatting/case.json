@@ -1,0 +1,15 @@
+{
+  "description": "valid-read-and-respond, minified: the digest must equal valid-read-and-respond's.",
+  "expect": {
+    "digest": "sha256:11d7cca7ae8bf77fb1bb74b51855d13466fcaf152b16103e958aefae6e1d2ea1",
+    "valid": true
+  },
+  "id": "export/digest-ignores-formatting",
+  "input": {
+    "export": "export.json"
+  },
+  "kind": "export",
+  "spec": [
+    "§14.3"
+  ]
+}

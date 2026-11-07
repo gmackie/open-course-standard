@@ -1,0 +1,15 @@
+{
+  "description": "A module digest pin on a range that is not exact.",
+  "expect": {
+    "problem": "invalid-package",
+    "valid": false
+  },
+  "id": "package/digest-pin-on-range",
+  "input": {
+    "package": "package"
+  },
+  "kind": "package",
+  "spec": [
+    "§6.2"
+  ]
+}

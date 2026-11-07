@@ -1,0 +1,16 @@
+{
+  "description": "An exact module pinned by the right digest.",
+  "expect": {
+    "lock": "expected.lock"
+  },
+  "id": "resolve/digest-pin-matches",
+  "input": {
+    "course": "course",
+    "store": "store"
+  },
+  "kind": "resolve",
+  "spec": [
+    "§6.2",
+    "§10.1"
+  ]
+}

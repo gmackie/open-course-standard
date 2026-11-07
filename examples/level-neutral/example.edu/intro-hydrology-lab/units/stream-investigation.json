@@ -1,0 +1,19 @@
+{
+  "id": "stream-investigation",
+  "items": [
+    {
+      "kind": "codex",
+      "ref": "protocol"
+    },
+    {
+      "kind": "codex",
+      "ref": "analysis"
+    },
+    {
+      "kind": "codex",
+      "ref": "safety-and-calibration"
+    }
+  ],
+  "standards": [],
+  "title": "Stream sampling and measurement uncertainty"
+}

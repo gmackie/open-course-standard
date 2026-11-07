@@ -1,0 +1,15 @@
+{
+  "description": "Rubric levels not listed lowest first.",
+  "expect": {
+    "problem": "invalid-export",
+    "valid": false
+  },
+  "id": "export/rubric-levels-descending",
+  "input": {
+    "export": "export.json"
+  },
+  "kind": "export",
+  "spec": [
+    "§14.5"
+  ]
+}

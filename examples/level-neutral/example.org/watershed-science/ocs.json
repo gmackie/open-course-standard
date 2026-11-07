@@ -1,0 +1,60 @@
+{
+  "id": "example.org/watershed-science",
+  "language": "en-US",
+  "modules": [
+    {
+      "name": "codex",
+      "package": "example.org/watershed-codex",
+      "range": "^1.0.0"
+    },
+    {
+      "name": "field",
+      "package": "example.edu/stream-lab",
+      "range": "^1.0.0",
+      "rights": "link"
+    }
+  ],
+  "outline": [
+    {
+      "kind": "unit",
+      "unit": "kickoff"
+    },
+    {
+      "kind": "module",
+      "module": "codex"
+    },
+    {
+      "kind": "module",
+      "module": "field"
+    }
+  ],
+  "overrides": [
+    {
+      "kind": "reorder",
+      "order": [
+        "infiltration",
+        "runoff"
+      ],
+      "target": {
+        "modules": [
+          "codex"
+        ]
+      }
+    },
+    {
+      "kind": "rename",
+      "target": {
+        "modules": [
+          "field"
+        ],
+        "unit": "sampling"
+      },
+      "title": "Investigate your local stream"
+    }
+  ],
+  "specVersion": "1.0",
+  "standards": [],
+  "summary": "A course composed from two independently published packages: a reusable codex and another publisher's field lab. Different levels can reuse the same parts with different goals.",
+  "title": "Watershed Science",
+  "version": "1.0.0"
+}

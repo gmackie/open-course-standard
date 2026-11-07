@@ -1,0 +1,17 @@
+{
+  "id": "example.edu/stream-lab",
+  "language": "en-US",
+  "modules": [],
+  "outline": [
+    {
+      "kind": "unit",
+      "unit": "sampling"
+    }
+  ],
+  "overrides": [],
+  "specVersion": "1.0",
+  "standards": [],
+  "summary": "A field laboratory any course can include.",
+  "title": "Stream Sampling Laboratory",
+  "version": "1.0.0"
+}

@@ -1,0 +1,15 @@
+{
+  "description": "A unit title holding a script tag.",
+  "expect": {
+    "problem": "invalid-package",
+    "valid": false
+  },
+  "id": "package/active-content-script",
+  "input": {
+    "package": "package"
+  },
+  "kind": "package",
+  "spec": [
+    "§3.2"
+  ]
+}

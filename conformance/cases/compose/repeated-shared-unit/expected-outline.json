@@ -1,0 +1,112 @@
+{
+  "hidden": [],
+  "packageId": "example.org/course",
+  "repeated": [
+    "sources/safety:rules"
+  ],
+  "standards": [
+    {
+      "competencyUri": "https://standards.example.org/competency/42",
+      "frameworkKey": "example-framework"
+    },
+    {
+      "competencyUri": "https://standards.example.org/competency/43",
+      "frameworkKey": "example-framework"
+    }
+  ],
+  "units": [
+    {
+      "items": [
+        {
+          "key": "intro#welcome",
+          "kind": "codex",
+          "renamed": false,
+          "title": "Note welcome"
+        }
+      ],
+      "key": "intro",
+      "provenance": {
+        "digest": "sha256:17ec4d2ef917993efa13e6744fda0b20512cfd35de44c0b73fb9515a7069315d",
+        "modules": [],
+        "packageId": "example.org/course",
+        "version": "1.0.0"
+      },
+      "renamed": false,
+      "title": "Unit intro"
+    },
+    {
+      "items": [
+        {
+          "key": "cells/safety:rules#poster",
+          "kind": "resource",
+          "renamed": false,
+          "title": "Resource poster",
+          "use": "excerpt"
+        },
+        {
+          "key": "cells/safety:rules#video",
+          "kind": "resource",
+          "renamed": false,
+          "title": "Resource video",
+          "use": "link"
+        }
+      ],
+      "key": "cells/safety:rules",
+      "provenance": {
+        "digest": "sha256:b56ba1fa220c908e702b5ae8e11991f0a5e9a8d9214b10d014c732c80c604a01",
+        "modules": [
+          "cells",
+          "safety"
+        ],
+        "packageId": "example.net/lab-safety",
+        "version": "1.0.0"
+      },
+      "renamed": true,
+      "title": "Cells lab rules"
+    },
+    {
+      "items": [
+        {
+          "key": "cells:membranes#diagram",
+          "kind": "resource",
+          "renamed": false,
+          "title": "Resource diagram",
+          "use": "licensed-copy"
+        }
+      ],
+      "key": "cells:membranes",
+      "provenance": {
+        "digest": "sha256:f27a3e4bdd7078f3354ca9a99f9bcdbe4a6f107eb51ab516163f686d568073f0",
+        "modules": [
+          "cells"
+        ],
+        "packageId": "example.com/cells-core",
+        "version": "2.0.0"
+      },
+      "renamed": false,
+      "title": "Membranes"
+    },
+    {
+      "items": [
+        {
+          "key": "sources:letters#context",
+          "kind": "codex",
+          "renamed": false,
+          "title": "Note context"
+        }
+      ],
+      "key": "sources:letters",
+      "provenance": {
+        "digest": "sha256:0c7596396788ccc6ffaaff6945f099aeb76b4783c518700acde5c79d1e39be39",
+        "modules": [
+          "sources"
+        ],
+        "packageId": "example.edu/sources",
+        "version": "1.0.0"
+      },
+      "renamed": false,
+      "title": "Letters"
+    }
+  ],
+  "version": "1.0.0"
+}

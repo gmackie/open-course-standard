@@ -1,0 +1,7 @@
+{
+  "body": "Analyze your measurements in a notebook someone else can rerun: load the raw data, show each calculation, and report results with their uncertainty. Explain one way your method could be improved.",
+  "id": "analysis",
+  "purpose": "context",
+  "title": "Reproducible analysis",
+  "visibility": "students"
+}

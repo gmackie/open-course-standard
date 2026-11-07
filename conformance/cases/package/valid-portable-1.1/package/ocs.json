@@ -1,0 +1,16 @@
+{
+  "id": "example.org/portable",
+  "language": "en",
+  "modules": [],
+  "outline": [
+    {
+      "kind": "unit",
+      "unit": "poems"
+    }
+  ],
+  "overrides": [],
+  "specVersion": "1.1",
+  "standards": [],
+  "title": "Course example.org/portable",
+  "version": "1.0.0"
+}

@@ -1,0 +1,15 @@
+{
+  "description": "A module range with ||.",
+  "expect": {
+    "problem": "invalid-package",
+    "valid": false
+  },
+  "id": "package/or-range",
+  "input": {
+    "package": "package"
+  },
+  "kind": "package",
+  "spec": [
+    "§4.4"
+  ]
+}

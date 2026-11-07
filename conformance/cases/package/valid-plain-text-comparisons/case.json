@@ -1,0 +1,15 @@
+{
+  "description": "Ordinary text with < and > is plain text.",
+  "expect": {
+    "digest": "sha256:bca78916020fe16c9bd73b485faad130b80070d9327991221b5fb49e7f968128",
+    "valid": true
+  },
+  "id": "package/valid-plain-text-comparisons",
+  "input": {
+    "package": "package"
+  },
+  "kind": "package",
+  "spec": [
+    "§3.2"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "lockVersion": 1,
+  "packages": [],
+  "root": {
+    "digest": "sha256:4a6d0aff269c9063c38e0a61013ab8b683296783724029da42e42c089152d183",
+    "id": "example.edu/intro-hydrology-lab",
+    "modules": [],
+    "version": "1.0.0"
+  },
+  "specVersion": "1.0"
+}

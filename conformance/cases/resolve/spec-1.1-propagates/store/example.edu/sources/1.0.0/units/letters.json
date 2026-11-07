@@ -1,0 +1,11 @@
+{
+  "id": "letters",
+  "items": [
+    {
+      "kind": "activity",
+      "ref": "analyze"
+    }
+  ],
+  "standards": [],
+  "title": "Unit letters"
+}

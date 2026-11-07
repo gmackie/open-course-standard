@@ -1,0 +1,15 @@
+{
+  "description": "The course and a module both include lab-safety; the whole course gets one version that satisfies both (1.1.4).",
+  "expect": {
+    "lock": "expected.lock"
+  },
+  "id": "resolve/diamond-one-version",
+  "input": {
+    "course": "course",
+    "store": "store"
+  },
+  "kind": "resolve",
+  "spec": [
+    "§10.2"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "description": "An entry whose id differs from its file name.",
+  "expect": {
+    "problem": "invalid-package",
+    "valid": false
+  },
+  "id": "package/id-file-name-mismatch",
+  "input": {
+    "package": "package"
+  },
+  "kind": "package",
+  "spec": [
+    "§5"
+  ]
+}

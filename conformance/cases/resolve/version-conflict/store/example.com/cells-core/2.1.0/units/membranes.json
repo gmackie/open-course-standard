@@ -1,0 +1,11 @@
+{
+  "id": "membranes",
+  "items": [
+    {
+      "kind": "resource",
+      "ref": "diagram"
+    }
+  ],
+  "standards": [],
+  "title": "Membranes"
+}

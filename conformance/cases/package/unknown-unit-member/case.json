@@ -1,0 +1,15 @@
+{
+  "description": "An unknown member in a unit.",
+  "expect": {
+    "problem": "invalid-package",
+    "valid": false
+  },
+  "id": "package/unknown-unit-member",
+  "input": {
+    "package": "package"
+  },
+  "kind": "package",
+  "spec": [
+    "§3.1"
+  ]
+}

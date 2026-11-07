@@ -1,0 +1,15 @@
+{
+  "description": ">=1.1.0 <2.0.0 selects 1.2.3.",
+  "expect": {
+    "lock": "expected.lock"
+  },
+  "id": "resolve/comparison-range",
+  "input": {
+    "course": "course",
+    "store": "store"
+  },
+  "kind": "resolve",
+  "spec": [
+    "§4.4"
+  ]
+}

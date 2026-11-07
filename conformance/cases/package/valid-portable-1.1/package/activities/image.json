@@ -1,0 +1,12 @@
+{
+  "definition": {
+    "portable": {
+      "digest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "id": "example.org/poem-image",
+      "version": "1.0.0"
+    }
+  },
+  "id": "image",
+  "role": "assignment",
+  "title": "An image in a poem"
+}

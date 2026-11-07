@@ -1,0 +1,16 @@
+{
+  "description": "An export that leaves every defaulted member out. The digest covers the file as written.",
+  "expect": {
+    "digest": "sha256:24608cc12f36ab8eb95054c0ad69a5df97776cea5ef65d4e766830cb02b51297",
+    "valid": true
+  },
+  "id": "export/valid-defaults-omitted",
+  "input": {
+    "export": "export.json"
+  },
+  "kind": "export",
+  "spec": [
+    "§14.2",
+    "§14.3"
+  ]
+}

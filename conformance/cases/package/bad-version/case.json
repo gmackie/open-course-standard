@@ -1,0 +1,15 @@
+{
+  "description": "A two-part version.",
+  "expect": {
+    "problem": "invalid-package",
+    "valid": false
+  },
+  "id": "package/bad-version",
+  "input": {
+    "package": "package"
+  },
+  "kind": "package",
+  "spec": [
+    "§4.3"
+  ]
+}

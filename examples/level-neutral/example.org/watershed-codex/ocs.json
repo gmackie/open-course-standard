@@ -1,0 +1,21 @@
+{
+  "id": "example.org/watershed-codex",
+  "language": "en-US",
+  "modules": [],
+  "outline": [
+    {
+      "kind": "unit",
+      "unit": "runoff"
+    },
+    {
+      "kind": "unit",
+      "unit": "infiltration"
+    }
+  ],
+  "overrides": [],
+  "specVersion": "1.0",
+  "standards": [],
+  "summary": "Reusable explanations of watershed processes, for any level.",
+  "title": "Watershed Science Codex",
+  "version": "1.0.0"
+}

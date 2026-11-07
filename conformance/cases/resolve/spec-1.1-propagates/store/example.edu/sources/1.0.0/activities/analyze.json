@@ -1,0 +1,12 @@
+{
+  "definition": {
+    "portable": {
+      "digest": "sha256:eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+      "id": "example.edu/letter-analysis",
+      "version": "1.0.0"
+    }
+  },
+  "id": "analyze",
+  "role": "assignment",
+  "title": "Analyze a letter"
+}

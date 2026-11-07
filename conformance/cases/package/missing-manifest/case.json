@@ -1,0 +1,15 @@
+{
+  "description": "A package with no ocs.json.",
+  "expect": {
+    "problem": "invalid-package",
+    "valid": false
+  },
+  "id": "package/missing-manifest",
+  "input": {
+    "package": "package"
+  },
+  "kind": "package",
+  "spec": [
+    "§5"
+  ]
+}

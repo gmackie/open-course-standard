@@ -1,0 +1,17 @@
+{
+  "description": "The course now needs ^1.1.0, so the locked 1.0.0 is replaced by the highest fitting version.",
+  "expect": {
+    "lock": "expected.lock"
+  },
+  "id": "resolve/locked-version-no-longer-fits",
+  "input": {
+    "course": "course",
+    "lock": "previous.lock",
+    "store": "store"
+  },
+  "kind": "resolve",
+  "spec": [
+    "§10.2",
+    "§10.3"
+  ]
+}

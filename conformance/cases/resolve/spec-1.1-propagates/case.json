@@ -1,0 +1,15 @@
+{
+  "description": "A 1.0 course that includes a 1.1 module gets a 1.1 lockfile.",
+  "expect": {
+    "lock": "expected.lock"
+  },
+  "id": "resolve/spec-1.1-propagates",
+  "input": {
+    "course": "course",
+    "store": "store"
+  },
+  "kind": "resolve",
+  "spec": [
+    "§11"
+  ]
+}

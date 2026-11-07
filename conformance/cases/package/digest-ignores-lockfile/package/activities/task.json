@@ -1,0 +1,9 @@
+{
+  "definition": {
+    "definitionId": "adf_task",
+    "version": 1
+  },
+  "id": "task",
+  "role": "assignment",
+  "title": "Activity task"
+}

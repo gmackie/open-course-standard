@@ -1,0 +1,19 @@
+{
+  "gradeBand": "9-12",
+  "id": "example.org/biology-foundations",
+  "language": "en-US",
+  "modules": [],
+  "outline": [
+    {
+      "kind": "unit",
+      "unit": "cell-division"
+    }
+  ],
+  "overrides": [],
+  "specVersion": "1.1",
+  "standards": [],
+  "subject": "science",
+  "summary": "Secondary science. The audience is context, not a requirement of the format.",
+  "title": "Biology Foundations",
+  "version": "1.0.0"
+}

@@ -1,0 +1,16 @@
+{
+  "description": "A module's units appear where the module is placed, after the course's own unit, with provenance.",
+  "expect": {
+    "outline": "expected-outline.json"
+  },
+  "id": "compose/module-in-place",
+  "input": {
+    "course": "course",
+    "store": "store"
+  },
+  "kind": "compose",
+  "spec": [
+    "§12.1",
+    "§12.2"
+  ]
+}

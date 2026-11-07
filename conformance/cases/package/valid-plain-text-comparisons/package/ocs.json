@@ -1,0 +1,16 @@
+{
+  "id": "example.org/comparisons",
+  "language": "en",
+  "modules": [],
+  "outline": [
+    {
+      "kind": "unit",
+      "unit": "inequalities"
+    }
+  ],
+  "overrides": [],
+  "specVersion": "1.0",
+  "standards": [],
+  "title": "When x < 3 and y > 2",
+  "version": "1.0.0"
+}

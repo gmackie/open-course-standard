@@ -1,0 +1,16 @@
+{
+  "description": "A question holding an iframe.",
+  "expect": {
+    "problem": "invalid-export",
+    "valid": false
+  },
+  "id": "export/active-content",
+  "input": {
+    "export": "export.json"
+  },
+  "kind": "export",
+  "spec": [
+    "§3.2",
+    "§14.2"
+  ]
+}

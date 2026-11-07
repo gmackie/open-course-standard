@@ -1,0 +1,15 @@
+{
+  "description": "A module range with a wildcard.",
+  "expect": {
+    "problem": "invalid-package",
+    "valid": false
+  },
+  "id": "package/bad-range",
+  "input": {
+    "package": "package"
+  },
+  "kind": "package",
+  "spec": [
+    "§4.4"
+  ]
+}

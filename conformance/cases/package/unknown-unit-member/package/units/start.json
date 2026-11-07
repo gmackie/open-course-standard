@@ -1,0 +1,20 @@
+{
+  "id": "start",
+  "items": [
+    {
+      "kind": "codex",
+      "ref": "welcome"
+    },
+    {
+      "kind": "activity",
+      "ref": "task"
+    },
+    {
+      "kind": "resource",
+      "ref": "reading"
+    }
+  ],
+  "onOpen": "alert(1)",
+  "standards": [],
+  "title": "Unit start"
+}

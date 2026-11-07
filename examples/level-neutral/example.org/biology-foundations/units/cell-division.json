@@ -1,0 +1,20 @@
+{
+  "id": "cell-division",
+  "items": [
+    {
+      "kind": "codex",
+      "ref": "modelling-mitosis"
+    },
+    {
+      "kind": "activity",
+      "ref": "models-explained"
+    },
+    {
+      "kind": "codex",
+      "ref": "assessment-guidance"
+    }
+  ],
+  "standards": [],
+  "summary": "Model mitosis, compare a diagram with an observed sample, and explain what each model leaves out.",
+  "title": "Cell division and scientific models"
+}
