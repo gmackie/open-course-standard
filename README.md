@@ -106,6 +106,16 @@ publish but **not yet published**.
 3. Write a small adapter for the [conformance suite](conformance/README.md) and run
    `node conformance/run.mjs --adapter "<your command>"`.
 
+## Experimental collaboration profiles
+
+Three draft RFCs explore [cross-institution contribution provenance](rfcs/0001-contribution-provenance-profile.md),
+[detached portable media](rfcs/0002-detached-portable-media.md), and
+[teacher-controlled upgrade previews](rfcs/0003-teacher-controlled-upgrades.md).
+Their reference prototypes and tests live under `packages/ocs/src/experiments/` and
+`packages/ocs/test/experimental-*.test.ts`. These experiments are **not** part of
+OCS 1.1 or the package's stable public exports; importing, approving, or applying
+them requires separate institutional permission and implementation.
+
 ## Status and governance
 
 OCS is a published draft standard with provisional governance: Graham Mackie is the steward, and
