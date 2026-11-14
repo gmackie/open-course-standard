@@ -6,6 +6,12 @@ versioning on its own.
 
 ## Unreleased
 
+### Experimental proposals (not OCS 1.1)
+
+- Draft RFCs for detached contribution provenance, portable rich-media references, and teacher-controlled course upgrades.
+- Internal experimental validators and conservative revision previews, with tamper, conflict, and invalid-input unit tests.
+- No changes to OCS 1.1 schemas, digest/signature contexts, lockfile bytes, or exported public API.
+
 ### Specification
 
 - OCS 1.1 published as the vendor-neutral Open Course Standard (`spec/ocs-1.1.md`). Same format
