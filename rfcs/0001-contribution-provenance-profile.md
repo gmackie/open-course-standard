@@ -74,6 +74,17 @@ reject a suggestion while the contributor keeps a lawfully licensed local editio
   publishing approvals and a prepublication privacy review.
 - A reviewer cannot sign for the original publisher unless separately authorized.
 
+## Standards and ecosystem reuse
+
+Creative provenance should map to W3C PROV-O (prov:wasRevisionOf,
+prov:wasAttributedTo, qualified derivation) rather than adding a second
+unrelated concept of authorship: https://www.w3.org/TR/prov-o/ .
+For interactive content, H5P's OER Hub already supports reuse and automatic
+attribution: https://h5p.org/h5p-oer-hub-jan-2026 .
+This profile must complement such tools by enabling independently maintained
+course packages to offer *reviewed improvements back to upstream publishers*,
+not by claiming that sharing/remixing/attribution is itself novel.
+
 ## Compatibility
 
 OCS 1.1 package, digest, signature, resolver and lockfile bytes are unchanged.

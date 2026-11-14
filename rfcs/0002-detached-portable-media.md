@@ -52,6 +52,20 @@ The manifest's visibility field is a publication assertion, not access control.
 A resource listed as restricted needs actual access controls at the hosting source
 and any mirror. Public immutable blobs cannot be remotely made secret.
 
+## Avoid duplicating Common Cartridge
+
+1EdTech Common Cartridge is an established interchange format for packaged
+educational files, media, assessment objects and related metadata:
+https://www.1edtech.org/standards/cc .
+Its 1.4 work also includes rich K-12 and accessibility metadata, CASE links
+and QTI assets. The detached OCS proposal should **not** replace CC file
+packaging. Prefer using CC/Thin CC or a compatible archive to transport actual
+assets when they express the intended rights and placement semantics.
+The additional OCS responsibility is an immutable publisher-scoped reference,
+content digest, verified provenance, local review and a standard way to
+associate assets with a course version. A CC adapter must disclose any
+semantics it cannot preserve rather than silently dropping them.
+
 ## Relationship to OCS 1.1
 
 This is deliberately *not* a new accepted form of OCS resource reference.

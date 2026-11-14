@@ -60,6 +60,16 @@ as explicit review cases. AI may summarize but may not authorize a merge.
 - Existing course/library install records and LMS placements must not be
   overwritten by title-matching heuristics.
 
+## Precedent and distinction
+
+Open edX Content Libraries already support reused course components, local
+text/title overrides, update notifications and teacher-selected side-by-side
+sync: https://docs.openedx.org/en/latest/educators/concepts/instructional_design/content_libraries.html .
+The distinctive goal here is **independent publishers and runtimes** exchanging
+verified OCS packages and upstream contributions, not inventing the first
+local-override or visual comparison UI. Reuse familiar education-language
+review patterns and test interoperability with an external LMS implementation.
+
 ## Why this is outside core OCS
 
 The OCS 1.1 source format already specifies deterministic resolution. Updating
